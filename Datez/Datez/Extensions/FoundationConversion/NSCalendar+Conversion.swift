@@ -13,10 +13,11 @@ extension NSCalendar {
     
     func components(units: NSCalendarUnit, fromTimeInterval timeInterval: NSTimeInterval) -> NSDateComponents {
         
+        let baseDate = NSDate(timeIntervalSinceReferenceDate: 0)
         return components(
             units,
-            fromDate: NSDate(),
-            toDate: NSDate(timeIntervalSinceNow: round(timeInterval)),
+            fromDate: baseDate,
+            toDate: baseDate + round(timeInterval),
             options: []
         )
     }
