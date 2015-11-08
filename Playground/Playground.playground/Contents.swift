@@ -30,6 +30,17 @@ let firstThingTomorrowButIn1984 = firstThingTomorrow.update(year: 1984)
 let newDate = firstThingTomorrowButIn1984.date
 
 
+//: __Convenient NSDate Operators:__
+
+// Just calling timeIntervalSinceDate
+let difference = NSDate(timeIntervalSinceNow: 5.minutes.timeInterval) - NSDate()
+
+// Just calling dateByAddingTimeInterval
+let afterFiftyHours = NSDate() + 50.hours.timeInterval
+
+// Just calling compare:
+let compareResult = NSDate(timeIntervalSinceNow: 8.hours.timeInterval) < NSDate()
+
 //: __[Bonus]: Durations__
 //:
 //: This is marked as bonus since it's not ideal at all for precise calculation, but super useful when you just need some convenience. Examples would be setting expiration intervals and estimating components from `NSTimeInterval`
