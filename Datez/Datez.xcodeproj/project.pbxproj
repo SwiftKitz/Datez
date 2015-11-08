@@ -309,9 +309,9 @@
 			productReference = 82D57CEC1BEE740B0071C345 /* DatezTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		82D57D521BEF01DF0071C345 /* Datez-watchOS */ = {
+		82D57D521BEF01DF0071C345 /* Datez-watchos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82D57D641BEF01DF0071C345 /* Build configuration list for PBXNativeTarget "Datez-watchOS" */;
+			buildConfigurationList = 82D57D641BEF01DF0071C345 /* Build configuration list for PBXNativeTarget "Datez-watchos" */;
 			buildPhases = (
 				82D57D531BEF01DF0071C345 /* Sources */,
 				82D57D601BEF01DF0071C345 /* Frameworks */,
@@ -322,7 +322,7 @@
 			);
 			dependencies = (
 			);
-			name = "Datez-watchOS";
+			name = "Datez-watchos";
 			productName = Datez;
 			productReference = 82D57D671BEF01DF0071C345 /* Datez.framework */;
 			productType = "com.apple.product-type.framework";
@@ -394,7 +394,7 @@
 			projectRoot = "";
 			targets = (
 				82D57CE11BEE740B0071C345 /* Datez-ios */,
-				82D57D521BEF01DF0071C345 /* Datez-watchOS */,
+				82D57D521BEF01DF0071C345 /* Datez-watchos */,
 				82D57D691BEF04250071C345 /* Datez-osx */,
 				82D57D801BEF05BC0071C345 /* Datez-tvos */,
 				82D57CEB1BEE740B0071C345 /* DatezTests */,
@@ -820,7 +820,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82D57D641BEF01DF0071C345 /* Build configuration list for PBXNativeTarget "Datez-watchOS" */ = {
+		82D57D641BEF01DF0071C345 /* Build configuration list for PBXNativeTarget "Datez-watchos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82D57D651BEF01DF0071C345 /* Debug */,
