@@ -7,6 +7,8 @@
 
 Super small and compact dates library to get sh*t done!
 
+_Even though I shipped it with my app, I still need to invest the time to set this up, and finalize the API. Contributors welcome!_
+
 ## Highlights
 
 + __Only two custom structs to worry about _(value types FTW!)_:__
