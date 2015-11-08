@@ -24,6 +24,7 @@
 		82D57D421BEEECCD0071C345 /* NSDateComponents+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D411BEEECCD0071C345 /* NSDateComponents+Conversion.swift */; };
 		82D57D441BEEECF30071C345 /* NSTimeInterval+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D431BEEECF30071C345 /* NSTimeInterval+Conversion.swift */; };
 		82D57D461BEEED150071C345 /* NSCalendar+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D451BEEED150071C345 /* NSCalendar+Conversion.swift */; };
+		82D57D481BEEF5270071C345 /* NSTimeIntervalConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D471BEEF5270071C345 /* NSTimeIntervalConversionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		82D57D411BEEECCD0071C345 /* NSDateComponents+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateComponents+Conversion.swift"; sourceTree = "<group>"; };
 		82D57D431BEEECF30071C345 /* NSTimeInterval+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Conversion.swift"; sourceTree = "<group>"; };
 		82D57D451BEEED150071C345 /* NSCalendar+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCalendar+Conversion.swift"; sourceTree = "<group>"; };
+		82D57D471BEEF5270071C345 /* NSTimeIntervalConversionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimeIntervalConversionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				82D57D261BEED6680071C345 /* DateComponents+Operators.swift */,
+				82D57D471BEEF5270071C345 /* NSTimeIntervalConversionTests.swift */,
 				82D57D271BEED6680071C345 /* DateView+Operators.swift */,
 				82D57D311BEED9050071C345 /* NSDate+Operators.swift */,
 			);
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D57D481BEEF5270071C345 /* NSTimeIntervalConversionTests.swift in Sources */,
 				82D57D381BEEE40F0071C345 /* DateComponentsOperatorsTests.swift in Sources */,
 				82D57D3A1BEEE7B60071C345 /* DateViewOperatorsTests.swift in Sources */,
 				82D57D301BEED6BD0071C345 /* RelativityTests.swift in Sources */,

@@ -9,6 +9,13 @@
 import Foundation
 
 
+/** [BONUS]: This is a bonus API for ballpark calculations, useful for
+    making hardcoded intervals more readable.
+    
+    e.g.
+    + declaring a cache expiration interval
+    + estimating the number of hours, or minutes in NSTimeInterval
+*/
 public extension NSTimeInterval {
     
     /** given 63.0, returns DateComponents(minute: 1, second: 3)
@@ -20,7 +27,7 @@ public extension NSTimeInterval {
         let components = gregorian.components(
             NSCalendarUnit(rawValue: UInt.max),
             fromDate: NSDate(),
-            toDate: NSDate(timeIntervalSinceNow: self),
+            toDate: NSDate(timeIntervalSinceNow: round(self)),
             options: []
         )
         
