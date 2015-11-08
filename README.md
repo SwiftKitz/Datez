@@ -1,5 +1,5 @@
 
-# DATEz
+# Datez
 
 Super small and compact dates library to get sh*t done!
 
