@@ -84,7 +84,7 @@ I needed to explicitly choose between Gregorian and IslamicCivil, so that is int
 __Wrong Date Calculation__:<br />
 Most frameworks I've seen make assumptions about the number of days in a month, or hard code the number of hours ... etc. __This library has absolutely _zero_ unnecessary<sup>[*]</sup> hard code.__
 
-__It Adheres to zKit Quality__:<br />
-zKit is a collection of super small, effecient, tested, maintained and high quality frameworks that I use for my own projects. Give you eyes a feast and take a look at the code. No file is more than 100 lines :bowtie:.
+__It Adheres to Kitz Quality__:<br />
+Kitz is a collection of super small, effecient, tested, maintained and high quality frameworks that I use for my own projects. Give you eyes a feast and take a look at the code. No file is more than 100 lines :bowtie:.
 
 <sup>[*]: Only hard code now is to clear the date components, by setting the calue to `0` or `1`.</sup>
