@@ -21,6 +21,8 @@ Only one way to achieve something, instead of copy pasting code everywhere, with
 
 ## Features
 
+You can try them in the playground shipped with the framework!
+
 __Quickly and Expicility Access Date Components:__
 
 ```swift
@@ -60,18 +62,13 @@ let components = 300.days.timeInterval
 // components ~= DateComponents(month: 3)
 ```
 
-__[TODO]: Counting__<br />
-Somehow design a way to return the total number of a component from a duration or date components.
-This feature should be rolled out soon, but also feel free to submit a PR!
+__[Bonus]: Counting__<br />
+Returns the total number of a calendar component from a time interval.
 
 ```swift
 // either this
-let totalDays = 50000.hours.totalDays
-
-// or this
 let totalDays = 50000.hours.timeInterval.totalDays
-
-// I don't know the answer, must implement this first!
+// returns 2083
 ```
 
 

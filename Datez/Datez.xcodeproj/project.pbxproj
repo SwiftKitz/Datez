@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82BCA8AE1BEF243200C1421E /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8AD1BEF243200C1421E /* Counting.swift */; };
+		82BCA8AF1BEF243200C1421E /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8AD1BEF243200C1421E /* Counting.swift */; };
+		82BCA8B01BEF243200C1421E /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8AD1BEF243200C1421E /* Counting.swift */; };
+		82BCA8B11BEF243200C1421E /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8AD1BEF243200C1421E /* Counting.swift */; };
 		82D57CE61BEE740B0071C345 /* Datez.h in Headers */ = {isa = PBXBuildFile; fileRef = 82D57CE51BEE740B0071C345 /* Datez.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82D57CED1BEE740B0071C345 /* Datez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D57CE21BEE740B0071C345 /* Datez.framework */; };
 		82D57D281BEED6680071C345 /* DateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D1F1BEED6680071C345 /* DateComponents.swift */; };
@@ -77,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82BCA8AD1BEF243200C1421E /* Counting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counting.swift; sourceTree = "<group>"; };
 		82D57CE21BEE740B0071C345 /* Datez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Datez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D57CE51BEE740B0071C345 /* Datez.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Datez.h; sourceTree = "<group>"; };
 		82D57CEC1BEE740B0071C345 /* DatezTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatezTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +210,7 @@
 				82D57D3E1BEEEC8E0071C345 /* FoundationConversion */,
 				82D57D241BEED6680071C345 /* Relativity.swift */,
 				82D57D331BEED99C0071C345 /* Duration.swift */,
+				82BCA8AD1BEF243200C1421E /* Counting.swift */,
 				82D57D3C1BEEEB1A0071C345 /* Debugging.swift */,
 			);
 			path = Extensions;
@@ -460,6 +466,7 @@
 				82D57D3D1BEEEB1A0071C345 /* Debugging.swift in Sources */,
 				82D57D321BEED9050071C345 /* NSDate+Operators.swift in Sources */,
 				82D57D2C1BEED6680071C345 /* Relativity.swift in Sources */,
+				82BCA8AE1BEF243200C1421E /* Counting.swift in Sources */,
 				82D57D2E1BEED6680071C345 /* DateView+Operators.swift in Sources */,
 				82D57D291BEED6680071C345 /* DateView.swift in Sources */,
 				82D57D401BEEECAF0071C345 /* NSDate+Conversion.swift in Sources */,
@@ -490,6 +497,7 @@
 				82D57D581BEF01DF0071C345 /* Debugging.swift in Sources */,
 				82D57D591BEF01DF0071C345 /* NSDate+Operators.swift in Sources */,
 				82D57D5A1BEF01DF0071C345 /* Relativity.swift in Sources */,
+				82BCA8AF1BEF243200C1421E /* Counting.swift in Sources */,
 				82D57D5B1BEF01DF0071C345 /* DateView+Operators.swift in Sources */,
 				82D57D5C1BEF01DF0071C345 /* DateView.swift in Sources */,
 				82D57D5D1BEF01DF0071C345 /* NSDate+Conversion.swift in Sources */,
@@ -509,6 +517,7 @@
 				82D57D6F1BEF04250071C345 /* Debugging.swift in Sources */,
 				82D57D701BEF04250071C345 /* NSDate+Operators.swift in Sources */,
 				82D57D711BEF04250071C345 /* Relativity.swift in Sources */,
+				82BCA8B01BEF243200C1421E /* Counting.swift in Sources */,
 				82D57D721BEF04250071C345 /* DateView+Operators.swift in Sources */,
 				82D57D731BEF04250071C345 /* DateView.swift in Sources */,
 				82D57D741BEF04250071C345 /* NSDate+Conversion.swift in Sources */,
@@ -528,6 +537,7 @@
 				82D57D861BEF05BC0071C345 /* Debugging.swift in Sources */,
 				82D57D871BEF05BC0071C345 /* NSDate+Operators.swift in Sources */,
 				82D57D881BEF05BC0071C345 /* Relativity.swift in Sources */,
+				82BCA8B11BEF243200C1421E /* Counting.swift in Sources */,
 				82D57D891BEF05BC0071C345 /* DateView+Operators.swift in Sources */,
 				82D57D8A1BEF05BC0071C345 /* DateView.swift in Sources */,
 				82D57D8B1BEF05BC0071C345 /* NSDate+Conversion.swift in Sources */,

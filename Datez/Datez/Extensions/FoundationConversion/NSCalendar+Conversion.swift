@@ -9,6 +9,19 @@
 import Foundation
 
 
+extension NSCalendar {
+    
+    func components(units: NSCalendarUnit, fromTimeInterval timeInterval: NSTimeInterval) -> NSDateComponents {
+        
+        return components(
+            units,
+            fromDate: NSDate(),
+            toDate: NSDate(timeIntervalSinceNow: round(timeInterval)),
+            options: []
+        )
+    }
+}
+
 public extension NSCalendar {
     
     static var Gregorian: NSCalendar {

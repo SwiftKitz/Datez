@@ -23,15 +23,10 @@ public extension NSTimeInterval {
      */
     public var components: DateComponents {
         
-        let gregorian = NSCalendar.Gregorian
-        let components = gregorian.components(
+        return NSCalendar.Gregorian.components(
             NSCalendarUnit(rawValue: UInt.max),
-            fromDate: NSDate(),
-            toDate: NSDate(timeIntervalSinceNow: round(self)),
-            options: []
-        )
-        
-        return components.datez
+            fromTimeInterval: self
+        ).datez
     }
 }
 
