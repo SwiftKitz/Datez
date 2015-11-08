@@ -36,6 +36,6 @@ public extension DateComponents {
     public var timeInterval: NSTimeInterval {
         
         let dateView = NSDate().gregorian + self
-        return dateView.date - NSDate()
+        return round(dateView.date - NSDate())
     }
 }
