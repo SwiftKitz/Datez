@@ -94,3 +94,11 @@ __It Adheres to Kitz Quality__:<br />
 Kitz is a collection of super small, effecient, tested, maintained and high quality frameworks that I use for my own projects. Give you eyes a feast and take a look at the code. No file is more than 100 lines :bowtie:.
 
 <sup>[*]: Only hard code now is to clear the date components, by setting the calue to `0` or `1`.</sup>
+
+## Author
+
+Mazyod ([@Mazyod](http://twitter.com/mazyod))
+
+## License
+
+Datez is released under the MIT license. See LICENSE for details.
