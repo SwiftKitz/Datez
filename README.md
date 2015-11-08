@@ -1,6 +1,7 @@
 
 # Datez
 
+![](https://img.shields.io/badge/version-prerelease-orange.svg)
 ![](https://travis-ci.org/SwiftKitz/Datez.svg?branch=master)
 ![](https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20watchos%20%7C%20tvos-lightgrey.svg)
 
