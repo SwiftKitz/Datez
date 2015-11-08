@@ -17,3 +17,8 @@ public func + (lhs: NSDate, rhs: NSTimeInterval) -> NSDate {
 public func - (lhs: NSDate, rhs: NSDate) -> NSTimeInterval {
     return lhs.timeIntervalSinceDate(rhs)
 }
+
+/** simple shorthand for comparing dates */
+public func < (lhs: NSDate, rhs: NSDate) -> Bool {
+    return lhs.compare(rhs) == .OrderedAscending
+}
