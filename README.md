@@ -57,7 +57,7 @@ __[TODO]: Counting__<br />
 Somehow design a way to return the total number of a component from a duration or date components.
 This feature should be rolled out soon, but also feel free to submit a PR!
 
-```
+```swift
 // either this
 let totalDays = 50000.hours.totalDays
 
