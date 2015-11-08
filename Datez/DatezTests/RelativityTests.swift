@@ -3,7 +3,7 @@
 //  Datez
 //
 //  Created by Mazyad Alabduljaleel on 11/7/15.
-//  Copyright © 2015 zkit. All rights reserved.
+//  Copyright © 2015 kitz. All rights reserved.
 //
 
 import XCTest

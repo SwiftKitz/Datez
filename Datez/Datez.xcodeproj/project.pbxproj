@@ -221,7 +221,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = zkit;
+				ORGANIZATIONNAME = kitz;
 				TargetAttributes = {
 					82D57CE11BEE740B0071C345 = {
 						CreatedOnToolsVersion = 7.1;
@@ -407,7 +407,7 @@
 				INFOPLIST_FILE = Datez/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zkit.Datez;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.Datez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -423,7 +423,7 @@
 				INFOPLIST_FILE = Datez/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zkit.Datez;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.Datez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -434,7 +434,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = DatezTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zkit.DatezTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.DatezTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -444,7 +444,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = DatezTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zkit.DatezTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.DatezTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
