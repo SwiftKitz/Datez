@@ -19,6 +19,10 @@ public extension NSDate {
         )
     }
     
+    public var currentCalendar: DateView {
+        return dateView(calendar: NSCalendar.currentCalendar())
+    }
+    
     public var gregorian: DateView {
         return dateView(calendar: NSCalendar.Gregorian)
     }

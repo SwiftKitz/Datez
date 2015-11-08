@@ -23,10 +23,11 @@ Only one way to achieve something, instead of copy pasting code everywhere, with
 
 You can try them in the playground shipped with the framework!
 
-__Quickly and Expicility Access Date Components:__
+__Quickly and Explicitly Access Date Components:__
 
 ```swift
 let someDate = NSDate()
+let currentCalendar = someDate.currentCalendar.components.year
 let gregorianDay = someDate.gregorian.components.day
 let hijriMonth = someDate.islamicCivil.components.month
 ```

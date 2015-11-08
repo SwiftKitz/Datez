@@ -8,6 +8,7 @@ import Datez
 //: __Quickly and Expicility Access Date Components:__
 
 let someDate = NSDate()
+let currentCalendar = someDate.currentCalendar.components.year
 let gregorianDay = someDate.gregorian.components.day
 let hijriMonth = someDate.islamicCivil.components.month
 
