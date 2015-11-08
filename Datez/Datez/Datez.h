@@ -6,7 +6,7 @@
 //  Copyright © 2015 kitz. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Datez.
 FOUNDATION_EXPORT double DatezVersionNumber;
