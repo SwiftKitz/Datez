@@ -36,5 +36,6 @@ script:
   "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build
   | xcpretty -c; fi
 notifications:
+  email: false
   slack:
     secure: NhKT0y5VJ4NlgSXk3KZ+NdMnSFNi3c+VBhSBO7/sizMuFSRtUXNnRQ2MFsxO4uDtm/CIv0YPOQr2GpJsb7aRU/erpxKAaDjVtx3MM4xS34W+QhYDmF+P+T6phDRZwuuwsLVwVQrTiyNLULUrEExIh7tatcrYmYYBO3J8qqz884uPJOF0+roxi/2Gjm/CKhXS+vHvaBKS0sK47LtD3y6Tuvus5QPGd7fwUmhR53Yzpn8+7QW2tw4Yfzk9KyFrFX4NC3b6WpjKq0oL9JwNiKJvox+/MJY4moXh73IqE7iVOcDslWnCsos4QXMaGdugYiQrnvLGAQuVVLupeeF0V/QzVDBp5qb6fdtQc5mU6ijRelqhrRDRpop/yylVSIxEs0eFenPJtTNRZbAQI1qkJ7XRYHXpQH/armaF5nhi3gTbIgOu/0CFJsccQeBK8hIYyQFHswXsaxeY0pOjuHxgkrRLz82vjWnXf3jlxnxbCbYhsgRIp15dnxXt5G1zh6drQ4tuB9G/K6MhmB5MGhfkGsu66Gg0IsZAGDdNw8sA4QvK2hz9jzcDe1YiD4nlQq82JilZCnCG4m6WSALMvlyX7UZNcOkaJjb6vxj1KfwgMBv2kkyy7cuHmwWgDGVLwxqiPJ1P1camMV0iatKCGQEKBmvB8h2jEgH+S/dRHlUldVr5gAg=
