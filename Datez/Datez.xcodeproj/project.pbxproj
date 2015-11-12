@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		823F18691BF43A9D008DF5F8 /* Datez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D57D951BEF05BC0071C345 /* Datez.framework */; };
+		823F18781BF43AB7008DF5F8 /* Datez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D57D7E1BEF04250071C345 /* Datez.framework */; };
+		823F187E1BF43ACE008DF5F8 /* RelativityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D2F1BEED6BD0071C345 /* RelativityTests.swift */; };
+		823F187F1BF43ACE008DF5F8 /* CountingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BD17D71BEF59800013D3DC /* CountingTests.swift */; };
+		823F18801BF43ACE008DF5F8 /* DateComponentsOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D371BEEE40F0071C345 /* DateComponentsOperatorsTests.swift */; };
+		823F18811BF43ACE008DF5F8 /* DateViewOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D391BEEE7B60071C345 /* DateViewOperatorsTests.swift */; };
+		823F18821BF43AD3008DF5F8 /* RelativityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D2F1BEED6BD0071C345 /* RelativityTests.swift */; };
+		823F18831BF43AD3008DF5F8 /* CountingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BD17D71BEF59800013D3DC /* CountingTests.swift */; };
+		823F18841BF43AD3008DF5F8 /* DateComponentsOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D371BEEE40F0071C345 /* DateComponentsOperatorsTests.swift */; };
+		823F18851BF43AD3008DF5F8 /* DateViewOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D391BEEE7B60071C345 /* DateViewOperatorsTests.swift */; };
 		82BCA8AE1BEF243200C1421E /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8AD1BEF243200C1421E /* Counting.swift */; };
 		82BCA8AF1BEF243200C1421E /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8AD1BEF243200C1421E /* Counting.swift */; };
 		82BCA8B01BEF243200C1421E /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8AD1BEF243200C1421E /* Counting.swift */; };
@@ -72,6 +82,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		823F186A1BF43A9D008DF5F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82D57CD91BEE740B0071C345 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82D57D801BEF05BC0071C345;
+			remoteInfo = "Datez-tvos";
+		};
+		823F18791BF43AB7008DF5F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82D57CD91BEE740B0071C345 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82D57D691BEF04250071C345;
+			remoteInfo = "Datez-osx";
+		};
 		82D57CEE1BEE740B0071C345 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 82D57CD91BEE740B0071C345 /* Project object */;
@@ -82,11 +106,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		823F18641BF43A9D008DF5F8 /* DatezTests-tvos.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DatezTests-tvos.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		823F18731BF43AB6008DF5F8 /* DatezTests-osx.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DatezTests-osx.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82BCA8AD1BEF243200C1421E /* Counting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counting.swift; sourceTree = "<group>"; };
 		82BD17D71BEF59800013D3DC /* CountingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingTests.swift; sourceTree = "<group>"; };
 		82D57CE21BEE740B0071C345 /* Datez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Datez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D57CE51BEE740B0071C345 /* Datez.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Datez.h; sourceTree = "<group>"; };
-		82D57CEC1BEE740B0071C345 /* DatezTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatezTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82D57CEC1BEE740B0071C345 /* DatezTests-ios.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DatezTests-ios.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D57CF31BEE740B0071C345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82D57D1F1BEED6680071C345 /* DateComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateComponents.swift; sourceTree = "<group>"; };
 		82D57D201BEED6680071C345 /* DateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
@@ -114,6 +140,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		823F18611BF43A9D008DF5F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823F18691BF43A9D008DF5F8 /* Datez.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		823F18701BF43AB6008DF5F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823F18781BF43AB7008DF5F8 /* Datez.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82D57CDE1BEE740B0071C345 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,10 +208,12 @@
 			isa = PBXGroup;
 			children = (
 				82D57CE21BEE740B0071C345 /* Datez.framework */,
-				82D57CEC1BEE740B0071C345 /* DatezTests.xctest */,
+				82D57CEC1BEE740B0071C345 /* DatezTests-ios.xctest */,
 				82D57D671BEF01DF0071C345 /* Datez.framework */,
 				82D57D7E1BEF04250071C345 /* Datez.framework */,
 				82D57D951BEF05BC0071C345 /* Datez.framework */,
+				823F18641BF43A9D008DF5F8 /* DatezTests-tvos.xctest */,
+				823F18731BF43AB6008DF5F8 /* DatezTests-osx.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,6 +334,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		823F18631BF43A9D008DF5F8 /* DatezTests-tvos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 823F186C1BF43A9D008DF5F8 /* Build configuration list for PBXNativeTarget "DatezTests-tvos" */;
+			buildPhases = (
+				823F18601BF43A9D008DF5F8 /* Sources */,
+				823F18611BF43A9D008DF5F8 /* Frameworks */,
+				823F18621BF43A9D008DF5F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				823F186B1BF43A9D008DF5F8 /* PBXTargetDependency */,
+			);
+			name = "DatezTests-tvos";
+			productName = "DatezTests-tvos";
+			productReference = 823F18641BF43A9D008DF5F8 /* DatezTests-tvos.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		823F18721BF43AB6008DF5F8 /* DatezTests-osx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 823F187B1BF43AB7008DF5F8 /* Build configuration list for PBXNativeTarget "DatezTests-osx" */;
+			buildPhases = (
+				823F186F1BF43AB6008DF5F8 /* Sources */,
+				823F18701BF43AB6008DF5F8 /* Frameworks */,
+				823F18711BF43AB6008DF5F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				823F187A1BF43AB7008DF5F8 /* PBXTargetDependency */,
+			);
+			name = "DatezTests-osx";
+			productName = "DatezTests-osx";
+			productReference = 823F18731BF43AB6008DF5F8 /* DatezTests-osx.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		82D57CE11BEE740B0071C345 /* Datez-ios */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82D57CF61BEE740B0071C345 /* Build configuration list for PBXNativeTarget "Datez-ios" */;
@@ -308,9 +388,9 @@
 			productReference = 82D57CE21BEE740B0071C345 /* Datez.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		82D57CEB1BEE740B0071C345 /* DatezTests */ = {
+		82D57CEB1BEE740B0071C345 /* DatezTests-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82D57CF91BEE740B0071C345 /* Build configuration list for PBXNativeTarget "DatezTests" */;
+			buildConfigurationList = 82D57CF91BEE740B0071C345 /* Build configuration list for PBXNativeTarget "DatezTests-ios" */;
 			buildPhases = (
 				82D57CE81BEE740B0071C345 /* Sources */,
 				82D57CE91BEE740B0071C345 /* Frameworks */,
@@ -321,9 +401,9 @@
 			dependencies = (
 				82D57CEF1BEE740B0071C345 /* PBXTargetDependency */,
 			);
-			name = DatezTests;
+			name = "DatezTests-ios";
 			productName = DatezTests;
-			productReference = 82D57CEC1BEE740B0071C345 /* DatezTests.xctest */;
+			productReference = 82D57CEC1BEE740B0071C345 /* DatezTests-ios.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		82D57D521BEF01DF0071C345 /* Datez-watchos */ = {
@@ -390,6 +470,12 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = kitz;
 				TargetAttributes = {
+					823F18631BF43A9D008DF5F8 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					823F18721BF43AB6008DF5F8 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 					82D57CE11BEE740B0071C345 = {
 						CreatedOnToolsVersion = 7.1;
 					};
@@ -414,12 +500,28 @@
 				82D57D521BEF01DF0071C345 /* Datez-watchos */,
 				82D57D691BEF04250071C345 /* Datez-osx */,
 				82D57D801BEF05BC0071C345 /* Datez-tvos */,
-				82D57CEB1BEE740B0071C345 /* DatezTests */,
+				82D57CEB1BEE740B0071C345 /* DatezTests-ios */,
+				823F18631BF43A9D008DF5F8 /* DatezTests-tvos */,
+				823F18721BF43AB6008DF5F8 /* DatezTests-osx */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		823F18621BF43A9D008DF5F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		823F18711BF43AB6008DF5F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82D57CE01BEE740B0071C345 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -458,6 +560,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		823F18601BF43A9D008DF5F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823F187E1BF43ACE008DF5F8 /* RelativityTests.swift in Sources */,
+				823F187F1BF43ACE008DF5F8 /* CountingTests.swift in Sources */,
+				823F18801BF43ACE008DF5F8 /* DateComponentsOperatorsTests.swift in Sources */,
+				823F18811BF43ACE008DF5F8 /* DateViewOperatorsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		823F186F1BF43AB6008DF5F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823F18821BF43AD3008DF5F8 /* RelativityTests.swift in Sources */,
+				823F18831BF43AD3008DF5F8 /* CountingTests.swift in Sources */,
+				823F18841BF43AD3008DF5F8 /* DateComponentsOperatorsTests.swift in Sources */,
+				823F18851BF43AD3008DF5F8 /* DateViewOperatorsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82D57CDD1BEE740B0071C345 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -553,6 +677,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		823F186B1BF43A9D008DF5F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82D57D801BEF05BC0071C345 /* Datez-tvos */;
+			targetProxy = 823F186A1BF43A9D008DF5F8 /* PBXContainerItemProxy */;
+		};
+		823F187A1BF43AB7008DF5F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82D57D691BEF04250071C345 /* Datez-osx */;
+			targetProxy = 823F18791BF43AB7008DF5F8 /* PBXContainerItemProxy */;
+		};
 		82D57CEF1BEE740B0071C345 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 82D57CE11BEE740B0071C345 /* Datez-ios */;
@@ -561,6 +695,56 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		823F186D1BF43A9D008DF5F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DatezTests-tvos/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kitz.DatezTests-tvos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+			};
+			name = Debug;
+		};
+		823F186E1BF43A9D008DF5F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DatezTests-tvos/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kitz.DatezTests-tvos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+			};
+			name = Release;
+		};
+		823F187C1BF43AB7008DF5F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DatezTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kitz.DatezTests-osx";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		823F187D1BF43AB7008DF5F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DatezTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kitz.DatezTests-osx";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		82D57CF41BEE740B0071C345 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -815,6 +999,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		823F186C1BF43A9D008DF5F8 /* Build configuration list for PBXNativeTarget "DatezTests-tvos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				823F186D1BF43A9D008DF5F8 /* Debug */,
+				823F186E1BF43A9D008DF5F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		823F187B1BF43AB7008DF5F8 /* Build configuration list for PBXNativeTarget "DatezTests-osx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				823F187C1BF43AB7008DF5F8 /* Debug */,
+				823F187D1BF43AB7008DF5F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		82D57CDC1BEE740B0071C345 /* Build configuration list for PBXProject "Datez" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -833,7 +1033,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82D57CF91BEE740B0071C345 /* Build configuration list for PBXNativeTarget "DatezTests" */ = {
+		82D57CF91BEE740B0071C345 /* Build configuration list for PBXNativeTarget "DatezTests-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82D57CFA1BEE740B0071C345 /* Debug */,
