@@ -18,7 +18,7 @@ import Foundation
 public extension NSTimeInterval {
     
     private func _components(unit: NSCalendarUnit) -> NSDateComponents {
-        return NSCalendar.Gregorian.components(unit, fromTimeInterval: self)
+        return NSCalendar.gregorian.components(unit, fromTimeInterval: self)
     }
     
     var totalSeconds: Int {

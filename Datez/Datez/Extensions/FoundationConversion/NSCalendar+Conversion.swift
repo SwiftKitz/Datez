@@ -25,11 +25,11 @@ extension NSCalendar {
 
 public extension NSCalendar {
     
-    static var Gregorian: NSCalendar {
+    static var gregorian: NSCalendar {
         return NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
     }
     
-    static var IslamicCivil: NSCalendar {
+    static var islamicCivil: NSCalendar {
         return NSCalendar(calendarIdentifier: NSCalendarIdentifierIslamicCivil)!
     }
 }

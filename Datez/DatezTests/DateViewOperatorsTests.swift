@@ -20,7 +20,7 @@ class DateViewOperatorsTests: XCTestCase {
             hour: 15,
             minute: 2
         ),
-        inCalendar: NSCalendar.Gregorian
+        inCalendar: NSCalendar.gregorian
     )
     
     func testAddingComponents() {
@@ -50,13 +50,13 @@ class DateViewOperatorsTests: XCTestCase {
         // DST switch date
         let dstSwitch = DateView(
             forDateComponents: DateComponents(year: 2015, month: 11, day: 1),
-            inCalendar: NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+            inCalendar: NSCalendar.gregorian
         )
         
         // 1 hour will be eated by spending 2 AM twice
         let expectedDate = DateView(
             forDateComponents: DateComponents(year: 2015, month: 11, day: 1, hour: 2),
-            inCalendar: NSCalendar.Gregorian
+            inCalendar: NSCalendar.gregorian
         )
         
         let dstOffset = dstSwitch + 3.hours
@@ -73,17 +73,17 @@ class DateViewOperatorsTests: XCTestCase {
         
         let preDst = DateView(
             forDateComponents: DateComponents(year: 2015, month: 10, day: 29),
-            inCalendar: NSCalendar.Gregorian
+            inCalendar: NSCalendar.gregorian
         )
         
         let postDst = DateView(
             forDateComponents: DateComponents(year: 2015, month: 11, day: 3),
-            inCalendar: NSCalendar.Gregorian
+            inCalendar: NSCalendar.gregorian
         )
         
         // DST compatibile timeZone
         let dateFormatter = NSDateFormatter()
-        dateFormatter.calendar = NSCalendar.Gregorian
+        dateFormatter.calendar = NSCalendar.gregorian
         dateFormatter.dateStyle = .ShortStyle
         dateFormatter.timeStyle = .ShortStyle
         

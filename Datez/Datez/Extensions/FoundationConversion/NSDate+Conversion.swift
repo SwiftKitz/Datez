@@ -24,10 +24,10 @@ public extension NSDate {
     }
     
     public var gregorian: DateView {
-        return dateView(calendar: NSCalendar.Gregorian)
+        return dateView(calendar: NSCalendar.gregorian)
     }
     
     public var islamicCivil: DateView {
-        return dateView(calendar: NSCalendar.IslamicCivil)
+        return dateView(calendar: NSCalendar.islamicCivil)
     }
 }

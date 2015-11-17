@@ -21,14 +21,14 @@ class RelativityTests: XCTestCase {
             minute: 44,
             second: 55
         ),
-        inCalendar: NSCalendar.Gregorian
+        inCalendar: NSCalendar.gregorian
     )
     
     func testBeginningOfYear() {
         
         let expectedDate = DateView(
             forDateComponents: DateComponents(year: 2015, month: 1, day: 1),
-            inCalendar: NSCalendar.Gregorian
+            inCalendar: NSCalendar.gregorian
         )
         
         XCTAssertEqual(date.beginningOfYear, expectedDate)
@@ -38,7 +38,7 @@ class RelativityTests: XCTestCase {
         
         let expectedDate = DateView(
             forDateComponents: DateComponents(year: 2015, month: 10, day: 1),
-            inCalendar: NSCalendar.Gregorian
+            inCalendar: NSCalendar.gregorian
         )
         
         XCTAssertEqual(date.beginningOfMonth, expectedDate)
@@ -48,7 +48,7 @@ class RelativityTests: XCTestCase {
         
         let expectedDate = DateView(
             forDateComponents: DateComponents(year: 2015, month: 10, day: 31),
-            inCalendar: NSCalendar.Gregorian
+            inCalendar: NSCalendar.gregorian
         )
         
         XCTAssertEqual(date.beginningOfDay, expectedDate)
@@ -58,7 +58,7 @@ class RelativityTests: XCTestCase {
         
         let expectedDate = DateView(
             forDateComponents: DateComponents(year: 2015, month: 10, day: 31, hour: 23),
-            inCalendar: NSCalendar.Gregorian
+            inCalendar: NSCalendar.gregorian
         )
         
         XCTAssertEqual(date.beginningOfHour, expectedDate)
@@ -77,14 +77,14 @@ class RelativityTests: XCTestCase {
         
         let sameDayDate = DateView(
             forDateComponents: DateComponents(year: 2015, month: 10, day: 31, hour: 2),
-            inCalendar: NSCalendar.Gregorian
+            inCalendar: NSCalendar.gregorian
         )
         
         XCTAssertTrue(date.isSameDayAsDate(sameDayDate))
         
         let differentDayDate = DateView(
             forDateComponents: DateComponents(year: 2014, month: 10, day: 31, hour: 2),
-            inCalendar: NSCalendar.Gregorian
+            inCalendar: NSCalendar.gregorian
         )
         
         XCTAssertFalse(date.isSameDayAsDate(differentDayDate))

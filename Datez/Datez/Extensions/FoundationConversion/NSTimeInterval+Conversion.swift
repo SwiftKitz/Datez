@@ -23,7 +23,7 @@ public extension NSTimeInterval {
      */
     public var components: DateComponents {
         
-        return NSCalendar.Gregorian.components(
+        return NSCalendar.gregorian.components(
             NSCalendarUnit(rawValue: UInt.max),
             fromTimeInterval: self
         ).datez
