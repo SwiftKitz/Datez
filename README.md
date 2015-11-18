@@ -1,5 +1,5 @@
 
-# Datez
+# Datez :calendar:
 
 ![Version](https://img.shields.io/badge/version-prerelease-orange.svg)
 [![Travis CI](https://travis-ci.org/SwiftKitz/Datez.svg?branch=master)](https://travis-ci.org/SwiftKitz/Datez)
