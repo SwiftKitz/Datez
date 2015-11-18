@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		826088601BFBA8FB00E8EFB0 /* NSTimeIntervalConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260885F1BFBA8FB00E8EFB0 /* NSTimeIntervalConversionTests.swift */; };
 		82BCA8AE1BEF243200C1421E /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8AD1BEF243200C1421E /* Counting.swift */; };
 		82BCA8AF1BEF243200C1421E /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8AD1BEF243200C1421E /* Counting.swift */; };
 		82BCA8B01BEF243200C1421E /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8AD1BEF243200C1421E /* Counting.swift */; };
 		82BCA8B11BEF243200C1421E /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8AD1BEF243200C1421E /* Counting.swift */; };
 		82BD17D81BEF59800013D3DC /* CountingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BD17D71BEF59800013D3DC /* CountingTests.swift */; };
+		82D57CE61BEE740B0071C345 /* Datez.h in Headers */ = {isa = PBXBuildFile; fileRef = 82D57CE51BEE740B0071C345 /* Datez.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82D57CED1BEE740B0071C345 /* Datez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D57CE21BEE740B0071C345 /* Datez.framework */; };
 		82D57D281BEED6680071C345 /* DateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D1F1BEED6680071C345 /* DateComponents.swift */; };
 		82D57D291BEED6680071C345 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D201BEED6680071C345 /* DateView.swift */; };
@@ -29,6 +29,7 @@
 		82D57D421BEEECCD0071C345 /* NSDateComponents+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D411BEEECCD0071C345 /* NSDateComponents+Conversion.swift */; };
 		82D57D441BEEECF30071C345 /* NSTimeInterval+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D431BEEECF30071C345 /* NSTimeInterval+Conversion.swift */; };
 		82D57D461BEEED150071C345 /* NSCalendar+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D451BEEED150071C345 /* NSCalendar+Conversion.swift */; };
+		82D57D481BEEF5270071C345 /* NSTimeIntervalConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D471BEEF5270071C345 /* NSTimeIntervalConversionTests.swift */; };
 		82D57D541BEF01DF0071C345 /* NSTimeInterval+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D431BEEECF30071C345 /* NSTimeInterval+Conversion.swift */; };
 		82D57D551BEF01DF0071C345 /* DateComponents+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D261BEED6680071C345 /* DateComponents+Operators.swift */; };
 		82D57D561BEF01DF0071C345 /* NSCalendar+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D451BEEED150071C345 /* NSCalendar+Conversion.swift */; };
@@ -41,6 +42,7 @@
 		82D57D5D1BEF01DF0071C345 /* NSDate+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D3F1BEEECAF0071C345 /* NSDate+Conversion.swift */; };
 		82D57D5E1BEF01DF0071C345 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D331BEED99C0071C345 /* Duration.swift */; };
 		82D57D5F1BEF01DF0071C345 /* DateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D1F1BEED6680071C345 /* DateComponents.swift */; };
+		82D57D621BEF01DF0071C345 /* Datez.h in Headers */ = {isa = PBXBuildFile; fileRef = 82D57CE51BEE740B0071C345 /* Datez.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82D57D6B1BEF04250071C345 /* NSTimeInterval+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D431BEEECF30071C345 /* NSTimeInterval+Conversion.swift */; };
 		82D57D6C1BEF04250071C345 /* DateComponents+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D261BEED6680071C345 /* DateComponents+Operators.swift */; };
 		82D57D6D1BEF04250071C345 /* NSCalendar+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D451BEEED150071C345 /* NSCalendar+Conversion.swift */; };
@@ -53,6 +55,7 @@
 		82D57D741BEF04250071C345 /* NSDate+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D3F1BEEECAF0071C345 /* NSDate+Conversion.swift */; };
 		82D57D751BEF04250071C345 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D331BEED99C0071C345 /* Duration.swift */; };
 		82D57D761BEF04250071C345 /* DateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D1F1BEED6680071C345 /* DateComponents.swift */; };
+		82D57D791BEF04250071C345 /* Datez.h in Headers */ = {isa = PBXBuildFile; fileRef = 82D57CE51BEE740B0071C345 /* Datez.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82D57D821BEF05BC0071C345 /* NSTimeInterval+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D431BEEECF30071C345 /* NSTimeInterval+Conversion.swift */; };
 		82D57D831BEF05BC0071C345 /* DateComponents+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D261BEED6680071C345 /* DateComponents+Operators.swift */; };
 		82D57D841BEF05BC0071C345 /* NSCalendar+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D451BEEED150071C345 /* NSCalendar+Conversion.swift */; };
@@ -65,6 +68,7 @@
 		82D57D8B1BEF05BC0071C345 /* NSDate+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D3F1BEEECAF0071C345 /* NSDate+Conversion.swift */; };
 		82D57D8C1BEF05BC0071C345 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D331BEED99C0071C345 /* Duration.swift */; };
 		82D57D8D1BEF05BC0071C345 /* DateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D57D1F1BEED6680071C345 /* DateComponents.swift */; };
+		82D57D901BEF05BC0071C345 /* Datez.h in Headers */ = {isa = PBXBuildFile; fileRef = 82D57CE51BEE740B0071C345 /* Datez.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,10 +82,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8260885F1BFBA8FB00E8EFB0 /* NSTimeIntervalConversionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimeIntervalConversionTests.swift; sourceTree = "<group>"; };
 		82BCA8AD1BEF243200C1421E /* Counting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counting.swift; sourceTree = "<group>"; };
 		82BD17D71BEF59800013D3DC /* CountingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingTests.swift; sourceTree = "<group>"; };
 		82D57CE21BEE740B0071C345 /* Datez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Datez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82D57CE51BEE740B0071C345 /* Datez.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Datez.h; sourceTree = "<group>"; };
 		82D57CEC1BEE740B0071C345 /* DatezTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatezTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D57CF31BEE740B0071C345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82D57D1F1BEED6680071C345 /* DateComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateComponents.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		82D57D411BEEECCD0071C345 /* NSDateComponents+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateComponents+Conversion.swift"; sourceTree = "<group>"; };
 		82D57D431BEEECF30071C345 /* NSTimeInterval+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Conversion.swift"; sourceTree = "<group>"; };
 		82D57D451BEEED150071C345 /* NSCalendar+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCalendar+Conversion.swift"; sourceTree = "<group>"; };
+		82D57D471BEEF5270071C345 /* NSTimeIntervalConversionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimeIntervalConversionTests.swift; sourceTree = "<group>"; };
 		82D57D671BEF01DF0071C345 /* Datez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Datez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D57D7E1BEF04250071C345 /* Datez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Datez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D57D951BEF05BC0071C345 /* Datez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Datez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +180,7 @@
 				82D57D1E1BEED6680071C345 /* Entity */,
 				82D57D221BEED6680071C345 /* Extensions */,
 				82D57D251BEED6680071C345 /* Operators */,
+				82D57CE51BEE740B0071C345 /* Datez.h */,
 				82D57D971BEF06A60071C345 /* Support Files */,
 			);
 			path = Datez;
@@ -184,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				82D57D2F1BEED6BD0071C345 /* RelativityTests.swift */,
-				8260885F1BFBA8FB00E8EFB0 /* NSTimeIntervalConversionTests.swift */,
 				82BD17D71BEF59800013D3DC /* CountingTests.swift */,
 				82D57D371BEEE40F0071C345 /* DateComponentsOperatorsTests.swift */,
 				82D57D391BEEE7B60071C345 /* DateViewOperatorsTests.swift */,
@@ -218,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				82D57D261BEED6680071C345 /* DateComponents+Operators.swift */,
+				82D57D471BEEF5270071C345 /* NSTimeIntervalConversionTests.swift */,
 				82D57D271BEED6680071C345 /* DateView+Operators.swift */,
 				82D57D311BEED9050071C345 /* NSDate+Operators.swift */,
 			);
@@ -253,6 +259,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D57CE61BEE740B0071C345 /* Datez.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +267,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D57D621BEF01DF0071C345 /* Datez.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +275,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D57D791BEF04250071C345 /* Datez.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +283,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D57D901BEF05BC0071C345 /* Datez.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,8 +483,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				82BD17D81BEF59800013D3DC /* CountingTests.swift in Sources */,
+				82D57D481BEEF5270071C345 /* NSTimeIntervalConversionTests.swift in Sources */,
 				82D57D381BEEE40F0071C345 /* DateComponentsOperatorsTests.swift in Sources */,
-				826088601BFBA8FB00E8EFB0 /* NSTimeIntervalConversionTests.swift in Sources */,
 				82D57D3A1BEEE7B60071C345 /* DateViewOperatorsTests.swift in Sources */,
 				82D57D301BEED6BD0071C345 /* RelativityTests.swift in Sources */,
 			);
