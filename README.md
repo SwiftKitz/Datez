@@ -16,7 +16,7 @@ _Even though I shipped it with my app, I still need to invest the time to set th
   - __`DateView`__: An `NSDate` associated with an `NSCalendar`
   - __`DateComponents`__: Like `NSDateComponents`, but `NSCalendar` agnostic.
 
-+ __Absolutely _Zero_ Hardcode:__
++ __Absolutely _Zero_ Hardcode:__<br />
 Only hardcode now is to clear the date components, by setting the value to `0` or `1`, not nothing like `minutes = seconds * 60`.
 
 + __Modular Composition Design:__<br />
