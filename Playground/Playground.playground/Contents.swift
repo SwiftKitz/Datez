@@ -2,9 +2,10 @@
 import Foundation
 import Datez
 
+//: # Datez
+//: ### Compact dates library to get sh*t done!
 
 //: ## Features
-//:
 //: __Quickly and Expicility Access Date Components:__
 
 let someDate = NSDate()

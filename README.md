@@ -6,16 +6,19 @@
 ![Swift](https://img.shields.io/badge/swift-2.1-blue.svg)
 ![Platforms](https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20watchos%20%7C%20tvos-lightgrey.svg)
 
-Super small and compact dates library to get sh*t done!
+Compact dates library to get sh*t done!
 
 _Even though I shipped it with my app, I still need to invest the time to set this up, and finalize the API. Contributors welcome!_
 
 ## Highlights
 
-+ __Only two custom structs to worry about _(value types FTW!)_:__
++ __Two Custom Structs Only _(value types FTW!)_:__
   - __`DateView`__: An `NSDate` associated with an `NSCalendar`
   - __`DateComponents`__: Like `NSDateComponents`, but `NSCalendar` agnostic.
-  
+
++ __Absolutely _Zero_ Hardcode:__
+Only hardcode now is to clear the date components, by setting the value to `0` or `1`, not nothing like `minutes = seconds * 60`.
+
 + __Modular Composition Design:__<br />
 Only one way to achieve something, instead of copy pasting code everywhere, with tons of head scratching.
 
@@ -100,12 +103,10 @@ __Assuming the underlying `NSCalendar`__:<br />
 I needed to explicitly choose between Gregorian and IslamicCivil, so that is integrated. It can also easily be extended to add more calendars. PRs most welcome!
 
 __Wrong Date Calculation__:<br />
-Most frameworks I've seen make assumptions about the number of days in a month, or hard code the number of hours ... etc. __This library has absolutely _zero_ unnecessary<sup>[*]</sup> hard code.__
+Most frameworks I've seen make assumptions about the number of days in a month, or hardcode the number of hours ... etc. 
 
 __It Adheres to Kitz Quality__:<br />
 Kitz is a collection of super small, effecient, tested, maintained and high quality frameworks that I use for my own projects. Give you eyes a feast and take a look at the code. No file is more than 100 lines :bowtie:.
-
-<sup>[*]: Only hard code now is to clear the date components, by setting the calue to `0` or `1`.</sup>
 
 ## Author
 
