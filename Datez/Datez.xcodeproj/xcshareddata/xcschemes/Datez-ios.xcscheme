@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "82D57CEB1BEE740B0071C345"
-               BuildableName = "DatezTests.xctest"
-               BlueprintName = "DatezTests"
+               BuildableName = "DatezTests-ios.xctest"
+               BlueprintName = "DatezTests-ios"
                ReferencedContainer = "container:Datez.xcodeproj">
             </BuildableReference>
          </TestableReference>
