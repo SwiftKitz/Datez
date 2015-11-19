@@ -48,11 +48,14 @@ let compareResult = NSDate(timeIntervalSinceNow: 8.hours.timeInterval) < NSDate(
 //: This is marked as bonus since it's not ideal at all for precise calculation, but super useful when you just need some convenience. Examples would be setting expiration intervals and estimating components from `NSTimeInterval`
 
 // Easily access NSTimeInterval to construct durations
-let expirationInterval = 5.days.timeInterval
+let expirationInterval = 300.days.timeInterval
 
-// And convert back to date components
-let components = 300.days.timeInterval
-// components ~= DateComponents(month: 3)
+// Convert back to a single date component
+let months = expirationInterval.totalMonths // 9
+
+// Or multiple components
+let components = expirationInterval.components
+// components ≈ DateComponents(day: 6, month: 9)
 
 
 //: __[Bonus]: Counting__
