@@ -83,16 +83,6 @@ let components = expirationInterval.components
 // components ≈ DateComponents(day: 6, month: 9)
 ```
 
-__[Bonus]: Counting__<br />
-Returns the total number of a calendar component from a time interval.
-
-```swift
-// either this
-let totalDays = 50000.hours.timeInterval.totalDays
-// returns 2083
-```
-
-
 ## Motivation
 
 I am not one to ridicule Apple's frameworks. If the functionality we seek can be achieved through Apple's frameworks, it should be our first destination. This can mostly be seen in Alamofire, which is a great library that makes use of Apple's frameworks to their fullest. 
