@@ -57,11 +57,3 @@ let months = expirationInterval.totalMonths // 9
 let components = expirationInterval.components
 // components ≈ DateComponents(day: 6, month: 9)
 
-
-//: __[Bonus]: Counting__
-//:
-//: Returns the total number of a calendar component from a time interval.
-
-// either this
-let totalDays = 50000.hours.timeInterval.totalDays
-
