@@ -34,7 +34,17 @@ public extension Int {
     public var days: DateComponents {
         return DateComponents(day: self)
     }
-
+    
+    public var weekOfMonth: DateComponents { return weeksOfMonth }
+    public var weeksOfMonth: DateComponents {
+        return DateComponents(weekOfMonth: self)
+    }
+    
+    public var weekOfYear: DateComponents { return weeksOfYear }
+    public var weeksOfYear: DateComponents {
+        return DateComponents(weekOfYear: self)
+    }
+    
     public var month: DateComponents { return months }
     public var months: DateComponents {
         return DateComponents(month: self)

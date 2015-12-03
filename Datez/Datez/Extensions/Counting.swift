@@ -37,6 +37,14 @@ public extension NSTimeInterval {
     var totalDays: Int {
         return _components(.Day).day
     }
+
+    var totalWeeksOfMonth: Int {
+        return _components(.WeekOfMonth).weekOfMonth
+    }
+    
+    var totalWeeksOfYear: Int {
+        return _components(.WeekOfYear).weekOfYear
+    }
     
     var totalMonths: Int {
         return _components(.Month).month

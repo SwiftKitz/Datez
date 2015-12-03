@@ -13,6 +13,8 @@ public struct DateComponents {
     
     public var year = 0
     public var month = 0
+    public var weekOfYear = 0
+    public var weekOfMonth = 0
     public var day = 0
     public var hour = 0
     public var minute = 0
@@ -21,6 +23,8 @@ public struct DateComponents {
     public init(
         year: Int? = nil,
         month: Int? = nil,
+        weekOfYear: Int? = nil,
+        weekOfMonth: Int? = nil,
         day: Int? = nil,
         hour: Int? = nil,
         minute: Int? = nil,
@@ -30,6 +34,8 @@ public struct DateComponents {
         updateInPlace(
             year: year,
             month: month,
+            weekOfYear: weekOfYear,
+            weekOfMonth: weekOfMonth,
             day: day,
             hour: hour,
             minute: minute,
@@ -40,6 +46,8 @@ public struct DateComponents {
     public func update(
         year year: Int? = nil,
         month: Int? = nil,
+        weekOfYear: Int? = nil,
+        weekOfMonth: Int? = nil,
         day: Int? = nil,
         hour: Int? = nil,
         minute: Int? = nil,
@@ -50,6 +58,8 @@ public struct DateComponents {
         components.updateInPlace(
             year: year,
             month: month,
+            weekOfYear: weekOfYear,
+            weekOfMonth: weekOfMonth,
             day: day,
             hour: hour,
             minute: minute,
@@ -62,6 +72,8 @@ public struct DateComponents {
     public mutating func updateInPlace(
         year year: Int? = nil,
         month: Int? = nil,
+        weekOfYear: Int? = nil,
+        weekOfMonth: Int? = nil,
         day: Int? = nil,
         hour: Int? = nil,
         minute: Int? = nil,
@@ -69,6 +81,8 @@ public struct DateComponents {
     ) {
         self.year = year ?? self.year
         self.month = month ?? self.month
+        self.weekOfYear = weekOfYear ?? self.weekOfYear
+        self.weekOfMonth = weekOfMonth ?? self.weekOfMonth
         self.day = day ?? self.day
         self.hour = hour ?? self.hour
         self.minute = minute ?? self.minute

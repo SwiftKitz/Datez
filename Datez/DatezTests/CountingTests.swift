@@ -25,4 +25,20 @@ class CountingTests: XCTestCase {
         XCTAssertEqual(59.minutes.timeInterval.totalDays, 0)
         XCTAssertEqual((-10).days.timeInterval.totalDays, -10)
     }
+    
+    func testWeeksOfMonthCounting() {
+        
+        XCTAssertEqual(12.days.timeInterval.totalWeeksOfMonth, 1)
+        XCTAssertEqual(52300.days.timeInterval.totalWeeksOfMonth, 7471)
+        XCTAssertEqual(6.days.timeInterval.totalWeeksOfMonth, 0)
+        XCTAssertEqual((-10).weeksOfMonth.timeInterval.totalWeeksOfMonth, -10)
+    }
+    
+    func testWeeksOfYearCounting() {
+        
+        XCTAssertEqual(12.days.timeInterval.totalWeeksOfYear, 1)
+        XCTAssertEqual(52300.days.timeInterval.totalWeeksOfYear, 7471)
+        XCTAssertEqual(6.days.timeInterval.totalWeeksOfYear, 0)
+        XCTAssertEqual((-10).weeksOfYear.timeInterval.totalWeeksOfYear, -10)
+    }
 }

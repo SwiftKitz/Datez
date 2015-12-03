@@ -33,6 +33,8 @@ public extension DateComponents {
         let components = NSDateComponents()
         components.year = year
         components.month = month
+        components.weekOfYear = weekOfYear
+        components.weekOfMonth = weekOfMonth
         components.day = day
         components.hour = hour
         components.minute = minute
