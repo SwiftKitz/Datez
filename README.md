@@ -1,10 +1,16 @@
 
-# Datez :calendar:
+<h1 align="center">
+  Datez :calendar:
+</h1>
 
-![Version](https://img.shields.io/badge/version-prerelease-orange.svg)
-[![Travis CI](https://travis-ci.org/SwiftKitz/Datez.svg?branch=master)](https://travis-ci.org/SwiftKitz/Datez)
-![Swift](https://img.shields.io/badge/swift-2.1-blue.svg)
-![Platforms](https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20watchos%20%7C%20tvos-lightgrey.svg)
+<p align="center">
+  <img alt="Version" src="https://img.shields.io/badge/version-prerelease-orange.svg" />
+  <a alt="Travis CI" href="https://travis-ci.org/SwiftKitz/Datez">
+    <img alt="Version" src="https://travis-ci.org/SwiftKitz/Datez.svg?branch=master" />
+  </a>
+  <img alt="Swift" src="https://img.shields.io/badge/swift-2.1-blue.svg" />
+  <img alt="Platforms" src="https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20watchos%20%7C%20tvos-lightgrey.svg" />
+</p>
 
 Compact dates library to get sh*t done!
 
