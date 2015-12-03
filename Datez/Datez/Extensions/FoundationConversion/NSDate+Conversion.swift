@@ -9,6 +9,7 @@
 import Foundation
 
 
+/** `DateView` access from `NSDate` */
 public extension NSDate {
     
     public func dateView(calendar calendar: NSCalendar) -> DateView {

@@ -9,9 +9,7 @@
 import Foundation
 
 
-/**
-    This file contains various extensions to add "Duration" support. Duration
-    can be expressed in two different ways:
+/** This adds "Duration" support. Duration can be expressed as:
     - Calendar specific: 1.month, 3.years, ... etc.
     - Absolute time: expressed as NSTimeInterval seconds
 */

@@ -9,6 +9,9 @@
 import Foundation
 
 
+/** Convenient relative date modifiers, on `DateComponents` and
+    `DateView`.
+*/
 public extension DateComponents {
     
     public var beginningOfYear: DateComponents {

@@ -8,7 +8,9 @@
 
 import Foundation
 
-
+/** Convert back and forth between `NSDateComponents` and
+    `DateComponents`
+*/
 public extension NSDateComponents {
     
     public var datez: DateComponents {

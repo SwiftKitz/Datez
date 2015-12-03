@@ -9,12 +9,13 @@
 import Foundation
 
 
-/**
-    Counting is getting the total number of a certain calendar unit in an
-    NSTimeInterval instance
+/** Counting is getting the total number of a certain calendar unit in an
+    NSTimeInterval instance:
+ 
+    NSTimeInterval(234253).totalYears
+ 
     WARNING: assumes gregorian calendar
 */
-
 public extension NSTimeInterval {
     
     private func _components(unit: NSCalendarUnit) -> NSDateComponents {

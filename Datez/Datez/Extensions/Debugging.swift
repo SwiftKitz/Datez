@@ -9,10 +9,11 @@
 import Foundation
 
 
+/** Add pretty debug descriptions */
 extension DateComponents: CustomDebugStringConvertible {
     
     public var debugDescription: String {
-        return "\(day).\(month).\(year) \(hour):\(minute):\(second)"
+        return "\(year)-\(month)-\(day) \(hour):\(minute):\(second)"
     }
 }
 
