@@ -85,22 +85,17 @@ let components = expirationInterval.components
 
 ## Motivation
 
-I am not one to ridicule Apple's frameworks. If the functionality we seek can be achieved through Apple's frameworks, it should be our first destination. This can mostly be seen in Alamofire, which is a great library that makes use of Apple's frameworks to their fullest. 
+This framework doesn't reinvent anything Apple already built. Under the hood, it leverages the `NSDate`, `NSCalendar`, and `NSDateComponents` classes to do all the work. It simply tries to simplify the API for Swift developers. Period.
 
-All that to say, this framework doesn't reinvent anything at all. Under the hood, it leverages the `NSDate`, `NSCalendar`, and `NSDateComponents` classes to do all the work. It simply tried to simplify the API for Swift developers. Period.
-
-After experience what using a great Swift API feels like, by using RealmSwift and SwiftyJSON, I started to believe in the importance of a clean and concise Swift API, and its impact on our productivity and stress levels.
+After experiencing what using a great Swift API feels like, by using RealmSwift and SwiftyJSON, I started to believe in the importance of a clean and concise Swift API, and its impact on our productivity and stress levels.
 
 _What's wrong with other date libraries?_
 
 __Assuming the underlying `NSCalendar`__:<br />
-I needed to explicitly choose between Gregorian and IslamicCivil, so that is integrated. It can also easily be extended to add more calendars. PRs most welcome!
+I needed to explicitly choose between Gregorian and IslamicCivil, so that is integrated.
 
 __Wrong Date Calculation__:<br />
 Most frameworks I've seen make assumptions about the number of days in a month, or hardcode the number of hours ... etc. 
-
-__It Adheres to Kitz Quality__:<br />
-Kitz is a collection of super small, effecient, tested, maintained and high quality frameworks that I use for my own projects. Give you eyes a feast and take a look at the code. No file is more than 100 lines :bowtie:.
 
 ## Author
 
