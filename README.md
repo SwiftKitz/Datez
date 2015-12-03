@@ -1,6 +1,9 @@
 
 <h1 align="center">
   Datez :calendar:
+<h6 align="center">
+  Breeze through NSDate, NSDateComponents, and NSTimeInterval
+</h6>
 </h1>
 
 <p align="center">
@@ -11,8 +14,6 @@
   <img alt="Swift" src="https://img.shields.io/badge/swift-2.1-orange.svg" />
   <img alt="Platforms" src="https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20watchos%20%7C%20tvos-lightgrey.svg" />
 </p>
-
-Compact dates library to get sh*t done!
 
 ## Highlights
 
