@@ -13,7 +13,9 @@ import Foundation
 extension CalendarComponents: CustomDebugStringConvertible {
     
     public var debugDescription: String {
-        return "\(year)-\(month)-\(day) \(hour):\(minute):\(second)"
+        return String(format: "%04ld-%02ld-%02ld %02ld:%02ld:%02ld",
+            arguments: [year, month, day, hour, minute, second]
+        )
     }
 }
 
