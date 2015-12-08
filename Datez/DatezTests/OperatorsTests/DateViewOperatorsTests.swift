@@ -13,7 +13,7 @@ import XCTest
 class DateViewOperatorsTests: XCTestCase {
 
     let anyDate = DateView(
-        forDateComponents: DateComponents(
+        forCalendarComponents: CalendarComponents(
             year: 2013,
             month: 4,
             day: 12,
@@ -49,13 +49,13 @@ class DateViewOperatorsTests: XCTestCase {
         
         // DST switch date
         let dstSwitch = DateView(
-            forDateComponents: DateComponents(year: 2015, month: 11, day: 1),
+            forCalendarComponents: CalendarComponents(year: 2015, month: 11, day: 1),
             inCalendar: NSCalendar.gregorian
         )
         
         // 1 hour will be eated by spending 2 AM twice
         let expectedDate = DateView(
-            forDateComponents: DateComponents(year: 2015, month: 11, day: 1, hour: 2),
+            forCalendarComponents: CalendarComponents(year: 2015, month: 11, day: 1, hour: 2),
             inCalendar: NSCalendar.gregorian
         )
         
@@ -72,12 +72,12 @@ class DateViewOperatorsTests: XCTestCase {
         NSTimeZone.setDefaultTimeZone(timeZone)
         
         let preDst = DateView(
-            forDateComponents: DateComponents(year: 2015, month: 10, day: 29),
+            forCalendarComponents: CalendarComponents(year: 2015, month: 10, day: 29),
             inCalendar: NSCalendar.gregorian
         )
         
         let postDst = DateView(
-            forDateComponents: DateComponents(year: 2015, month: 11, day: 3),
+            forCalendarComponents: CalendarComponents(year: 2015, month: 11, day: 3),
             inCalendar: NSCalendar.gregorian
         )
         

@@ -1,5 +1,5 @@
 //
-//  DateComponentsOperatorsTests.swift
+//  CalendarComponentsOperatorsTests.swift
 //  Datez
 //
 //  Created by Mazyad Alabduljaleel on 11/7/15.
@@ -9,9 +9,9 @@
 import XCTest
 @testable import Datez
 
-class DateComponentsOperatorsTests: XCTestCase {
+class CalendarComponentsOperatorsTests: XCTestCase {
 
-    let anyComponents = DateComponents(
+    let anyComponents = CalendarComponents(
         month: 5,
         day: -4,
         hour: 3,
@@ -21,7 +21,7 @@ class DateComponentsOperatorsTests: XCTestCase {
 
     func testMinusPrefix() {
         
-        let expectedComps = DateComponents(
+        let expectedComps = CalendarComponents(
             month: -5,
             day: 4,
             hour: -3,

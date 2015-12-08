@@ -10,7 +10,7 @@ import Foundation
 
 
 /** Add pretty debug descriptions */
-extension DateComponents: CustomDebugStringConvertible {
+extension CalendarComponents: CustomDebugStringConvertible {
     
     public var debugDescription: String {
         return "\(year)-\(month)-\(day) \(hour):\(minute):\(second)"

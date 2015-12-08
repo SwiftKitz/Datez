@@ -1,5 +1,5 @@
 //
-//  DateComponents+Operators.swift
+//  CalendarComponents+Operators.swift
 //  Prayerz
 //
 //  Created by Mazyad Alabduljaleel on 11/7/15.
@@ -9,10 +9,10 @@
 import Foundation
 
 
-/** dateComponents with inverted sign */
+/** calendarComponents with inverted sign */
 prefix operator - {}
-public prefix func - (comps: DateComponents) -> DateComponents {
-    return DateComponents(
+public prefix func - (comps: CalendarComponents) -> CalendarComponents {
+    return CalendarComponents(
         year: -comps.year,
         month: -comps.month,
         day: -comps.day,
@@ -23,10 +23,10 @@ public prefix func - (comps: DateComponents) -> DateComponents {
 }
 
 
-extension DateComponents: Equatable {}
+extension CalendarComponents: Equatable {}
 
 /** conforming to Equatable */
-public func == (lhs: DateComponents, rhs: DateComponents) -> Bool {
+public func == (lhs: CalendarComponents, rhs: CalendarComponents) -> Bool {
     
     return lhs.year == rhs.year
         && lhs.month == rhs.month

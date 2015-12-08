@@ -9,11 +9,11 @@
 import Foundation
 
 
-/** new DateView by adding wallclock dateComponents */
-public func + (dateView: DateView, components: DateComponents) -> DateView {
+/** new DateView by adding wallclock calendarComponents */
+public func + (dateView: DateView, components: CalendarComponents) -> DateView {
     
     let newDate = dateView.calendar.dateByAddingComponents(
-        components.foundation,
+        components.dateComponents,
         toDate: dateView.date,
         options: []
     )!
@@ -21,8 +21,8 @@ public func + (dateView: DateView, components: DateComponents) -> DateView {
     return DateView(forDate: newDate, inCalendar: dateView.calendar)
 }
 
-/** dateView - dateComponents */
-public func - (dateView: DateView, components: DateComponents) -> DateView {
+/** dateView - calendarComponents */
+public func - (dateView: DateView, components: CalendarComponents) -> DateView {
     return dateView + (-components)
 }
 

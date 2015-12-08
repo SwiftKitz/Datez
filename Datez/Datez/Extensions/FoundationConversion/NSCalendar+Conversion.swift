@@ -17,7 +17,7 @@ extension NSCalendar {
         return components(
             units,
             fromDate: baseDate,
-            toDate: baseDate + round(timeInterval),
+            toDate: baseDate + timeInterval,
             options: []
         )
     }

@@ -22,7 +22,7 @@ class NSTimeIntervalConversionTests: XCTestCase {
     let ballparkAccuracy = 3.days.timeInterval
     
     
-    func testTimeIntervalFromDateComponents() {
+    func testTimeIntervalFromCalendarComponents() {
         
         XCTAssertEqualWithAccuracy(11.minute.timeInterval, 11 * 60.seconds.timeInterval, accuracy: highAccuracy)
         XCTAssertEqualWithAccuracy(20.hours.timeInterval, 20 * 60.minutes.timeInterval, accuracy: highAccuracy)
@@ -30,9 +30,9 @@ class NSTimeIntervalConversionTests: XCTestCase {
         XCTAssertEqualWithAccuracy(3.months.timeInterval, 3 * 31.days.timeInterval, accuracy: ballparkAccuracy)
     }
     
-    func testDateComponentsFromTimeInterval() {
+    func testCalendarComponentsFromTimeInterval() {
         
-        XCTAssertEqual(11.minute.timeInterval.components, DateComponents(minute: 11))
-        XCTAssertEqual(20.hours.timeInterval.components, DateComponents(hour: 20))
+        XCTAssertEqual(11.minute.timeInterval.components, CalendarComponents(minute: 11))
+        XCTAssertEqual(20.hours.timeInterval.components, CalendarComponents(hour: 20))
     }
 }

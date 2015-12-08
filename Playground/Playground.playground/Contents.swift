@@ -55,5 +55,5 @@ let months = expirationInterval.totalMonths // 9
 
 // Or multiple components
 let components = expirationInterval.components
-// components ≈ DateComponents(day: 6, month: 9)
+// components ≈ CalendarComponents(day: 6, month: 9)
 

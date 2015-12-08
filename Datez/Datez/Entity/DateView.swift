@@ -17,12 +17,12 @@ public struct DateView {
     public let date: NSDate
     public let calendar: NSCalendar
     
-    public var components: DateComponents {
+    public var components: CalendarComponents {
         
         return calendar.components(
             NSCalendarUnit(rawValue: UInt.max),
             fromDate: date
-        ).datez
+        ).calendarComponents
     }
     
     // MARK: - Init & Dealloc
@@ -33,10 +33,10 @@ public struct DateView {
         self.date = date
     }
     
-    public init(forDateComponents dateComponents: DateComponents, inCalendar calendar: NSCalendar) {
+    public init(forCalendarComponents calendarComponents: CalendarComponents, inCalendar calendar: NSCalendar) {
         
         self.init(
-            forDate: calendar.dateFromComponents(dateComponents.foundation)!,
+            forDate: calendar.dateFromComponents(calendarComponents.dateComponents)!,
             inCalendar: calendar
         )
     }
@@ -50,9 +50,9 @@ public struct DateView {
         hour: Int? = nil,
         minute: Int? = nil,
         second: Int? = nil
-        ) -> DateView
+    ) -> DateView
     {
         let comps = components.update(year: year, month: month, day: day, hour: hour, minute: minute, second: second)
-        return DateView(forDateComponents: comps, inCalendar: calendar)
+        return DateView(forCalendarComponents: comps, inCalendar: calendar)
     }
 }

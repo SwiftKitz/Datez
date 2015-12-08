@@ -1,5 +1,5 @@
 //
-//  DateComponents.swift
+//  CalendarComponents.swift
 //  Prayerz
 //
 //  Created by Mazyad Alabduljaleel on 9/16/15.
@@ -9,7 +9,7 @@
 import Foundation
 
 /** Calendar agnostic data structure to hold date components */
-public struct DateComponents {
+public struct CalendarComponents {
     
     public var year = 0
     public var month = 0
@@ -52,7 +52,7 @@ public struct DateComponents {
         hour: Int? = nil,
         minute: Int? = nil,
         second: Int? = nil
-    ) -> DateComponents {
+    ) -> CalendarComponents {
             
         var components = self
         components.updateInPlace(

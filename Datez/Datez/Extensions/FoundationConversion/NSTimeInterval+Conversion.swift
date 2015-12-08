@@ -18,21 +18,21 @@ import Foundation
 */
 public extension NSTimeInterval {
     
-    /** given 63.0, returns DateComponents(minute: 1, second: 3)
+    /** given 63.0, returns CalendarComponents(minute: 1, second: 3)
      WARNING: assumes gregorian calendar
      */
-    public var components: DateComponents {
+    public var components: CalendarComponents {
         
         return NSCalendar.gregorian.components(
             NSCalendarUnit(rawValue: UInt.max),
             fromTimeInterval: self
-        ).datez
+        ).calendarComponents
     }
 }
 
-public extension DateComponents {
+public extension CalendarComponents {
     
-    /** given DateComponents(minute: 1, second: 3), returns 63.0 */
+    /** given CalendarComponents(minute: 1, second: 3), returns 63.0 */
     public var timeInterval: NSTimeInterval {
         
         let baseDate = NSDate(timeIntervalSinceReferenceDate: 0)

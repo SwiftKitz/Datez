@@ -9,13 +9,13 @@
 import Foundation
 
 /** Convert back and forth between `NSDateComponents` and
-    `DateComponents`
+    `CalendarComponents`
 */
 public extension NSDateComponents {
     
-    public var datez: DateComponents {
+    public var calendarComponents: CalendarComponents {
         
-        return DateComponents(
+        return CalendarComponents(
             year: year == NSDateComponentUndefined ? 0 : year,
             month: month == NSDateComponentUndefined ? 0 : month,
             day: day == NSDateComponentUndefined ? 0 : day,
@@ -26,9 +26,9 @@ public extension NSDateComponents {
     }
 }
 
-public extension DateComponents {
+public extension CalendarComponents {
     
-    public var foundation: NSDateComponents {
+    public var dateComponents: NSDateComponents {
         
         let components = NSDateComponents()
         components.year = year

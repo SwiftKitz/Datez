@@ -9,24 +9,24 @@
 import Foundation
 
 
-/** Convenient relative date modifiers, on `DateComponents` and
+/** Convenient relative date modifiers, on `CalendarComponents` and
     `DateView`.
 */
-public extension DateComponents {
+public extension CalendarComponents {
     
-    public var beginningOfYear: DateComponents {
+    public var beginningOfYear: CalendarComponents {
         return update(month: 1, day: 1, hour: 0, minute: 0, second: 0)
     }
     
-    public var beginningOfMonth: DateComponents {
+    public var beginningOfMonth: CalendarComponents {
         return update(day: 1, hour: 0, minute: 0, second: 0)
     }
     
-    public var beginningOfDay: DateComponents {
+    public var beginningOfDay: CalendarComponents {
         return update(hour: 0, minute: 0, second: 0)
     }
     
-    public var beginningOfHour: DateComponents {
+    public var beginningOfHour: CalendarComponents {
         return update(minute: 0, second: 0)
     }
 }
@@ -36,28 +36,28 @@ public extension DateView {
     
     public var beginningOfYear: DateView {
         return DateView(
-            forDateComponents: components.beginningOfYear,
+            forCalendarComponents: components.beginningOfYear,
             inCalendar: calendar
         )
     }
     
     public var beginningOfMonth: DateView {
         return DateView(
-            forDateComponents: components.beginningOfMonth,
+            forCalendarComponents: components.beginningOfMonth,
             inCalendar: calendar
         )
     }
     
     public var beginningOfDay: DateView {
         return DateView(
-            forDateComponents: components.beginningOfDay,
+            forCalendarComponents: components.beginningOfDay,
             inCalendar: calendar
         )
     }
     
     public var beginningOfHour: DateView {
         return DateView(
-            forDateComponents: components.beginningOfHour,
+            forCalendarComponents: components.beginningOfHour,
             inCalendar: calendar
         )
     }
