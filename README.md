@@ -22,7 +22,7 @@
 
 + __Two Custom Structs Only _(value types FTW!)_:__
   - __`DateView`__: An `NSDate` associated with an `NSCalendar`
-  - __`DateComponents`__: Like `NSDateComponents`, but `NSCalendar` agnostic.
+  - __`CalendarComponents`__: Like `NSDateComponents`, but `NSCalendar` agnostic.
 
 + __Absolutely _Zero_ Hardcode:__<br />
 Only hardcode now is to clear the date components, by setting the value to `0` or `1`. Nothing like:<br />
@@ -88,7 +88,7 @@ let months = expirationInterval.totalMonths // 9
 
 // Or multiple components
 let components = expirationInterval.components
-// components ≈ DateComponents(day: 6, month: 9)
+// components ≈ CalendarComponents(day: 6, month: 9)
 ```
 
 ## Motivation
