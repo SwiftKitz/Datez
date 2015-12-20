@@ -91,6 +91,8 @@ let components = expirationInterval.components
 // components ≈ CalendarComponents(day: 6, month: 9)
 ```
 
+## Getting Started
+
 ### Carthage
 
 [Carthage][carthage-link] is fully supported. Simply add the following line to your [Cartfile][cartfile-docs]:
