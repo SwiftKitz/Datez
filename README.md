@@ -91,6 +91,29 @@ let components = expirationInterval.components
 // components ≈ CalendarComponents(day: 6, month: 9)
 ```
 
+### Carthage
+
+[Carthage][carthage-link] is fully supported. Simply add the following line to your [Cartfile][cartfile-docs]:
+
+```ruby
+github "SwiftKitz/Datez" ~> 1.0.0
+```
+
+### Cocoapods
+
+[Cocoapods][cocoapods-link] is fully supported. Simply add the following line to your [Podfile][podfile-docs]:
+
+```ruby
+pod 'Datez'
+```
+
+### Submodule
+
+For manual installation, you can grab the source directly or through git submodules, then simply:
+
++ Drop the `Datez.xcodeproj` file as a subproject (make sure `Copy resources` is __not__ enabled)
++ Navigate to your root project settings. Under "Embedded Binaries", click the "+" button and select the `Datez.framework`
+
 ## Motivation
 
 This framework doesn't reinvent anything Apple already built. Under the hood, it leverages the `NSDate`, `NSCalendar`, and `NSDateComponents` classes to do all the work. It simply tries to simplify the API for Swift developers. Period.
@@ -112,3 +135,9 @@ Mazyod ([@Mazyod](http://twitter.com/mazyod))
 ## License
 
 Datez is released under the MIT license. See LICENSE for details.
+
+
+[carthage-link]: https://github.com/Carthage/Carthage
+[cartfile-docs]: https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile
+[cocoapods-link]: https://cocoapods.org/
+[podfile-docs]: https://guides.cocoapods.org/syntax/podfile.html
