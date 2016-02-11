@@ -101,9 +101,9 @@ let components = expirationInterval.components
 github "SwiftKitz/Datez" ~> 1.0.0
 ```
 
-### Cocoapods
+### CocoaPods
 
-[Cocoapods][cocoapods-link] is fully supported. Simply add the following line to your [Podfile][podfile-docs]:
+[CocoaPods][cocoapods-link] is fully supported. Simply add the following line to your [Podfile][podfile-docs]:
 
 ```ruby
 pod 'Datez'
