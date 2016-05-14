@@ -116,6 +116,10 @@ For manual installation, you can grab the source directly or through git submodu
 + Drop the `Datez.xcodeproj` file as a subproject (make sure `Copy resources` is __not__ enabled)
 + Navigate to your root project settings. Under "Embedded Binaries", click the "+" button and select the `Datez.framework`
 
+### Video Tutorial
+
+This is a [video][video-link] tutorial on how to use Datez 📆.
+
 ## Motivation
 
 This framework doesn't reinvent anything Apple already built. Under the hood, it leverages the `NSDate`, `NSCalendar`, and `NSDateComponents` classes to do all the work. It simply tries to simplify the API for Swift developers. Period.
@@ -143,3 +147,4 @@ Datez is released under the MIT license. See LICENSE for details.
 [cartfile-docs]: https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile
 [cocoapods-link]: https://cocoapods.org/
 [podfile-docs]: https://guides.cocoapods.org/syntax/podfile.html
+[video-link]: https://youtu.be/d9d8-o3DZpo
