@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/Maryom/Datez/blob/master/Demo.gif" width="1790" height="350">
+  <img src="https://github.com/Maryom/Datez/blob/master/Demo.gif" style="width:1790;height:350">
 </p>
 
 ## Highlights
