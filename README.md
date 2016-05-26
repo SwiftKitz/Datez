@@ -18,6 +18,10 @@
   </a>
 </p>
 
+<p align="center">
+  <img src="https://github.com/Maryom/Datez/blob/master/Demo.gif" style="width:1790;height:350">
+</p>
+
 ## Highlights
 
 + __Two Custom Structs Only _(value types FTW!)_:__
@@ -115,6 +119,7 @@ For manual installation, you can grab the source directly or through git submodu
 
 + Drop the `Datez.xcodeproj` file as a subproject (make sure `Copy resources` is __not__ enabled)
 + Navigate to your root project settings. Under "Embedded Binaries", click the "+" button and select the `Datez.framework`
+
 
 ## Motivation
 
