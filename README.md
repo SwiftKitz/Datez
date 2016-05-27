@@ -18,6 +18,10 @@
   </a>
 </p>
 
+<p align="center">
+    ![](resources/Demo.gif)
+</p>
+
 ## Highlights
 
 + __Two Custom Structs Only _(value types FTW!)_:__
