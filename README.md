@@ -18,9 +18,7 @@
   </a>
 </p>
 
-<p align="center">
-    ![](resources/Demo.gif)
-</p>
+![](resources/Demo.gif)
 
 ## Highlights
 
