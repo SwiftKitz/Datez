@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540C96EB1D551EED0095B0B8 /* IntMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C96EA1D551EED0095B0B8 /* IntMonth.swift */; };
+		540C96EC1D551EED0095B0B8 /* IntMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C96EA1D551EED0095B0B8 /* IntMonth.swift */; };
+		540C96ED1D551EED0095B0B8 /* IntMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C96EA1D551EED0095B0B8 /* IntMonth.swift */; };
+		540C96EE1D551EED0095B0B8 /* IntMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C96EA1D551EED0095B0B8 /* IntMonth.swift */; };
+		540C96F01D551F200095B0B8 /* IntMonthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C96EF1D551F200095B0B8 /* IntMonthTests.swift */; };
+		540C96F11D551F200095B0B8 /* IntMonthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C96EF1D551F200095B0B8 /* IntMonthTests.swift */; };
+		540C96F21D551F200095B0B8 /* IntMonthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C96EF1D551F200095B0B8 /* IntMonthTests.swift */; };
 		8237A42E1C1770DA008DEA43 /* DurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8237A42D1C1770DA008DEA43 /* DurationTests.swift */; };
 		8237A42F1C1770DA008DEA43 /* DurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8237A42D1C1770DA008DEA43 /* DurationTests.swift */; };
 		8237A4301C1770DA008DEA43 /* DurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8237A42D1C1770DA008DEA43 /* DurationTests.swift */; };
@@ -128,6 +135,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		540C96EA1D551EED0095B0B8 /* IntMonth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntMonth.swift; sourceTree = "<group>"; };
+		540C96EF1D551F200095B0B8 /* IntMonthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntMonthTests.swift; sourceTree = "<group>"; };
 		8237A42D1C1770DA008DEA43 /* DurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationTests.swift; sourceTree = "<group>"; };
 		8237A4311C1770EA008DEA43 /* DebuggingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebuggingTests.swift; sourceTree = "<group>"; };
 		823F18641BF43A9D008DF5F8 /* DatezTests-tvos.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DatezTests-tvos.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -294,6 +303,7 @@
 				82BCA8AD1BEF243200C1421E /* Counting.swift */,
 				82D57D3C1BEEEB1A0071C345 /* Debugging.swift */,
 				82D57D331BEED99C0071C345 /* Duration.swift */,
+				540C96EA1D551EED0095B0B8 /* IntMonth.swift */,
 				82D57D241BEED6680071C345 /* Relativity.swift */,
 			);
 			path = Extensions;
@@ -338,6 +348,7 @@
 				82FD6C121C165E25004A62FA /* CountingTests.swift */,
 				8237A4311C1770EA008DEA43 /* DebuggingTests.swift */,
 				8237A42D1C1770DA008DEA43 /* DurationTests.swift */,
+				540C96EF1D551F200095B0B8 /* IntMonthTests.swift */,
 				82FD6C131C165E25004A62FA /* RelativityTests.swift */,
 			);
 			path = ExtensionTests;
@@ -531,7 +542,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = kitz;
 				TargetAttributes = {
 					823F18631BF43A9D008DF5F8 = {
@@ -630,6 +641,7 @@
 			files = (
 				82FD6C071C1656D9004A62FA /* NSTimeIntervalConversionTests.swift in Sources */,
 				82FD6C201C16603D004A62FA /* NSDateComponentsConversionTests.swift in Sources */,
+				540C96F11D551F200095B0B8 /* IntMonthTests.swift in Sources */,
 				8237A42F1C1770DA008DEA43 /* DurationTests.swift in Sources */,
 				828562531C16523B0030FF3B /* DateViewTests.swift in Sources */,
 				82FD6C151C165E25004A62FA /* CountingTests.swift in Sources */,
@@ -650,6 +662,7 @@
 			files = (
 				82FD6C081C1656D9004A62FA /* NSTimeIntervalConversionTests.swift in Sources */,
 				82FD6C211C16603D004A62FA /* NSDateComponentsConversionTests.swift in Sources */,
+				540C96F21D551F200095B0B8 /* IntMonthTests.swift in Sources */,
 				8237A4301C1770DA008DEA43 /* DurationTests.swift in Sources */,
 				828562541C16523B0030FF3B /* DateViewTests.swift in Sources */,
 				82FD6C161C165E25004A62FA /* CountingTests.swift in Sources */,
@@ -672,6 +685,7 @@
 				82D57D2D1BEED6680071C345 /* CalendarComponents+Operators.swift in Sources */,
 				82D57D461BEEED150071C345 /* NSCalendar+Conversion.swift in Sources */,
 				82D57D421BEEECCD0071C345 /* NSDateComponents+Conversion.swift in Sources */,
+				540C96EB1D551EED0095B0B8 /* IntMonth.swift in Sources */,
 				82D57D3D1BEEEB1A0071C345 /* Debugging.swift in Sources */,
 				82D57D321BEED9050071C345 /* NSDate+Operators.swift in Sources */,
 				82D57D2C1BEED6680071C345 /* Relativity.swift in Sources */,
@@ -690,6 +704,7 @@
 			files = (
 				82FD6C061C1656D9004A62FA /* NSTimeIntervalConversionTests.swift in Sources */,
 				82FD6C1F1C16603D004A62FA /* NSDateComponentsConversionTests.swift in Sources */,
+				540C96F01D551F200095B0B8 /* IntMonthTests.swift in Sources */,
 				8237A42E1C1770DA008DEA43 /* DurationTests.swift in Sources */,
 				828562521C16523A0030FF3B /* DateViewTests.swift in Sources */,
 				82FD6C141C165E25004A62FA /* CountingTests.swift in Sources */,
@@ -712,6 +727,7 @@
 				82D57D551BEF01DF0071C345 /* CalendarComponents+Operators.swift in Sources */,
 				82D57D561BEF01DF0071C345 /* NSCalendar+Conversion.swift in Sources */,
 				82D57D571BEF01DF0071C345 /* NSDateComponents+Conversion.swift in Sources */,
+				540C96EC1D551EED0095B0B8 /* IntMonth.swift in Sources */,
 				82D57D581BEF01DF0071C345 /* Debugging.swift in Sources */,
 				82D57D591BEF01DF0071C345 /* NSDate+Operators.swift in Sources */,
 				82D57D5A1BEF01DF0071C345 /* Relativity.swift in Sources */,
@@ -732,6 +748,7 @@
 				82D57D6C1BEF04250071C345 /* CalendarComponents+Operators.swift in Sources */,
 				82D57D6D1BEF04250071C345 /* NSCalendar+Conversion.swift in Sources */,
 				82D57D6E1BEF04250071C345 /* NSDateComponents+Conversion.swift in Sources */,
+				540C96ED1D551EED0095B0B8 /* IntMonth.swift in Sources */,
 				82D57D6F1BEF04250071C345 /* Debugging.swift in Sources */,
 				82D57D701BEF04250071C345 /* NSDate+Operators.swift in Sources */,
 				82D57D711BEF04250071C345 /* Relativity.swift in Sources */,
@@ -752,6 +769,7 @@
 				82D57D831BEF05BC0071C345 /* CalendarComponents+Operators.swift in Sources */,
 				82D57D841BEF05BC0071C345 /* NSCalendar+Conversion.swift in Sources */,
 				82D57D851BEF05BC0071C345 /* NSDateComponents+Conversion.swift in Sources */,
+				540C96EE1D551EED0095B0B8 /* IntMonth.swift in Sources */,
 				82D57D861BEF05BC0071C345 /* Debugging.swift in Sources */,
 				82D57D871BEF05BC0071C345 /* NSDate+Operators.swift in Sources */,
 				82D57D881BEF05BC0071C345 /* Relativity.swift in Sources */,
@@ -1024,6 +1042,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1041,6 +1060,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
