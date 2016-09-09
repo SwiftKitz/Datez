@@ -11,32 +11,27 @@ import Foundation
 
 extension NSCalendar {
     
-    func components(units: NSCalendarUnit, fromTimeInterval timeInterval: NSTimeInterval) -> NSDateComponents {
+    func components(_ units: NSCalendar.Unit, fromTimeInterval timeInterval: TimeInterval) -> DateComponents {
         
-        let baseDate = NSDate(timeIntervalSinceReferenceDate: 0)
-        return components(
-            units,
-            fromDate: baseDate,
-            toDate: baseDate + timeInterval,
-            options: []
-        )
+        let baseDate = Date(timeIntervalSinceReferenceDate: 0)
+        return components(units, from: baseDate, to: baseDate + timeInterval, options: [])
     }
 }
 
 extension NSCalendar {
     
-    static var gregorian: NSCalendar            { return NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)! }
-    static var buddhist: NSCalendar             { return NSCalendar(calendarIdentifier: NSCalendarIdentifierBuddhist)! }
-    static var chinese: NSCalendar              { return NSCalendar(calendarIdentifier: NSCalendarIdentifierChinese)! }
-    static var coptic: NSCalendar               { return NSCalendar(calendarIdentifier: NSCalendarIdentifierCoptic)! }
-    static var ethiopicAmeteMihret: NSCalendar  { return NSCalendar(calendarIdentifier: NSCalendarIdentifierEthiopicAmeteMihret)! }
-    static var ethiopicAmeteAlem: NSCalendar    { return NSCalendar(calendarIdentifier: NSCalendarIdentifierEthiopicAmeteAlem)! }
-    static var hebrew: NSCalendar               { return NSCalendar(calendarIdentifier: NSCalendarIdentifierHebrew)! }
-    static var ISO8601: NSCalendar              { return NSCalendar(calendarIdentifier: NSCalendarIdentifierISO8601)! }
-    static var indian: NSCalendar               { return NSCalendar(calendarIdentifier: NSCalendarIdentifierIndian)! }
-    static var islamic: NSCalendar              { return NSCalendar(calendarIdentifier: NSCalendarIdentifierIslamic)! }
-    static var islamicCivil: NSCalendar         { return NSCalendar(calendarIdentifier: NSCalendarIdentifierIslamicCivil)! }
-    static var japanese: NSCalendar             { return NSCalendar(calendarIdentifier: NSCalendarIdentifierJapanese)! }
-    static var persian: NSCalendar              { return NSCalendar(calendarIdentifier: NSCalendarIdentifierPersian)! }
-    static var republicOfChina: NSCalendar      { return NSCalendar(calendarIdentifier: NSCalendarIdentifierRepublicOfChina)! }
+    static var gregorian: NSCalendar            { return NSCalendar(identifier: NSCalendar.Identifier.gregorian)! }
+    static var buddhist: NSCalendar             { return NSCalendar(identifier: NSCalendar.Identifier.buddhist)! }
+    static var chinese: NSCalendar              { return NSCalendar(identifier: NSCalendar.Identifier.chinese)! }
+    static var coptic: NSCalendar               { return NSCalendar(identifier: NSCalendar.Identifier.coptic)! }
+    static var ethiopicAmeteMihret: NSCalendar  { return NSCalendar(identifier: NSCalendar.Identifier.ethiopicAmeteMihret)! }
+    static var ethiopicAmeteAlem: NSCalendar    { return NSCalendar(identifier: NSCalendar.Identifier.ethiopicAmeteAlem)! }
+    static var hebrew: NSCalendar               { return NSCalendar(identifier: NSCalendar.Identifier.hebrew)! }
+    static var ISO8601: NSCalendar              { return NSCalendar(identifier: NSCalendar.Identifier.ISO8601)! }
+    static var indian: NSCalendar               { return NSCalendar(identifier: NSCalendar.Identifier.indian)! }
+    static var islamic: NSCalendar              { return NSCalendar(identifier: NSCalendar.Identifier.islamic)! }
+    static var islamicCivil: NSCalendar         { return NSCalendar(identifier: NSCalendar.Identifier.islamicCivil)! }
+    static var japanese: NSCalendar             { return NSCalendar(identifier: NSCalendar.Identifier.japanese)! }
+    static var persian: NSCalendar              { return NSCalendar(identifier: NSCalendar.Identifier.persian)! }
+    static var republicOfChina: NSCalendar      { return NSCalendar(identifier: NSCalendar.Identifier.republicOfChina)! }
 }

@@ -45,7 +45,7 @@ class DateViewOperatorsTests: XCTestCase {
         
         // DST affected time zone
         let timeZone = NSTimeZone(name: "America/Los_Angeles")!
-        NSTimeZone.setDefaultTimeZone(timeZone)
+        NSTimeZone.default = timeZone as TimeZone
         
         // DST switch date
         let dstSwitch = DateView(
@@ -62,14 +62,14 @@ class DateViewOperatorsTests: XCTestCase {
         let dstOffset = dstSwitch + 3.hours
         XCTAssertEqual(dstOffset, expectedDate)
         
-        NSTimeZone.setDefaultTimeZone(NSTimeZone.systemTimeZone())
+        NSTimeZone.default = TimeZone.current
     }
     
     func testDateViewOffsetCrossingDSTDay() {
         
         // DST affected time zone
         let timeZone = NSTimeZone(name: "America/Los_Angeles")!
-        NSTimeZone.setDefaultTimeZone(timeZone)
+        NSTimeZone.default = timeZone as TimeZone
         
         let preDst = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 10, day: 29),
@@ -82,10 +82,10 @@ class DateViewOperatorsTests: XCTestCase {
         )
         
         // DST compatibile timeZone
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.calendar = NSCalendar.gregorian
-        dateFormatter.dateStyle = .ShortStyle
-        dateFormatter.timeStyle = .ShortStyle
+        let dateFormatter = DateFormatter()
+        dateFormatter.calendar = NSCalendar.gregorian as Calendar!
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
         
         let crossDstForward = preDst + 121.hours
         XCTAssertEqual(crossDstForward, postDst)
@@ -93,6 +93,6 @@ class DateViewOperatorsTests: XCTestCase {
         let crossDstBackwards = postDst - 121.hours
         XCTAssertEqual(crossDstBackwards, preDst)
         
-        NSTimeZone.setDefaultTimeZone(NSTimeZone.systemTimeZone())
+        NSTimeZone.default = TimeZone.current
     }
 }

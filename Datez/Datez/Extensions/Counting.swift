@@ -16,9 +16,9 @@ import Foundation
  
     WARNING: assumes gregorian calendar
 */
-public extension NSTimeInterval {
+public extension TimeInterval {
     
-    private func _components(unit: NSCalendarUnit) -> NSDateComponents {
+    fileprivate func _components(_ unit: NSCalendar.Unit) -> DateComponents {
         return NSCalendar.gregorian.components(unit, fromTimeInterval: self)
     }
     
@@ -27,30 +27,30 @@ public extension NSTimeInterval {
     }
     
     var totalMinutes: Int {
-        return _components(.Minute).minute
+        return _components(.minute).minute ?? 0
     }
     
     var totalHours: Int {
-        return _components(.Hour).hour
+        return _components(.hour).hour ?? 0
     }
     
     var totalDays: Int {
-        return _components(.Day).day
+        return _components(.day).day ?? 0
     }
 
     var totalWeeksOfMonth: Int {
-        return _components(.WeekOfMonth).weekOfMonth
+        return _components(.weekOfMonth).weekOfMonth ?? 0
     }
     
     var totalWeeksOfYear: Int {
-        return _components(.WeekOfYear).weekOfYear
+        return _components(.weekOfYear).weekOfYear ?? 0
     }
     
     var totalMonths: Int {
-        return _components(.Month).month
+        return _components(.month).month ?? 0
     }
     
     var totalYears: Int {
-        return _components(.Year).year
+        return _components(.year).year ?? 0
     }
 }

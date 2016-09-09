@@ -66,7 +66,7 @@ class RelativityTests: XCTestCase {
     
     func testIsToday() {
         
-        let todayDate = NSDate().gregorian
+        let todayDate = Date().gregorian
         XCTAssertTrue(todayDate.isToday)
         
         let differentDayDate = todayDate.update(year: 2014)

@@ -14,7 +14,7 @@ class DateViewTests: XCTestCase {
     
     func testInitForDateInCalendar() {
 
-        let date = NSDate(timeIntervalSinceReferenceDate: 180)
+        let date = Date(timeIntervalSinceReferenceDate: 180)
         let dateView = DateView(forDate: date, inCalendar: NSCalendar.gregorian)
         
         XCTAssertEqual(dateView.date, date)
@@ -33,7 +33,7 @@ class DateViewTests: XCTestCase {
     func testUpdate() {
         
         let components = CalendarComponents(year: 1, month: 2, day: 3, hour: 4, minute: 5, second: 6)
-        let dateView = NSDate().gregorian.update(year: 1, month: 2, day: 3, hour: 4, minute: 5, second: 6)
+        let dateView = Date().gregorian.update(year: 1, month: 2, day: 3, hour: 4, minute: 5, second: 6)
         
         XCTAssertEqual(dateView.components, components)
     }

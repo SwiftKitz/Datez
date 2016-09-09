@@ -14,20 +14,19 @@ public struct DateView {
     
     // MARK: - Properties
     
-    public let date: NSDate
+    public let date: Date
     public let calendar: NSCalendar
     
     public var components: CalendarComponents {
-        
         return calendar.components(
-            NSCalendarUnit(rawValue: UInt.max),
-            fromDate: date
+            NSCalendar.Unit(rawValue: UInt.max),
+            from: date
         ).calendarComponents
     }
     
     // MARK: - Init & Dealloc
     
-    public init(forDate date: NSDate, inCalendar calendar: NSCalendar) {
+    public init(forDate date: Date, inCalendar calendar: NSCalendar) {
         
         self.calendar = calendar
         self.date = date
@@ -36,7 +35,7 @@ public struct DateView {
     public init(forCalendarComponents calendarComponents: CalendarComponents, inCalendar calendar: NSCalendar) {
         
         self.init(
-            forDate: calendar.dateFromComponents(calendarComponents.dateComponents)!,
+            forDate: calendar.date(from: calendarComponents.dateComponents as DateComponents)!,
             inCalendar: calendar
         )
     }
@@ -44,7 +43,7 @@ public struct DateView {
     // MARK: - Public methods
     
     public func update(
-        year year: Int? = nil,
+        year: Int? = nil,
         month: Int? = nil,
         day: Int? = nil,
         hour: Int? = nil,

@@ -16,7 +16,7 @@ class NSDateComponentsConversionTests: XCTestCase {
         
         let calendarComponents = CalendarComponents(year: 1, month: 2, weekOfYear: 3, weekOfMonth: 4, day: 5, hour: 6, minute: 7, second: 8)
         let dateComponents = calendarComponents.dateComponents
-        let expectedDateComponents = NSDateComponents()
+        var expectedDateComponents = DateComponents()
         expectedDateComponents.year = 1
         expectedDateComponents.month = 2
         expectedDateComponents.weekOfYear = 3
@@ -31,7 +31,7 @@ class NSDateComponentsConversionTests: XCTestCase {
     
     func testDateComponentsToCalendarComponentsConversion() {
         
-        let dateComponents = NSDateComponents()
+        var dateComponents = DateComponents()
         dateComponents.year = 1
         dateComponents.month = 2
         dateComponents.weekOfYear = 3
@@ -48,7 +48,7 @@ class NSDateComponentsConversionTests: XCTestCase {
     
     func testDateComponentstoCalendarComponentsConversionWithUndefinedComponents() {
         
-        let dateComponents = NSDateComponents()
+        var dateComponents = DateComponents()
         dateComponents.year = NSDateComponentUndefined
         dateComponents.month = NSDateComponentUndefined
         dateComponents.weekOfYear = NSDateComponentUndefined

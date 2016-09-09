@@ -14,7 +14,7 @@ class NSDateConversionTests: XCTestCase {
 
     func testDateView() {
         
-        let date = NSDate(timeIntervalSinceReferenceDate: 90000)
+        let date = Date(timeIntervalSinceReferenceDate: 90000)
         let dateView = date.dateView(calendar: NSCalendar.chinese)
         
         XCTAssertEqual(dateView, DateView(forDate: date, inCalendar: NSCalendar.chinese))
@@ -22,9 +22,9 @@ class NSDateConversionTests: XCTestCase {
     
     func testCalendars() {
         
-        let date = NSDate(timeIntervalSinceReferenceDate: 90000)
+        let date = Date(timeIntervalSinceReferenceDate: 90000)
         
-        XCTAssertEqual(date.currentCalendar, date.dateView(calendar: NSCalendar.currentCalendar()))
+        XCTAssertEqual(date.currentCalendar, date.dateView(calendar: NSCalendar.current as NSCalendar))
         XCTAssertEqual(date.gregorian, date.dateView(calendar: NSCalendar.gregorian))
         XCTAssertEqual(date.buddhist, date.dateView(calendar: NSCalendar.buddhist))
         XCTAssertEqual(date.chinese, date.dateView(calendar: NSCalendar.chinese))

@@ -44,7 +44,7 @@ public struct CalendarComponents {
     }
     
     public func update(
-        year year: Int? = nil,
+        year: Int? = nil,
         month: Int? = nil,
         weekOfYear: Int? = nil,
         weekOfMonth: Int? = nil,
@@ -70,7 +70,7 @@ public struct CalendarComponents {
     }
     
     public mutating func updateInPlace(
-        year year: Int? = nil,
+        year: Int? = nil,
         month: Int? = nil,
         weekOfYear: Int? = nil,
         weekOfMonth: Int? = nil,

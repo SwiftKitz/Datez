@@ -16,7 +16,7 @@ import Foundation
     + declaring a cache expiration interval
     + estimating the number of hours, or minutes in NSTimeInterval
 */
-public extension NSTimeInterval {
+public extension TimeInterval {
     
     /** given 63.0, returns CalendarComponents(minute: 1, second: 3)
      WARNING: assumes gregorian calendar
@@ -24,7 +24,7 @@ public extension NSTimeInterval {
     public var components: CalendarComponents {
         
         return NSCalendar.gregorian.components(
-            NSCalendarUnit(rawValue: UInt.max),
+            NSCalendar.Unit(rawValue: UInt.max),
             fromTimeInterval: self
         ).calendarComponents
     }
@@ -33,9 +33,9 @@ public extension NSTimeInterval {
 public extension CalendarComponents {
     
     /** given CalendarComponents(minute: 1, second: 3), returns 63.0 */
-    public var timeInterval: NSTimeInterval {
+    public var timeInterval: TimeInterval {
         
-        let baseDate = NSDate(timeIntervalSinceReferenceDate: 0)
+        let baseDate = Date(timeIntervalSinceReferenceDate: 0)
         let dateView = baseDate.gregorian + self
         return dateView.date - baseDate
     }

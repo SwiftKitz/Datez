@@ -10,18 +10,18 @@ import Foundation
 
 
 /** `DateView` access from `NSDate` */
-public extension NSDate {
+public extension Date {
     
-    public func dateView(calendar calendar: NSCalendar) -> DateView {
+    public func dateView(calendar: NSCalendar) -> DateView {
         
         return DateView(
-            forDate: self,
+            forDate: self as Date,
             inCalendar: calendar
         )
     }
     
     public var currentCalendar: DateView {
-        return dateView(calendar: NSCalendar.currentCalendar())
+        return dateView(calendar: NSCalendar.current as NSCalendar)
     }
     
     public var gregorian: DateView              { return dateView(calendar: NSCalendar.gregorian) }

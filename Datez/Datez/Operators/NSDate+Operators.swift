@@ -9,16 +9,9 @@
 import Foundation
 
 /** simple shorthand for dateByAddingTimeInterval */
-public func + (lhs: NSDate, rhs: NSTimeInterval) -> NSDate {
-    return lhs.dateByAddingTimeInterval(rhs)
-}
+
 
 /** simple shorthand for timeIntervalSinceDat */
-public func - (lhs: NSDate, rhs: NSDate) -> NSTimeInterval {
-    return lhs.timeIntervalSinceDate(rhs)
-}
-
-/** simple shorthand for comparing dates */
-public func < (lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) == .OrderedAscending
+public func - (lhs: Date, rhs: Date) -> TimeInterval {
+    return lhs.timeIntervalSince(rhs)
 }

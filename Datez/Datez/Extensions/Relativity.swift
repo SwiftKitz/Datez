@@ -63,10 +63,10 @@ public extension DateView {
     }
     
     var isToday: Bool {
-        return isSameDayAsDate(NSDate().dateView(calendar: calendar))
+        return isSameDayAsDate(Date().dateView(calendar: calendar))
     }
     
-    func isSameDayAsDate(date: DateView) -> Bool {
+    func isSameDayAsDate(_ date: DateView) -> Bool {
         
         let argDate = date.update(hour: 0, minute: 0, second: 0)
         let selfDate = update(hour: 0, minute: 0, second: 0)

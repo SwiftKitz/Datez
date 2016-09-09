@@ -11,7 +11,7 @@ import Foundation
 /** Convert back and forth between `NSDateComponents` and
     `CalendarComponents`
 */
-public extension NSDateComponents {
+public extension DateComponents {
     
     public var calendarComponents: CalendarComponents {
         
@@ -28,9 +28,9 @@ public extension NSDateComponents {
 
 public extension CalendarComponents {
     
-    public var dateComponents: NSDateComponents {
+    public var dateComponents: DateComponents {
         
-        let components = NSDateComponents()
+        var components = DateComponents()
         components.year = year
         components.month = month
         components.weekOfYear = weekOfYear
