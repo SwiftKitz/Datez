@@ -2,7 +2,7 @@
 <h1 align="center">
   Datez :calendar:
 <h6 align="center">
-  Breeze through NSDate, NSDateComponents, and NSTimeInterval
+  Breeze through Date, DateComponents, and TimeInterval
 </h6>
 </h1>
 
@@ -23,8 +23,8 @@
 ## Highlights
 
 + __Two Custom Structs Only _(value types FTW!)_:__
-  - __`DateView`__: An `NSDate` associated with an `NSCalendar`
-  - __`CalendarComponents`__: Like `NSDateComponents`, but `NSCalendar` agnostic.
+  - __`DateView`__: An `Date` associated with an `Calendar`
+  - __`CalendarComponents`__: Like `DateComponents`, but `Calendar` agnostic.
 
 + __Absolutely _Zero_ Hardcode:__<br />
 Only hardcode now is to clear the date components, by setting the value to `0` or `1`. Nothing like:<br />
@@ -40,7 +40,7 @@ You can try them in the playground shipped with the framework!
 __Quickly and Explicitly Access Date Components:__
 
 ```swift
-let someDate = NSDate()
+let someDate = Date()
 let currentCalendar = someDate.currentCalendar.components.year
 let gregorianDay = someDate.gregorian.components.day
 let hijriMonth = someDate.islamicCivil.components.month
@@ -49,7 +49,7 @@ let hijriMonth = someDate.islamicCivil.components.month
 __Easy and Concise Date Manipulation:__
 
 ```swift
-let date = NSDate()
+let date = Date()
 let gregorianDate = date.gregorian
 
 // Adding components
@@ -65,24 +65,24 @@ let firstThingTomorrowButIn1984 = firstThingTomorrow.update(year: 1984)
 let newDate = firstThingTomorrowButIn1984.date
 ```
 
-__Convenient NSDate Operators:__
+__Convenient Date Operators:__
 
 ```swift
 // Just calling timeIntervalSinceDate
-let difference = NSDate(timeIntervalSinceNow: 5.minutes.timeInterval) - NSDate()
+let difference = Date(timeIntervalSinceNow: 5.minutes.timeInterval) - Date()
 
 // Just calling dateByAddingTimeInterval
-let afterFiftyHours = NSDate() + 50.hours.timeInterval
+let afterFiftyHours = Date() + 50.hours.timeInterval
 
 // Just calling compare:
-let compareResult = NSDate(timeIntervalSinceNow: 8.hours.timeInterval) < NSDate()
+let compareResult = Date(timeIntervalSinceNow: 8.hours.timeInterval) < Date()
 ```
 
 __[Bonus]: Durations__<br />
-This is marked as bonus since it's not ideal at all for precise calculation, but super useful when you just need some convenience. Examples would be setting expiration intervals and estimating components from `NSTimeInterval`
+This is marked as bonus since it's not ideal at all for precise calculation, but super useful when you just need some convenience. Examples would be setting expiration intervals and estimating components from `TimeInterval`
 
 ```swift
-// Easily access NSTimeInterval to construct durations
+// Easily access TimeInterval to construct durations
 let expirationInterval = 300.days.timeInterval
 
 // Convert back to a single date component
@@ -122,13 +122,13 @@ For manual installation, you can grab the source directly or through git submodu
 
 ## Motivation
 
-This framework doesn't reinvent anything Apple already built. Under the hood, it leverages the `NSDate`, `NSCalendar`, and `NSDateComponents` classes to do all the work. It simply tries to simplify the API for Swift developers. Period.
+This framework doesn't reinvent anything Apple already built. Under the hood, it leverages the `Date`, `Calendar`, and `DateComponents` classes to do all the work. It simply tries to simplify the API for Swift developers. Period.
 
 After experiencing what using a great Swift API feels like, by using RealmSwift and SwiftyJSON, I started to believe in the importance of a clean and concise Swift API, and its impact on our productivity and stress levels.
 
 _What's wrong with other date libraries?_
 
-__Assuming the underlying `NSCalendar`__:<br />
+__Assuming the underlying `Calendar`__:<br />
 I needed to explicitly choose between Gregorian and IslamicCivil, so that is integrated.
 
 __Wrong Date Calculation__:<br />
