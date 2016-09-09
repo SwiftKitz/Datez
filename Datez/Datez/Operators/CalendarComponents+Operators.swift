@@ -10,7 +10,7 @@ import Foundation
 
 
 /** calendarComponents with inverted sign */
-prefix operator - {}
+prefix operator -
 public prefix func - (comps: CalendarComponents) -> CalendarComponents {
     return CalendarComponents(
         year: -comps.year,

@@ -7,11 +7,11 @@
 </h1>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg" />
+  <img alt="Version" src="https://img.shields.io/badge/version-2.0.0-blue.svg" />
   <a alt="Travis CI" href="https://travis-ci.org/SwiftKitz/Datez">
     <img alt="Version" src="https://travis-ci.org/SwiftKitz/Datez.svg?branch=master" />
   </a>
-  <img alt="Swift" src="https://img.shields.io/badge/swift-2.1-orange.svg" />
+  <img alt="Swift" src="https://img.shields.io/badge/swift-3.0-orange.svg" />
   <img alt="Platforms" src="https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20watchos%20%7C%20tvos-lightgrey.svg" />
   <a alt="Carthage Compatible" href="https://github.com/SwiftKitz/Datez#carthage">
     <img alt="Carthage" src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" />
@@ -95,12 +95,14 @@ let components = expirationInterval.components
 
 ## Getting Started
 
+**IMPORTANT:** Kitz repos fully embrace Swift 3.0 and all the changes it brought. You should use `v1.0.0` if your still using Swift 2.x.
+
 ### Carthage
 
 [Carthage][carthage-link] is fully supported. Simply add the following line to your [Cartfile][cartfile-docs]:
 
 ```ruby
-github "SwiftKitz/Datez" ~> 1.0.0
+github "SwiftKitz/Datez" ~> 2.0.0
 ```
 
 ### CocoaPods
