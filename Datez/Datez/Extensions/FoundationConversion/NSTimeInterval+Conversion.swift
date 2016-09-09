@@ -23,8 +23,8 @@ public extension TimeInterval {
      */
     public var components: CalendarComponents {
         
-        return NSCalendar.gregorian.components(
-            NSCalendar.Unit(rawValue: UInt.max),
+        return Calendar.gregorian.components(
+            Calendar.Component.all,
             fromTimeInterval: self
         ).calendarComponents
     }

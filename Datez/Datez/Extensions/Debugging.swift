@@ -22,6 +22,6 @@ extension CalendarComponents: CustomDebugStringConvertible {
 extension DateView: CustomDebugStringConvertible {
     
     public var debugDescription: String {
-        return "\(components), \(calendar.calendarIdentifier)"
+        return "\(components), \(calendar.identifier)"
     }
 }

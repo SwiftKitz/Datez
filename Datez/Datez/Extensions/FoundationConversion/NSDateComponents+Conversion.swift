@@ -16,12 +16,14 @@ public extension DateComponents {
     public var calendarComponents: CalendarComponents {
         
         return CalendarComponents(
-            year: year == NSDateComponentUndefined ? 0 : year,
-            month: month == NSDateComponentUndefined ? 0 : month,
-            day: day == NSDateComponentUndefined ? 0 : day,
-            hour: hour == NSDateComponentUndefined ? 0 : hour,
-            minute: minute == NSDateComponentUndefined ? 0 : minute,
-            second: second == NSDateComponentUndefined ? 0 : second
+            year: year,
+            month: month,
+            weekOfYear: weekOfYear,
+            weekOfMonth: weekOfMonth,
+            day: day,
+            hour: hour,
+            minute: minute,
+            second: second
         )
     }
 }

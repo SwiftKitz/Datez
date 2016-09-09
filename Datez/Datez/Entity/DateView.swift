@@ -15,24 +15,24 @@ public struct DateView {
     // MARK: - Properties
     
     public let date: Date
-    public let calendar: NSCalendar
+    public let calendar: Calendar
     
     public var components: CalendarComponents {
-        return calendar.components(
-            NSCalendar.Unit(rawValue: UInt.max),
+        return calendar.dateComponents(
+            Calendar.Component.all,
             from: date
         ).calendarComponents
     }
     
     // MARK: - Init & Dealloc
     
-    public init(forDate date: Date, inCalendar calendar: NSCalendar) {
+    public init(forDate date: Date, inCalendar calendar: Calendar) {
         
         self.calendar = calendar
         self.date = date
     }
     
-    public init(forCalendarComponents calendarComponents: CalendarComponents, inCalendar calendar: NSCalendar) {
+    public init(forCalendarComponents calendarComponents: CalendarComponents, inCalendar calendar: Calendar) {
         
         self.init(
             forDate: calendar.date(from: calendarComponents.dateComponents as DateComponents)!,

@@ -16,7 +16,7 @@ class NSCalendarConversionTests: XCTestCase {
         
         let timeInterval = 8.days.timeInterval + 9.months.timeInterval
         
-        let calendar = NSCalendar.gregorian
+        let calendar = Calendar.gregorian
         let baseDate = Date(timeIntervalSinceReferenceDate: 0)
         
         let components = (calendar as NSCalendar).components(

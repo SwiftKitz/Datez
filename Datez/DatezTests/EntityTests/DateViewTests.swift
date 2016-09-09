@@ -15,19 +15,19 @@ class DateViewTests: XCTestCase {
     func testInitForDateInCalendar() {
 
         let date = Date(timeIntervalSinceReferenceDate: 180)
-        let dateView = DateView(forDate: date, inCalendar: NSCalendar.gregorian)
+        let dateView = DateView(forDate: date, inCalendar: Calendar.gregorian)
         
         XCTAssertEqual(dateView.date, date)
-        XCTAssertEqual(dateView.calendar, NSCalendar.gregorian)
+        XCTAssertEqual(dateView.calendar, Calendar.gregorian)
     }
     
     func testInitForCalendarComponentsInCalendar() {
         
         let components = CalendarComponents(year: 1990, month: 1, day: 7, hour: 3, minute: 44, second: 42)
-        let dateView = DateView(forCalendarComponents: components, inCalendar: NSCalendar.gregorian)
+        let dateView = DateView(forCalendarComponents: components, inCalendar: Calendar.gregorian)
         
         XCTAssertEqual(dateView.components, components)
-        XCTAssertEqual(dateView.calendar, NSCalendar.gregorian)
+        XCTAssertEqual(dateView.calendar, Calendar.gregorian)
     }
     
     func testUpdate() {

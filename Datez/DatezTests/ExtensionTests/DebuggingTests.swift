@@ -21,6 +21,6 @@ class DebuggingTests: XCTestCase {
     func testDateViewDebugDescription() {
         
         let dateView = Date(timeIntervalSinceReferenceDate: 8.years.timeInterval).gregorian
-        XCTAssertEqual("\(dateView)", "\(dateView.components), \(dateView.calendar.calendarIdentifier)")
+        XCTAssertEqual("\(dateView)", "\(dateView.components), \(dateView.calendar.identifier)")
     }
 }

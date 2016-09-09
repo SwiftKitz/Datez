@@ -18,8 +18,8 @@ import Foundation
 */
 public extension TimeInterval {
     
-    fileprivate func _components(_ unit: NSCalendar.Unit) -> DateComponents {
-        return NSCalendar.gregorian.components(unit, fromTimeInterval: self)
+    fileprivate func _components(_ unit: Calendar.Component) -> DateComponents {
+        return Calendar.gregorian.components([unit], fromTimeInterval: self)
     }
     
     var totalSeconds: Int {
