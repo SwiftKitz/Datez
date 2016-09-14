@@ -19,7 +19,7 @@ let hijriMonth = someDate.islamicCivil.components.month
 let date = Date()
 let gregorianDate = date.gregorian
 
-// Adding components
+// Adding components 
 let tomorrow = gregorianDate + 1.day
 
 // Relative accessors
