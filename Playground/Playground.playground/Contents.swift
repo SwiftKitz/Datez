@@ -8,7 +8,7 @@ import Datez
 //: ## Features
 //: __Quickly and Expicility Access Date Components:__
 
-let someDate = NSDate()
+let someDate = Date()
 let currentCalendar = someDate.currentCalendar.components.year
 let gregorianDay = someDate.gregorian.components.day
 let hijriMonth = someDate.islamicCivil.components.month
@@ -16,10 +16,10 @@ let hijriMonth = someDate.islamicCivil.components.month
 
 //: __Easy and Concise Date Manipulation:__
 
-let date = NSDate()
+let date = Date()
 let gregorianDate = date.gregorian
 
-// Adding components
+// Adding components 
 let tomorrow = gregorianDate + 1.day
 
 // Relative accessors
@@ -35,13 +35,13 @@ let newDate = firstThingTomorrowButIn1984.date
 //: __Convenient NSDate Operators:__
 
 // Just calling timeIntervalSinceDate
-let difference = NSDate(timeIntervalSinceNow: 5.minutes.timeInterval) - NSDate()
+let difference = Date(timeIntervalSinceNow: 5.minutes.timeInterval) - Date()
 
 // Just calling dateByAddingTimeInterval
-let afterFiftyHours = NSDate() + 50.hours.timeInterval
+let afterFiftyHours = Date() + 50.hours.timeInterval
 
 // Just calling compare:
-let compareResult = NSDate(timeIntervalSinceNow: 8.hours.timeInterval) < NSDate()
+let compareResult = Date(timeIntervalSinceNow: 8.hours.timeInterval) < Date()
 
 //: __[Bonus]: Durations__
 //:
