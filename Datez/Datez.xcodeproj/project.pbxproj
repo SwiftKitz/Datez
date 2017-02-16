@@ -549,6 +549,9 @@
 						CreatedOnToolsVersion = 7.1;
 						LastSwiftMigration = 0800;
 					};
+					82D57D521BEF01DF0071C345 = {
+						LastSwiftMigration = 0810;
+					};
 					82D57D691BEF04250071C345 = {
 						LastSwiftMigration = 0800;
 					};
@@ -1015,6 +1018,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.Datez;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1034,6 +1038,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.Datez;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
