@@ -1015,6 +1015,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.Datez;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Debug;
 		};
@@ -1034,6 +1035,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.Datez;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Release;
 		};
@@ -1087,6 +1089,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.Datez;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
 		};
@@ -1106,6 +1109,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.Datez;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
 		};
