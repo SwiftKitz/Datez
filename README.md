@@ -18,7 +18,6 @@
   </a>
 </p>
 
-![](resources/Demo.gif)
 
 ## Highlights
 
