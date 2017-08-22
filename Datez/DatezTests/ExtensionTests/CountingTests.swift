@@ -60,7 +60,7 @@ class CountingTests: XCTestCase {
     func testMonthsCounting() {
         // it is not predictable whether a month is 28, 29, 30, or 31 days
         // as stated in the readme, this should be used for ballpark numbers
-        XCTAssertEqualWithAccuracy(Double(2920.days.timeInterval.totalMonths), 95, accuracy: 1.0)
+        XCTAssertEqual(Double(2920.days.timeInterval.totalMonths), 95, accuracy: 1.0)
 
         XCTAssertEqual(32.days.timeInterval.totalMonths, 1)
         XCTAssertEqual(27.days.timeInterval.totalMonths, 0)
