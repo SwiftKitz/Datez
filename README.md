@@ -16,9 +16,8 @@
   <a alt="Carthage Compatible" href="https://github.com/SwiftKitz/Datez#carthage">
     <img alt="Carthage" src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" />
   </a>
+  <img src="resources/Demo.gif">
 </p>
-
-![](resources/Demo.gif)
 
 ## Highlights
 
