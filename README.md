@@ -18,7 +18,7 @@
   </a>
 </p>
 
-![](resources/Demo.gif)
+![](resources/Demo.gif?style=centerme)
 
 ## Highlights
 
