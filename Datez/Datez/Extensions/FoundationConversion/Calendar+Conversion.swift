@@ -1,5 +1,5 @@
 //
-//  NSCalendar+Conversion.swift
+//  Calendar+Conversion.swift
 //  Datez
 //
 //  Created by Mazyad Alabduljaleel on 11/7/15.

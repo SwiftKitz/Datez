@@ -1,5 +1,5 @@
 //
-//  NSDateComponents+Conversion.swift
+//  DateComponents+Conversion.swift
 //  Datez
 //
 //  Created by Mazyad Alabduljaleel on 11/7/15.

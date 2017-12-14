@@ -8,7 +8,7 @@
 
 import Foundation
 
-/** Calendar agnostic data structure to hold date components */
+/** Calendar/TimeZone agnostic data structure to hold date components */
 public struct CalendarComponents {
     
     public var year = 0
