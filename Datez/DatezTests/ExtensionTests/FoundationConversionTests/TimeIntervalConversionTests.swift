@@ -1,5 +1,5 @@
 //
-//  NSTimeIntervalConversionTests.swift
+//  TimeIntervalConversionTests.swift
 //  Datez
 //
 //  Created by Mazyad Alabduljaleel on 11/7/15.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import Datez
 
-class NSTimeIntervalConversionTests: XCTestCase {
+class TimeIntervalConversionTests: XCTestCase {
 
     // Must be exact to the second
     let highAccuracy = 0.1

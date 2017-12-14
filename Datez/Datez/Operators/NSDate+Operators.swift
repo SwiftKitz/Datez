@@ -1,5 +1,5 @@
 //
-//  NSDate+Operators.swift
+//  Date+Operators.swift
 //  Datez
 //
 //  Created by Mazyad Alabduljaleel on 11/7/15.

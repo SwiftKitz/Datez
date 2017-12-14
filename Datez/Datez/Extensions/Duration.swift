@@ -11,7 +11,7 @@ import Foundation
 
 /** This adds "Duration" support. Duration can be expressed as:
     - Calendar specific: 1.month, 3.years, ... etc.
-    - Absolute time: expressed as NSTimeInterval seconds
+    - Absolute time: expressed as TimeInterval seconds
 */
 public extension Int {
     

@@ -1,5 +1,5 @@
 //
-//  NSCalendarConversionTests.swift
+//  CalendarConversionTests.swift
 //  Datez
 //
 //  Created by Mazyad Alabduljaleel on 12/7/15.
@@ -10,7 +10,7 @@ import XCTest
 @testable import Datez
 
 
-class NSCalendarConversionTests: XCTestCase {
+class CalendarConversionTests: XCTestCase {
     
     func testComponentsFromTimeInterval() {
         
@@ -19,11 +19,10 @@ class NSCalendarConversionTests: XCTestCase {
         let calendar = Calendar.gregorian
         let baseDate = Date(timeIntervalSinceReferenceDate: 0)
         
-        let components = (calendar as NSCalendar).components(
+        let components = calendar.dateComponents(
             [.month, .day],
             from: baseDate,
-            to: baseDate + timeInterval,
-            options: []
+            to: baseDate + timeInterval
         )
         
         XCTAssertEqual(components.day, 8)

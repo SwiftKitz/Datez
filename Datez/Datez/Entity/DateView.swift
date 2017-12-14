@@ -9,7 +9,7 @@
 import Foundation
 
 
-/** A date associated with an `NSCalendar` */
+/** A date associated with an `Calendar` */
 public struct DateView {
     
     // MARK: - Properties

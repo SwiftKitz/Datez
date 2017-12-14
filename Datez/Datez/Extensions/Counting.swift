@@ -10,15 +10,15 @@ import Foundation
 
 
 /** Counting is getting the total number of a certain calendar unit in an
-    NSTimeInterval instance:
+    TimeInterval instance:
  
-    NSTimeInterval(234253).totalYears
+    TimeInterval(234253).totalYears
  
     WARNING: assumes gregorian calendar
 */
 public extension TimeInterval {
     
-    fileprivate func _components(_ unit: Calendar.Component) -> DateComponents {
+    private func _components(_ unit: Calendar.Component) -> DateComponents {
         return Calendar.gregorian.components([unit], fromTimeInterval: self)
     }
     

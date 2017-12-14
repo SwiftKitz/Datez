@@ -1,5 +1,5 @@
 //
-//  NSDateConversionTests.swift
+//  DateConversionTests.swift
 //  Datez
 //
 //  Created by Mazyad Alabduljaleel on 12/7/15.
@@ -10,7 +10,7 @@ import XCTest
 @testable import Datez
 
 
-class NSDateConversionTests: XCTestCase {
+class DateConversionTests: XCTestCase {
 
     func testDateView() {
         

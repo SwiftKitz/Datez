@@ -1,5 +1,5 @@
 //
-//  NSDateOperatorsTests.swift
+//  DateOperatorsTests.swift
 //  Datez
 //
 //  Created by Mazyad Alabduljaleel on 12/8/15.
@@ -10,7 +10,7 @@ import XCTest
 import Datez
 
 
-class NSDateOperatorsTests: XCTestCase {
+class DateOperatorsTests: XCTestCase {
     
     func testSubtractingDates() {
                 

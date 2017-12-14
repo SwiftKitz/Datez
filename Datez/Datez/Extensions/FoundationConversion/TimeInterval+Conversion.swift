@@ -14,7 +14,7 @@ import Foundation
     
     e.g.
     + declaring a cache expiration interval
-    + estimating the number of hours, or minutes in NSTimeInterval
+    + estimating the number of hours, or minutes in TimeInterval
 */
 public extension TimeInterval {
     

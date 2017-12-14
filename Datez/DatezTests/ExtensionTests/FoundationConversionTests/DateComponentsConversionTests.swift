@@ -1,5 +1,5 @@
 //
-//  NSDateComponentsConversionTests.swift
+//  DateComponentsConversionTests.swift
 //  Datez
 //
 //  Created by Mazyad Alabduljaleel on 12/7/15.
@@ -10,11 +10,19 @@ import XCTest
 @testable import Datez
 
 
-class NSDateComponentsConversionTests: XCTestCase {
+class DateComponentsConversionTests: XCTestCase {
 
     func testCalendarComponentsToDateComponentsConversion() {
         
-        let calendarComponents = CalendarComponents(year: 1, month: 2, weekOfYear: 3, weekOfMonth: 4, day: 5, hour: 6, minute: 7, second: 8)
+        let calendarComponents = CalendarComponents(year: 1,
+                                                    month: 2,
+                                                    weekOfYear: 3,
+                                                    weekOfMonth: 4,
+                                                    day: 5,
+                                                    hour: 6,
+                                                    minute: 7,
+                                                    second: 8)
+        
         let dateComponents = calendarComponents.dateComponents
         var expectedDateComponents = DateComponents()
         expectedDateComponents.year = 1
@@ -41,13 +49,20 @@ class NSDateComponentsConversionTests: XCTestCase {
         dateComponents.minute = 7
         dateComponents.second = 8
         
-        let expectedComponents = CalendarComponents(year: 1, month: 2, weekOfYear: 3, weekOfMonth: 4, day: 5, hour: 6, minute: 7, second: 8)
+        let expectedComponents = CalendarComponents(year: 1,
+                                                    month: 2,
+                                                    weekOfYear: 3,
+                                                    weekOfMonth: 4,
+                                                    day: 5,
+                                                    hour: 6,
+                                                    minute: 7,
+                                                    second: 8)
         
         XCTAssertEqual(dateComponents.calendarComponents, expectedComponents)
     }
     
     func testDateComponentstoCalendarComponentsConversionWithUndefinedComponents() {
-        
+        // this works because `NSDateComponentUndefined` is too large to fit in an Int (-_-")
         var dateComponents = DateComponents()
         dateComponents.year = NSDateComponentUndefined
         dateComponents.month = NSDateComponentUndefined

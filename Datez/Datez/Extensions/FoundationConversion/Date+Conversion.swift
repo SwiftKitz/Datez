@@ -9,7 +9,7 @@
 import Foundation
 
 
-/** `DateView` access from `NSDate` */
+/** `DateView` access from `Date` */
 public extension Date {
     
     public func dateView(calendar: Calendar) -> DateView {

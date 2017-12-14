@@ -8,7 +8,7 @@
 
 import Foundation
 
-/** Convert back and forth between `NSDateComponents` and
+/** Convert back and forth between `DateComponents` and
     `CalendarComponents`
 */
 public extension DateComponents {
