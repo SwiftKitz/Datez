@@ -44,8 +44,8 @@ class DateViewOperatorsTests: XCTestCase {
     func testDateViewOffsetOnDSTDay() {
         
         // DST affected time zone
-        let timeZone = NSTimeZone(name: "America/Los_Angeles")!
-        NSTimeZone.default = timeZone as TimeZone
+        let timeZone = TimeZone(identifier: "America/Los_Angeles")!
+        NSTimeZone.default = timeZone
         
         // DST switch date
         let dstSwitch = DateView(
@@ -53,7 +53,7 @@ class DateViewOperatorsTests: XCTestCase {
             inCalendar: Calendar.gregorian
         )
         
-        // 1 hour will be eated by spending 2 AM twice
+        // 1 hour will be eaten by spending 2 AM twice
         let expectedDate = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 11, day: 1, hour: 2),
             inCalendar: Calendar.gregorian
@@ -68,8 +68,8 @@ class DateViewOperatorsTests: XCTestCase {
     func testDateViewOffsetCrossingDSTDay() {
         
         // DST affected time zone
-        let timeZone = NSTimeZone(name: "America/Los_Angeles")!
-        NSTimeZone.default = timeZone as TimeZone
+        let timeZone = TimeZone(identifier: "America/Los_Angeles")!
+        NSTimeZone.default = timeZone
         
         let preDst = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 10, day: 29),

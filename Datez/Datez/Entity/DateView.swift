@@ -35,7 +35,7 @@ public struct DateView {
     public init(forCalendarComponents calendarComponents: CalendarComponents, inCalendar calendar: Calendar) {
         
         self.init(
-            forDate: calendar.date(from: calendarComponents.dateComponents as DateComponents)!,
+            forDate: calendar.date(from: calendarComponents.dateComponents)!,
             inCalendar: calendar
         )
     }

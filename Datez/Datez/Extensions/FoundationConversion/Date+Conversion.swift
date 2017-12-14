@@ -15,7 +15,7 @@ public extension Date {
     public func dateView(calendar: Calendar) -> DateView {
         
         return DateView(
-            forDate: self as Date,
+            forDate: self,
             inCalendar: calendar
         )
     }
