@@ -94,7 +94,7 @@ let components = expirationInterval.components
 
 ## Getting Started
 
-**IMPORTANT:** Kitz repos fully embrace Swift 4.0 and all the changes it brought. You should use `v1.0.0` if you're still using Swift 2.x.
+**IMPORTANT:** Kitz repos fully embrace Swift 4.0 and all the changes it brought. You should use [v1.0.0][v1.0.0-link] if you're still using Swift 2.x.
 
 ### Carthage
 
@@ -146,3 +146,4 @@ Datez is released under the MIT license. See LICENSE for details.
 [cartfile-docs]: https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile
 [cocoapods-link]: https://cocoapods.org/
 [podfile-docs]: https://guides.cocoapods.org/syntax/podfile.html
+[v1.0.0-link]: https://github.com/SwiftKitz/Datez/releases/tag/v1.0.0
