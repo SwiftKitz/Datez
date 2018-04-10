@@ -11,7 +11,7 @@
   <a alt="Travis CI" href="https://travis-ci.org/SwiftKitz/Datez">
     <img alt="Version" src="https://travis-ci.org/SwiftKitz/Datez.svg?branch=master" />
   </a>
-  <img alt="Swift" src="https://img.shields.io/badge/swift-4.0-orange.svg" />
+  <img alt="Swift" src="https://img.shields.io/badge/swift-4.1-orange.svg" />
   <img alt="Platforms" src="https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20watchos%20%7C%20tvos-lightgrey.svg" />
   <a alt="Carthage Compatible" href="https://github.com/SwiftKitz/Datez#carthage">
     <img alt="Carthage" src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" />
@@ -93,8 +93,6 @@ let components = expirationInterval.components
 ```
 
 ## Getting Started
-
-**IMPORTANT:** Kitz repos fully embrace Swift 4.0 and all the changes it brought. You should use `v1.0.0` if you're still using Swift 2.x.
 
 ### Carthage
 
