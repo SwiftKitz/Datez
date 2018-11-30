@@ -29,6 +29,10 @@ public extension CalendarComponents {
     public var beginningOfHour: CalendarComponents {
         return update(minute: 0, second: 0)
     }
+
+    public var beginningOfMinute: CalendarComponents {
+        return update(second: 0)
+    }
 }
 
 
@@ -61,7 +65,21 @@ public extension DateView {
             inCalendar: calendar
         )
     }
-    
+
+    public var beginningOfMinute: DateView {
+        return DateView(
+            forCalendarComponents: components.beginningOfMinute,
+            inCalendar: calendar
+        )
+    }
+
+    public var beginningOfSecond: DateView {
+        return DateView(
+            forCalendarComponents: components,
+            inCalendar: calendar
+        )
+    }
+
     var isToday: Bool {
         return isSameDayAsDate(Date().dateView(calendar: calendar))
     }
