@@ -10,7 +10,7 @@ import Foundation
 
 
 /** A date associated with an `Calendar` */
-public struct DateView {
+public struct DateView: Equatable {
     
     // MARK: - Properties
     

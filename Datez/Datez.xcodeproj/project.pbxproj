@@ -13,6 +13,13 @@
 		8237A4321C1770EA008DEA43 /* DebuggingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8237A4311C1770EA008DEA43 /* DebuggingTests.swift */; };
 		8237A4331C1770EA008DEA43 /* DebuggingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8237A4311C1770EA008DEA43 /* DebuggingTests.swift */; };
 		8237A4341C1770EA008DEA43 /* DebuggingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8237A4311C1770EA008DEA43 /* DebuggingTests.swift */; };
+		82385CD121B10AA3002DCFD1 /* DiscreteTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385CD021B10AA3002DCFD1 /* DiscreteTimer.swift */; };
+		82385CD221B10AA3002DCFD1 /* DiscreteTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385CD021B10AA3002DCFD1 /* DiscreteTimer.swift */; };
+		82385CD321B10AA3002DCFD1 /* DiscreteTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385CD021B10AA3002DCFD1 /* DiscreteTimer.swift */; };
+		82385CD421B10AA3002DCFD1 /* DiscreteTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385CD021B10AA3002DCFD1 /* DiscreteTimer.swift */; };
+		82385CD721B11814002DCFD1 /* DiscreteTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385CD621B11814002DCFD1 /* DiscreteTimerTests.swift */; };
+		82385CD821B11814002DCFD1 /* DiscreteTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385CD621B11814002DCFD1 /* DiscreteTimerTests.swift */; };
+		82385CD921B11814002DCFD1 /* DiscreteTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385CD621B11814002DCFD1 /* DiscreteTimerTests.swift */; };
 		823F18691BF43A9D008DF5F8 /* Datez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D57D951BEF05BC0071C345 /* Datez.framework */; };
 		823F18781BF43AB7008DF5F8 /* Datez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D57D7E1BEF04250071C345 /* Datez.framework */; };
 		828562521C16523A0030FF3B /* DateViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285624D1C164F7B0030FF3B /* DateViewTests.swift */; };
@@ -130,6 +137,8 @@
 /* Begin PBXFileReference section */
 		8237A42D1C1770DA008DEA43 /* DurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationTests.swift; sourceTree = "<group>"; };
 		8237A4311C1770EA008DEA43 /* DebuggingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebuggingTests.swift; sourceTree = "<group>"; };
+		82385CD021B10AA3002DCFD1 /* DiscreteTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscreteTimer.swift; sourceTree = "<group>"; };
+		82385CD621B11814002DCFD1 /* DiscreteTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscreteTimerTests.swift; sourceTree = "<group>"; };
 		823F18641BF43A9D008DF5F8 /* DatezTests-tvos.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DatezTests-tvos.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		823F18731BF43AB6008DF5F8 /* DatezTests-osx.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DatezTests-osx.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		828562481C164F710030FF3B /* CalendarComponentsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarComponentsTests.swift; sourceTree = "<group>"; };
@@ -224,6 +233,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82385CCF21B10A85002DCFD1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				82385CD021B10AA3002DCFD1 /* DiscreteTimer.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		82385CD521B117F6002DCFD1 /* ServicesTests */ = {
+			isa = PBXGroup;
+			children = (
+				82385CD621B11814002DCFD1 /* DiscreteTimerTests.swift */,
+			);
+			path = ServicesTests;
+			sourceTree = "<group>";
+		};
 		828562471C164F280030FF3B /* EntityTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +287,7 @@
 				82D57D1E1BEED6680071C345 /* Entity */,
 				82D57D221BEED6680071C345 /* Extensions */,
 				82D57D251BEED6680071C345 /* Operators */,
+				82385CCF21B10A85002DCFD1 /* Services */,
 				82D57D971BEF06A60071C345 /* Support Files */,
 			);
 			path = Datez;
@@ -270,6 +296,7 @@
 		82D57CF01BEE740B0071C345 /* DatezTests */ = {
 			isa = PBXGroup;
 			children = (
+				82385CD521B117F6002DCFD1 /* ServicesTests */,
 				828562471C164F280030FF3B /* EntityTests */,
 				82FD6C031C16563B004A62FA /* ExtensionTests */,
 				82FD6C091C1656E6004A62FA /* OperatorsTests */,
@@ -634,6 +661,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82385CD821B11814002DCFD1 /* DiscreteTimerTests.swift in Sources */,
 				82FD6C071C1656D9004A62FA /* TimeIntervalConversionTests.swift in Sources */,
 				82FD6C201C16603D004A62FA /* DateComponentsConversionTests.swift in Sources */,
 				8237A42F1C1770DA008DEA43 /* DurationTests.swift in Sources */,
@@ -654,6 +682,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82385CD921B11814002DCFD1 /* DiscreteTimerTests.swift in Sources */,
 				82FD6C081C1656D9004A62FA /* TimeIntervalConversionTests.swift in Sources */,
 				82FD6C211C16603D004A62FA /* DateComponentsConversionTests.swift in Sources */,
 				8237A4301C1770DA008DEA43 /* DurationTests.swift in Sources */,
@@ -678,6 +707,7 @@
 				82D57D2D1BEED6680071C345 /* CalendarComponents+Operators.swift in Sources */,
 				82D57D461BEEED150071C345 /* Calendar+Conversion.swift in Sources */,
 				82D57D421BEEECCD0071C345 /* DateComponents+Conversion.swift in Sources */,
+				82385CD121B10AA3002DCFD1 /* DiscreteTimer.swift in Sources */,
 				82D57D3D1BEEEB1A0071C345 /* Debugging.swift in Sources */,
 				82D57D321BEED9050071C345 /* NSDate+Operators.swift in Sources */,
 				82D57D2C1BEED6680071C345 /* Relativity.swift in Sources */,
@@ -694,6 +724,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82385CD721B11814002DCFD1 /* DiscreteTimerTests.swift in Sources */,
 				82FD6C061C1656D9004A62FA /* TimeIntervalConversionTests.swift in Sources */,
 				82FD6C1F1C16603D004A62FA /* DateComponentsConversionTests.swift in Sources */,
 				8237A42E1C1770DA008DEA43 /* DurationTests.swift in Sources */,
@@ -718,6 +749,7 @@
 				82D57D551BEF01DF0071C345 /* CalendarComponents+Operators.swift in Sources */,
 				82D57D561BEF01DF0071C345 /* Calendar+Conversion.swift in Sources */,
 				82D57D571BEF01DF0071C345 /* DateComponents+Conversion.swift in Sources */,
+				82385CD221B10AA3002DCFD1 /* DiscreteTimer.swift in Sources */,
 				82D57D581BEF01DF0071C345 /* Debugging.swift in Sources */,
 				82D57D591BEF01DF0071C345 /* NSDate+Operators.swift in Sources */,
 				82D57D5A1BEF01DF0071C345 /* Relativity.swift in Sources */,
@@ -738,6 +770,7 @@
 				82D57D6C1BEF04250071C345 /* CalendarComponents+Operators.swift in Sources */,
 				82D57D6D1BEF04250071C345 /* Calendar+Conversion.swift in Sources */,
 				82D57D6E1BEF04250071C345 /* DateComponents+Conversion.swift in Sources */,
+				82385CD321B10AA3002DCFD1 /* DiscreteTimer.swift in Sources */,
 				82D57D6F1BEF04250071C345 /* Debugging.swift in Sources */,
 				82D57D701BEF04250071C345 /* NSDate+Operators.swift in Sources */,
 				82D57D711BEF04250071C345 /* Relativity.swift in Sources */,
@@ -758,6 +791,7 @@
 				82D57D831BEF05BC0071C345 /* CalendarComponents+Operators.swift in Sources */,
 				82D57D841BEF05BC0071C345 /* Calendar+Conversion.swift in Sources */,
 				82D57D851BEF05BC0071C345 /* DateComponents+Conversion.swift in Sources */,
+				82385CD421B10AA3002DCFD1 /* DiscreteTimer.swift in Sources */,
 				82D57D861BEF05BC0071C345 /* Debugging.swift in Sources */,
 				82D57D871BEF05BC0071C345 /* NSDate+Operators.swift in Sources */,
 				82D57D881BEF05BC0071C345 /* Relativity.swift in Sources */,

@@ -24,11 +24,3 @@ public func + (dateView: DateView, components: CalendarComponents) -> DateView {
 public func - (dateView: DateView, components: CalendarComponents) -> DateView {
     return dateView + (-components)
 }
-
-
-extension DateView: Equatable {}
-
-/** Bool whether they are equal or not */
-public func == (lhs: DateView, rhs: DateView) -> Bool {
-    return lhs.date == rhs.date && lhs.calendar == rhs.calendar
-}
