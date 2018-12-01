@@ -22,7 +22,7 @@ public final class DiscreteTimer {
     
     public enum TimeUnit: TimeInterval {
         case second = 1
-        case mintue = 60
+        case minute = 60
         case hour = 3_600
     }
     
@@ -53,18 +53,18 @@ public final class DiscreteTimer {
         DispatchQueue.main.asyncAfter(deadline: .now() + intervalDelay) { [weak self] in
             guard let `self` = self else { return }
             
-            let date: Date
+            let dateView: DateView
             let now = self.dateProvider().gregorian
             switch self.timeUnit {
             case .second:
-                date = now.beginningOfSecond.date
-            case .mintue:
-                date = now.beginningOfMinute.date
+                dateView = now.beginningOfSecond
+            case .minute:
+                dateView = now.beginningOfMinute
             case .hour:
-                date = now.beginningOfHour.date
+                dateView = now.beginningOfHour
             }
             
-            self.callback(date)
+            self.callback(dateView.date)
             self.scheduleNextUpdate()
         }
     }
