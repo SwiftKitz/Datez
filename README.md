@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-3.0.0-blue.svg" />
+  <img alt="Version" src="https://img.shields.io/badge/version-3.0.1-blue.svg" />
   <a alt="Travis CI" href="https://travis-ci.org/SwiftKitz/Datez">
     <img alt="Version" src="https://travis-ci.org/SwiftKitz/Datez.svg?branch=master" />
   </a>
@@ -99,7 +99,7 @@ let components = expirationInterval.components
 [Carthage][carthage-link] is fully supported. Simply add the following line to your [Cartfile][cartfile-docs]:
 
 ```ruby
-github "SwiftKitz/Datez" ~> 3.0.0
+github "SwiftKitz/Datez" ~> 3.0.1
 ```
 
 ### CocoaPods
