@@ -33,7 +33,7 @@ public final class DiscreteTimer {
     private let timeUnit: TimeUnit
     private let dateProvider: () -> (Date)
     private let callback: Callback
-    
+
     // MARK: - init & deinit
     
     public init(timeUnit: TimeUnit,
@@ -45,16 +45,25 @@ public final class DiscreteTimer {
         
         scheduleNextUpdate()
     }
-    
-    private func scheduleNextUpdate() {
-        
-        let timeInterval = dateProvider().timeIntervalSince1970
+
+    @discardableResult
+    private func scheduleNextUpdate() -> (Date, Int) {
+
+        let date = dateProvider()
+        let timeInterval = date.timeIntervalSince1970
         let intervalDelay = timeUnit.rawValue - timeInterval.truncatingRemainder(dividingBy: timeUnit.rawValue)
+        let currentUnit = Int(timeInterval / timeUnit.rawValue)
+
         DispatchQueue.main.asyncAfter(deadline: .now() + intervalDelay) { [weak self] in
             guard let `self` = self else { return }
-            
+
+            let (date, nextUnit) = self.scheduleNextUpdate()
+            guard currentUnit != nextUnit else {
+                return
+            }
+
             let dateView: DateView
-            let now = self.dateProvider().gregorian
+            let now = date.gregorian
             switch self.timeUnit {
             case .second:
                 dateView = now.beginningOfSecond
@@ -65,7 +74,8 @@ public final class DiscreteTimer {
             }
             
             self.callback(dateView.date)
-            self.scheduleNextUpdate()
         }
+
+        return (date, currentUnit)
     }
 }

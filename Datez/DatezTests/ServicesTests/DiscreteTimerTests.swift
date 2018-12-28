@@ -22,6 +22,7 @@ class DiscreteTimerTests: XCTestCase {
         
         var callbackDateOp: Date?
         let callback: DiscreteTimer.Callback = { date in
+            XCTAssertNil(callbackDateOp, "Callback was triggered multiple times!")
             callbackDateOp = date
             callbackTriggerExpectation.fulfill()
         }
@@ -30,8 +31,11 @@ class DiscreteTimerTests: XCTestCase {
                                           dateProvider: dateProvider.asCallback,
                                           callback: callback)
         
-        // make sure to update the mock immediately so the timer doesn't fire quickly in succession
-        dateProvider.date = Date(timeIntervalSinceReferenceDate: 1.01)
+        // make sure to update the mock immediately so the timer
+        // can safely trigger the for the new time.
+        // set it to the end of the next interval, to test that
+        // it's not triggering twice as well
+        dateProvider.date = Date(timeIntervalSinceReferenceDate: 1.99)
         
         waitForExpectations(timeout: 0.1)
         
@@ -40,6 +44,10 @@ class DiscreteTimerTests: XCTestCase {
         }
         
         XCTAssertEqual(callbackDate, expectedDate)
+
+        let refuteSecondEvent = expectation(description: "dummy")
+        let result = XCTWaiter.wait(for: [refuteSecondEvent], timeout: 0.05)
+        XCTAssertEqual(result, .timedOut)
     }
 }
 
