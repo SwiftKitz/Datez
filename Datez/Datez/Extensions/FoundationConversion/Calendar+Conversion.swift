@@ -20,20 +20,20 @@ extension Calendar {
 
 extension Calendar {
     
-    static var gregorian: Calendar            { return Calendar(identifier: Calendar.Identifier.gregorian) }
-    static var buddhist: Calendar             { return Calendar(identifier: Calendar.Identifier.buddhist) }
-    static var chinese: Calendar              { return Calendar(identifier: Calendar.Identifier.chinese) }
-    static var coptic: Calendar               { return Calendar(identifier: Calendar.Identifier.coptic) }
-    static var ethiopicAmeteMihret: Calendar  { return Calendar(identifier: Calendar.Identifier.ethiopicAmeteMihret) }
-    static var ethiopicAmeteAlem: Calendar    { return Calendar(identifier: Calendar.Identifier.ethiopicAmeteAlem) }
-    static var hebrew: Calendar               { return Calendar(identifier: Calendar.Identifier.hebrew) }
-    static var iso8601: Calendar              { return Calendar(identifier: Calendar.Identifier.iso8601) }
-    static var indian: Calendar               { return Calendar(identifier: Calendar.Identifier.indian) }
-    static var islamic: Calendar              { return Calendar(identifier: Calendar.Identifier.islamic) }
-    static var islamicCivil: Calendar         { return Calendar(identifier: Calendar.Identifier.islamicCivil) }
-    static var japanese: Calendar             { return Calendar(identifier: Calendar.Identifier.japanese) }
-    static var persian: Calendar              { return Calendar(identifier: Calendar.Identifier.persian) }
-    static var republicOfChina: Calendar      { return Calendar(identifier: Calendar.Identifier.republicOfChina) }
+    static let gregorian              = Calendar(identifier: .gregorian)
+    static let buddhist               = Calendar(identifier: .buddhist)
+    static let chinese                = Calendar(identifier: .chinese)
+    static let coptic                 = Calendar(identifier: .coptic)
+    static let ethiopicAmeteMihret    = Calendar(identifier: .ethiopicAmeteMihret)
+    static let ethiopicAmeteAlem      = Calendar(identifier: .ethiopicAmeteAlem)
+    static let hebrew                 = Calendar(identifier: .hebrew)
+    static let iso8601                = Calendar(identifier: .iso8601)
+    static let indian                 = Calendar(identifier: .indian)
+    static let islamic                = Calendar(identifier: .islamic)
+    static let islamicCivil           = Calendar(identifier: .islamicCivil)
+    static let japanese               = Calendar(identifier: .japanese)
+    static let persian                = Calendar(identifier: .persian)
+    static let republicOfChina        = Calendar(identifier: .republicOfChina)
 }
 
 public extension Calendar.Component {
