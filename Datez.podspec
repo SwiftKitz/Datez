@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
                    playgrounds to quickly make the most out of this library.
                    DESC
 
-  s.homepage     = "http://kitz.io"
+  s.homepage     = "https://swiftkitz.github.io"
   s.license      = "MIT"
   s.author             = { "Maz Jaleel" => "mazjaleel@gmail.com" }
   s.social_media_url   = "http://twitter.com/SwiftKitz"
