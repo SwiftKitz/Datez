@@ -10,7 +10,7 @@ env:
   - TVOS_FRAMEWORK_SCHEME="Datez-tvos"
   - WATCHOS_FRAMEWORK_SCHEME="Datez-watchos"
   - IOS_SDK=iphonesimulator12.1
-  - OSX_SDK=macosx10.13
+  - OSX_SDK=macosx10.14
   - TVOS_SDK=appletvsimulator12.1
   - WATCHOS_SDK=watchsimulator5.1
   matrix:
