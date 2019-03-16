@@ -50,13 +50,13 @@ class DateViewOperatorsTests: XCTestCase {
         // DST switch date
         let dstSwitch = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 11, day: 1),
-            inCalendar: Calendar.gregorian
+            inCalendar: Calendar(identifier: .gregorian)
         )
         
         // 1 hour will be eaten by spending 2 AM twice
         let expectedDate = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 11, day: 1, hour: 2),
-            inCalendar: Calendar.gregorian
+            inCalendar: Calendar(identifier: .gregorian)
         )
         
         let dstOffset = dstSwitch + 3.hours
@@ -73,14 +73,14 @@ class DateViewOperatorsTests: XCTestCase {
         
         let preDst = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 10, day: 29),
-            inCalendar: Calendar.gregorian
+            inCalendar: Calendar(identifier: .gregorian)
         )
         
         let postDst = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 11, day: 3),
-            inCalendar: Calendar.gregorian
+            inCalendar: Calendar(identifier: .gregorian)
         )
-        
+
         // DST compatibile timeZone
         let dateFormatter = DateFormatter()
         dateFormatter.calendar = Calendar.gregorian
