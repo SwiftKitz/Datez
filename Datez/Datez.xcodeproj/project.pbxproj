@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -558,7 +558,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = kitz;
 				TargetAttributes = {
 					823F18631BF43A9D008DF5F8 = {
@@ -570,11 +570,11 @@
 					};
 					82D57CE11BEE740B0071C345 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 					};
 					82D57CEB1BEE740B0071C345 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 					};
 					82D57D691BEF04250071C345 = {
 						LastSwiftMigration = 0920;
@@ -582,11 +582,12 @@
 				};
 			};
 			buildConfigurationList = 82D57CDC1BEE740B0071C345 /* Build configuration list for PBXProject "Datez" */;
-			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 82D57CD81BEE740B0071C345;
 			productRefGroup = 82D57CE31BEE740B0071C345 /* Products */;
@@ -1031,6 +1032,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.Datez;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1052,6 +1054,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.Datez;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1066,6 +1069,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.DatezTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1080,6 +1084,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kitz.DatezTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

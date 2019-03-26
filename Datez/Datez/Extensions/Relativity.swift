@@ -14,23 +14,23 @@ import Foundation
 */
 public extension CalendarComponents {
     
-    public var beginningOfYear: CalendarComponents {
+    var beginningOfYear: CalendarComponents {
         return update(month: 1, day: 1, hour: 0, minute: 0, second: 0)
     }
     
-    public var beginningOfMonth: CalendarComponents {
+    var beginningOfMonth: CalendarComponents {
         return update(day: 1, hour: 0, minute: 0, second: 0)
     }
     
-    public var beginningOfDay: CalendarComponents {
+    var beginningOfDay: CalendarComponents {
         return update(hour: 0, minute: 0, second: 0)
     }
     
-    public var beginningOfHour: CalendarComponents {
+    var beginningOfHour: CalendarComponents {
         return update(minute: 0, second: 0)
     }
 
-    public var beginningOfMinute: CalendarComponents {
+    var beginningOfMinute: CalendarComponents {
         return update(second: 0)
     }
 }
@@ -38,42 +38,42 @@ public extension CalendarComponents {
 
 public extension DateView {
     
-    public var beginningOfYear: DateView {
+    var beginningOfYear: DateView {
         return DateView(
             forCalendarComponents: components.beginningOfYear,
             inCalendar: calendar
         )
     }
     
-    public var beginningOfMonth: DateView {
+    var beginningOfMonth: DateView {
         return DateView(
             forCalendarComponents: components.beginningOfMonth,
             inCalendar: calendar
         )
     }
     
-    public var beginningOfDay: DateView {
+    var beginningOfDay: DateView {
         return DateView(
             forCalendarComponents: components.beginningOfDay,
             inCalendar: calendar
         )
     }
     
-    public var beginningOfHour: DateView {
+    var beginningOfHour: DateView {
         return DateView(
             forCalendarComponents: components.beginningOfHour,
             inCalendar: calendar
         )
     }
 
-    public var beginningOfMinute: DateView {
+    var beginningOfMinute: DateView {
         return DateView(
             forCalendarComponents: components.beginningOfMinute,
             inCalendar: calendar
         )
     }
 
-    public var beginningOfSecond: DateView {
+    var beginningOfSecond: DateView {
         return DateView(
             forCalendarComponents: components,
             inCalendar: calendar

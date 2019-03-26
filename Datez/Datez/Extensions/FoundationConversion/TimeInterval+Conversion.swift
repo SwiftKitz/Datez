@@ -21,7 +21,7 @@ public extension TimeInterval {
     /** given 63.0, returns CalendarComponents(minute: 1, second: 3)
      WARNING: assumes gregorian calendar
      */
-    public var components: CalendarComponents {
+    var components: CalendarComponents {
         
         return Calendar.gregorian.components(
             Calendar.Component.all,
@@ -33,7 +33,7 @@ public extension TimeInterval {
 public extension CalendarComponents {
     
     /** given CalendarComponents(minute: 1, second: 3), returns 63.0 */
-    public var timeInterval: TimeInterval {
+    var timeInterval: TimeInterval {
         
         let baseDate = Date(timeIntervalSinceReferenceDate: 0)
         let dateView = baseDate.gregorian + self

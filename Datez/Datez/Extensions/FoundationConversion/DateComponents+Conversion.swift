@@ -13,7 +13,7 @@ import Foundation
 */
 public extension DateComponents {
     
-    public var calendarComponents: CalendarComponents {
+    var calendarComponents: CalendarComponents {
         
         return CalendarComponents(
             year: year,
@@ -30,7 +30,7 @@ public extension DateComponents {
 
 public extension CalendarComponents {
     
-    public var dateComponents: DateComponents {
+    var dateComponents: DateComponents {
         
         var components = DateComponents()
         components.year = year

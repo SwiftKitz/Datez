@@ -15,43 +15,43 @@ import Foundation
 */
 public extension Int {
     
-    public var second: CalendarComponents { return seconds }
-    public var seconds: CalendarComponents {
+    var second: CalendarComponents { return seconds }
+    var seconds: CalendarComponents {
         return CalendarComponents(second: self)
     }
     
-    public var minute: CalendarComponents { return minutes }
-    public var minutes: CalendarComponents {
+    var minute: CalendarComponents { return minutes }
+    var minutes: CalendarComponents {
         return CalendarComponents(minute: self)
     }
     
-    public var hour: CalendarComponents { return hours }
-    public var hours: CalendarComponents {
+    var hour: CalendarComponents { return hours }
+    var hours: CalendarComponents {
         return CalendarComponents(hour: self)
     }
     
-    public var day: CalendarComponents { return days }
-    public var days: CalendarComponents {
+    var day: CalendarComponents { return days }
+    var days: CalendarComponents {
         return CalendarComponents(day: self)
     }
     
-    public var weekOfMonth: CalendarComponents { return weeksOfMonth }
-    public var weeksOfMonth: CalendarComponents {
+    var weekOfMonth: CalendarComponents { return weeksOfMonth }
+    var weeksOfMonth: CalendarComponents {
         return CalendarComponents(weekOfMonth: self)
     }
     
-    public var weekOfYear: CalendarComponents { return weeksOfYear }
-    public var weeksOfYear: CalendarComponents {
+    var weekOfYear: CalendarComponents { return weeksOfYear }
+    var weeksOfYear: CalendarComponents {
         return CalendarComponents(weekOfYear: self)
     }
     
-    public var month: CalendarComponents { return months }
-    public var months: CalendarComponents {
+    var month: CalendarComponents { return months }
+    var months: CalendarComponents {
         return CalendarComponents(month: self)
     }
     
-    public var year: CalendarComponents { return years }
-    public var years: CalendarComponents {
+    var year: CalendarComponents { return years }
+    var years: CalendarComponents {
         return CalendarComponents(year: self)
     }
 }

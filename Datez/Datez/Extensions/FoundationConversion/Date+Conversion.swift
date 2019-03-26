@@ -12,7 +12,7 @@ import Foundation
 /** `DateView` access from `Date` */
 public extension Date {
     
-    public func dateView(calendar: Calendar) -> DateView {
+    func dateView(calendar: Calendar) -> DateView {
         
         return DateView(
             forDate: self,
@@ -20,22 +20,22 @@ public extension Date {
         )
     }
     
-    public var currentCalendar: DateView {
+    var currentCalendar: DateView {
         return dateView(calendar: Calendar.current)
     }
     
-    public var gregorian: DateView              { return dateView(calendar: Calendar.gregorian) }
-    public var buddhist: DateView               { return dateView(calendar: Calendar.buddhist) }
-    public var chinese: DateView                { return dateView(calendar: Calendar.chinese) }
-    public var coptic: DateView                 { return dateView(calendar: Calendar.coptic) }
-    public var ethiopicAmeteMihret: DateView    { return dateView(calendar: Calendar.ethiopicAmeteMihret) }
-    public var ethiopicAmeteAlem: DateView      { return dateView(calendar: Calendar.ethiopicAmeteAlem) }
-    public var hebrew: DateView                 { return dateView(calendar: Calendar.hebrew) }
-    public var iso8601: DateView                { return dateView(calendar: Calendar.iso8601) }
-    public var indian: DateView                 { return dateView(calendar: Calendar.indian) }
-    public var islamic: DateView                { return dateView(calendar: Calendar.islamic) }
-    public var islamicCivil: DateView           { return dateView(calendar: Calendar.islamicCivil) }
-    public var japanese: DateView               { return dateView(calendar: Calendar.japanese) }
-    public var persian: DateView                { return dateView(calendar: Calendar.persian) }
-    public var republicOfChina: DateView        { return dateView(calendar: Calendar.republicOfChina) }
+    var gregorian: DateView              { return dateView(calendar: Calendar.gregorian) }
+    var buddhist: DateView               { return dateView(calendar: Calendar.buddhist) }
+    var chinese: DateView                { return dateView(calendar: Calendar.chinese) }
+    var coptic: DateView                 { return dateView(calendar: Calendar.coptic) }
+    var ethiopicAmeteMihret: DateView    { return dateView(calendar: Calendar.ethiopicAmeteMihret) }
+    var ethiopicAmeteAlem: DateView      { return dateView(calendar: Calendar.ethiopicAmeteAlem) }
+    var hebrew: DateView                 { return dateView(calendar: Calendar.hebrew) }
+    var iso8601: DateView                { return dateView(calendar: Calendar.iso8601) }
+    var indian: DateView                 { return dateView(calendar: Calendar.indian) }
+    var islamic: DateView                { return dateView(calendar: Calendar.islamic) }
+    var islamicCivil: DateView           { return dateView(calendar: Calendar.islamicCivil) }
+    var japanese: DateView               { return dateView(calendar: Calendar.japanese) }
+    var persian: DateView                { return dateView(calendar: Calendar.persian) }
+    var republicOfChina: DateView        { return dateView(calendar: Calendar.republicOfChina) }
 }

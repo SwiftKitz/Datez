@@ -38,7 +38,7 @@ extension Calendar {
 
 public extension Calendar.Component {
     
-    public static var all: Set<Calendar.Component> {
+    static var all: Set<Calendar.Component> {
         return [
             .calendar, .day, .era, .hour, .minute, .month, .nanosecond, .quarter, .second,
             .timeZone, .weekday, .weekdayOrdinal, .weekOfMonth, .weekOfYear, .year, .yearForWeekOfYear
