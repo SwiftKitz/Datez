@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Datez"
-  s.version      = "3.0.4"
+  s.version      = "3.1.0"
   s.summary      = "Breeze through NSDate, NSDateComponents, and NSTimeInterval!"
   s.description  = <<-DESC
                    A swift datez library that focuses on readability, compactness,
@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = "2.0"
   s.tvos.deployment_target = "9.0"
 
-  s.source       = { :git => "https://github.com/SwiftKitz/Datez.git", :tag => "v3.0.4" }
+  s.source       = { :git => "https://github.com/SwiftKitz/Datez.git", :tag => "v3.1.0" }
   s.source_files = "Datez/Datez/**/*.swift"
 end
