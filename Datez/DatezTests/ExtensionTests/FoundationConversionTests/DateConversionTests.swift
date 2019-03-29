@@ -36,6 +36,8 @@ class DateConversionTests: XCTestCase {
         XCTAssertEqual(date.indian, date.dateView(calendar: Calendar.indian))
         XCTAssertEqual(date.islamic, date.dateView(calendar: Calendar.islamic))
         XCTAssertEqual(date.islamicCivil, date.dateView(calendar: Calendar.islamicCivil))
+        XCTAssertEqual(date.islamicTabular, date.dateView(calendar: Calendar.islamicTabular))
+        XCTAssertEqual(date.islamicUmmAlQura, date.dateView(calendar: Calendar.islamicUmmAlQura))
         XCTAssertEqual(date.japanese, date.dateView(calendar: Calendar.japanese))
         XCTAssertEqual(date.persian, date.dateView(calendar: Calendar.persian))
         XCTAssertEqual(date.republicOfChina, date.dateView(calendar: Calendar.republicOfChina))

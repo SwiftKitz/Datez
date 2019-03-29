@@ -18,22 +18,24 @@ extension Calendar {
     }
 }
 
-extension Calendar {
+public extension Calendar {
     
-    static let gregorian              = Calendar(identifier: .gregorian)
-    static let buddhist               = Calendar(identifier: .buddhist)
-    static let chinese                = Calendar(identifier: .chinese)
-    static let coptic                 = Calendar(identifier: .coptic)
-    static let ethiopicAmeteMihret    = Calendar(identifier: .ethiopicAmeteMihret)
-    static let ethiopicAmeteAlem      = Calendar(identifier: .ethiopicAmeteAlem)
-    static let hebrew                 = Calendar(identifier: .hebrew)
-    static let iso8601                = Calendar(identifier: .iso8601)
-    static let indian                 = Calendar(identifier: .indian)
-    static let islamic                = Calendar(identifier: .islamic)
-    static let islamicCivil           = Calendar(identifier: .islamicCivil)
-    static let japanese               = Calendar(identifier: .japanese)
-    static let persian                = Calendar(identifier: .persian)
-    static let republicOfChina        = Calendar(identifier: .republicOfChina)
+    static let gregorian            = Calendar(identifier: .gregorian)
+    static let buddhist             = Calendar(identifier: .buddhist)
+    static let chinese              = Calendar(identifier: .chinese)
+    static let coptic               = Calendar(identifier: .coptic)
+    static let ethiopicAmeteMihret  = Calendar(identifier: .ethiopicAmeteMihret)
+    static let ethiopicAmeteAlem    = Calendar(identifier: .ethiopicAmeteAlem)
+    static let hebrew               = Calendar(identifier: .hebrew)
+    static let iso8601              = Calendar(identifier: .iso8601)
+    static let indian               = Calendar(identifier: .indian)
+    static let islamic              = Calendar(identifier: .islamic)
+    static let islamicCivil         = Calendar(identifier: .islamicCivil)
+    static let islamicTabular       = Calendar(identifier: .islamicTabular)
+    static let islamicUmmAlQura     = Calendar(identifier: .islamicUmmAlQura)
+    static let japanese             = Calendar(identifier: .japanese)
+    static let persian              = Calendar(identifier: .persian)
+    static let republicOfChina      = Calendar(identifier: .republicOfChina)
 }
 
 public extension Calendar.Component {
