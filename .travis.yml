@@ -7,14 +7,10 @@ env:
   - WORKSPACE=Datez.xcworkspace
   - IOS_FRAMEWORK_SCHEME="Datez-ios"
   - OSX_FRAMEWORK_SCHEME="Datez-osx"
-  - TVOS_FRAMEWORK_SCHEME="Datez-tvos"
-  - WATCHOS_FRAMEWORK_SCHEME="Datez-watchos"
-  - IOS_SDK=iphonesimulator12.1
+  - IOS_SDK=iphonesimulator12.2
   - OSX_SDK=macosx10.14
-  - TVOS_SDK=appletvsimulator12.1
-  - WATCHOS_SDK=watchsimulator5.1
   matrix:
-  - DESTINATION="OS=12.1,name=iPhone 6S"         SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"
+  - DESTINATION="OS=12.2,name=iPhone 6S"         SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"
   - DESTINATION="arch=x86_64"                    SCHEME="$OSX_FRAMEWORK_SCHEME"     SDK="$OSX_SDK"     RUN_TESTS="YES"
 before_install:
 - gem install xcpretty --no-document --quiet
