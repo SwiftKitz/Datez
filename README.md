@@ -7,11 +7,11 @@
 </h1>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-4.0.0-blue.svg" />
+  <img alt="Version" src="https://img.shields.io/badge/version-4.1.0-blue.svg" />
   <a alt="Github CI" href="https://github.com/SwiftKitz/Datez/actions">
     <img alt="Version" src="https://github.com/SwiftKitz/Datez/workflows/Swift/badge.svg" />
   </a>
-  <img alt="Swift" src="https://img.shields.io/badge/swift-5.2-orange.svg" />
+  <img alt="Swift" src="https://img.shields.io/badge/swift-5.3-orange.svg" />
   <img alt="Platforms" src="https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20watchos%20%7C%20tvos-lightgrey.svg" />
   <img src="resources/Demo.gif">
 </p>

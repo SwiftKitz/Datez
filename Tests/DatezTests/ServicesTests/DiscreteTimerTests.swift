@@ -48,6 +48,9 @@ class DiscreteTimerTests: XCTestCase {
         let refuteSecondEvent = expectation(description: "dummy")
         let result = XCTWaiter.wait(for: [refuteSecondEvent], timeout: 0.05)
         XCTAssertEqual(result, .timedOut)
+        
+        // hang on to this mem
+        _ = discreteTimer
     }
 }
 

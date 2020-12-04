@@ -6,10 +6,10 @@ import PackageDescription
 let package = Package(
     name: "Datez",
     platforms: [
-        .iOS(.v8),
-        .macOS(.v10_11),
+        .iOS(.v9),
+        .macOS(.v10_12),
         .tvOS(.v9),
-        .watchOS(.v3),
+        .watchOS(.v4),
     ],
     products: [
         .library(
