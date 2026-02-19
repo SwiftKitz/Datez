@@ -11,7 +11,7 @@ import Datez
 
 class DiscreteTimerTests: XCTestCase {
     
-    func testSimpleTriggers() {
+    @MainActor func testSimpleTriggers() {
         
         let dateProvider = DateProviderMock()
         dateProvider.date = Date(timeIntervalSinceReferenceDate: 0.99)
@@ -20,7 +20,7 @@ class DiscreteTimerTests: XCTestCase {
         
         let callbackTriggerExpectation = expectation(description: "callback is triggered")
         
-        var callbackDateOp: Date?
+        nonisolated(unsafe) var callbackDateOp: Date?
         let callback: DiscreteTimer.Callback = { date in
             XCTAssertNil(callbackDateOp, "Callback was triggered multiple times!")
             callbackDateOp = date
@@ -54,11 +54,11 @@ class DiscreteTimerTests: XCTestCase {
     }
 }
 
-private final class DateProviderMock {
-    
+private final class DateProviderMock: @unchecked Sendable {
+
     var date: Date?
-    
-    var asCallback: () -> (Date) {
+
+    var asCallback: @Sendable () -> (Date) {
         return {
             self.date ?? Date()
         }

@@ -16,29 +16,29 @@ import Foundation
  
  e.g.
  */
-public final class DiscreteTimer {
+public final class DiscreteTimer: @unchecked Sendable {
     
     // MARK: - nested types
     
-    public enum TimeUnit: TimeInterval {
+    public enum TimeUnit: TimeInterval, Sendable {
         case second = 1
         case minute = 60
         case hour = 3_600
     }
     
-    public typealias Callback = (Date) -> ()
+    public typealias Callback = @Sendable (Date) -> ()
     
     // MARK: - properties
     
     private let timeUnit: TimeUnit
-    private let dateProvider: () -> (Date)
+    private let dateProvider: @Sendable () -> (Date)
     private let callback: Callback
 
     // MARK: - init & deinit
     
     public init(timeUnit: TimeUnit,
-                dateProvider: @escaping () -> (Date) = Date.init,
-                callback: @escaping Callback) {
+                dateProvider: @escaping @Sendable () -> (Date) = Date.init,
+                callback: @escaping @Sendable Callback) {
         self.timeUnit = timeUnit
         self.dateProvider = dateProvider
         self.callback = callback
@@ -55,7 +55,7 @@ public final class DiscreteTimer {
         let currentUnit = Int(timeInterval / timeUnit.rawValue)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + intervalDelay) { [weak self] in
-            guard let `self` = self else { return }
+            guard let self else { return }
 
             let (date, nextUnit) = self.scheduleNextUpdate()
             guard currentUnit != nextUnit else {
