@@ -7,11 +7,11 @@
 </h1>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-4.1.0-blue.svg" />
+  <img alt="Version" src="https://img.shields.io/badge/version-5.0.0-blue.svg" />
   <a alt="Github CI" href="https://github.com/SwiftKitz/Datez/actions">
     <img alt="Version" src="https://github.com/SwiftKitz/Datez/workflows/Swift/badge.svg" />
   </a>
-  <img alt="Swift" src="https://img.shields.io/badge/swift-5.3-orange.svg" />
+  <img alt="Swift" src="https://img.shields.io/badge/swift-6.0-orange.svg" />
   <img alt="Platforms" src="https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20watchos%20%7C%20tvos-lightgrey.svg" />
   <img src="resources/Demo.gif">
 </p>
@@ -93,24 +93,15 @@ let components = expirationInterval.components
 
 ### Swift Package Manager
 
-```
-TODO: Write me
-```
+Add Datez to your `Package.swift`:
 
-### CocoaPods
-
-[CocoaPods][cocoapods-link] is fully supported. Simply add the following line to your [Podfile][podfile-docs]:
-
-```ruby
-pod 'Datez'
+```swift
+dependencies: [
+    .package(url: "https://github.com/SwiftKitz/Datez.git", from: "5.0.0")
+]
 ```
 
-### Submodule
-
-For manual installation, you can grab the source directly or through git submodules, then simply:
-
-+ Drop the `Datez.xcodeproj` file as a subproject (make sure `Copy resources` is __not__ enabled)
-+ Navigate to your root project settings. Under "Embedded Binaries", click the "+" button and select the `Datez.framework`
+Or add it through Xcode: File > Add Package Dependencies, then enter the repository URL.
 
 ## Motivation
 
@@ -133,9 +124,3 @@ Mazyod ([@Mazyod](http://twitter.com/mazyod))
 ## License
 
 Datez is released under the MIT license. See LICENSE for details.
-
-
-[carthage-link]: https://github.com/Carthage/Carthage
-[cartfile-docs]: https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile
-[cocoapods-link]: https://cocoapods.org/
-[podfile-docs]: https://guides.cocoapods.org/syntax/podfile.html
