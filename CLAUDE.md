@@ -27,7 +27,7 @@ swift test --filter DatezTests.CalendarComponentsTests/testUpdate
 swift build -v && swift test -v
 ```
 
-Platforms: iOS 9.0+, macOS 10.12+, watchOS 4.0+, tvOS 9.0+. Swift 5.2+.
+Platforms: iOS 13+, macOS 10.15+, tvOS 13+, watchOS 6+. Swift 6 language mode enabled.
 
 ## Architecture
 
@@ -58,6 +58,13 @@ Sources/Datez/
 ```
 
 Tests mirror this structure under `Tests/DatezTests/`.
+
+### Concurrency
+
+The library uses Swift 6 strict concurrency. All public types conform to `Sendable`:
+- `CalendarComponents` and `DateView` are naturally `Sendable` (value types with Sendable properties)
+- `DiscreteTimer` is `@unchecked Sendable` (all work dispatched to main queue)
+- `DiscreteTimer.Callback` and `dateProvider` closures are `@Sendable`
 
 ### Design Principles
 
