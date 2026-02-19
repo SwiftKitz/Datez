@@ -1,6 +1,6 @@
 //
 //  CalendarComponents.swift
-//  Prayerz
+//  Datez
 //
 //  Created by Mazyad Alabduljaleel on 9/16/15.
 //  Copyright (c) 2015 ArabianDevs. All rights reserved.

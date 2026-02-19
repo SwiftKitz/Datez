@@ -1,6 +1,6 @@
 //
 //  DateView+Operators.swift
-//  Prayerz
+//  Datez
 //
 //  Created by Mazyad Alabduljaleel on 11/7/15.
 //  Copyright © 2015 ArabianDevs. All rights reserved.
