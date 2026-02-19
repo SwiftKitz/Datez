@@ -1,15 +1,14 @@
-// swift-tools-version:5.2
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version:6.0
 
 import PackageDescription
 
 let package = Package(
     name: "Datez",
     platforms: [
-        .iOS(.v9),
-        .macOS(.v10_12),
-        .tvOS(.v9),
-        .watchOS(.v4),
+        .iOS(.v13),
+        .macOS(.v10_15),
+        .tvOS(.v13),
+        .watchOS(.v6),
     ],
     products: [
         .library(
@@ -20,9 +19,15 @@ let package = Package(
     targets: [
         .target(
             name: "Datez",
-            dependencies: []),
+            dependencies: [],
+            swiftSettings: [
+                .swiftLanguageMode(.v6),
+            ]),
         .testTarget(
             name: "DatezTests",
-            dependencies: ["Datez"]),
+            dependencies: ["Datez"],
+            swiftSettings: [
+                .swiftLanguageMode(.v6),
+            ]),
     ]
 )
