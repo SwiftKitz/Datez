@@ -12,11 +12,13 @@ import Foundation
 /** new DateView by adding wallclock calendarComponents */
 public func + (dateView: DateView, components: CalendarComponents) -> DateView {
     
-    let newDate = dateView.calendar.date(
+    guard let newDate = dateView.calendar.date(
         byAdding: components.dateComponents,
         to: dateView.date
-    )!
-    
+    ) else {
+        preconditionFailure("Failed to add \(components) to \(dateView.date) using calendar \(dateView.calendar.identifier)")
+    }
+
     return DateView(forDate: newDate, inCalendar: dateView.calendar)
 }
 

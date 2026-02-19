@@ -9,7 +9,7 @@
 import Foundation
 
 /** Calendar/TimeZone agnostic data structure to hold date components */
-public struct CalendarComponents: Sendable {
+public struct CalendarComponents: Equatable, Sendable {
     
     public var year = 0
     public var month = 0

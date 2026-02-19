@@ -22,16 +22,3 @@ public prefix func - (comps: CalendarComponents) -> CalendarComponents {
     )
 }
 
-
-extension CalendarComponents: Equatable {}
-
-/** conforming to Equatable */
-public func == (lhs: CalendarComponents, rhs: CalendarComponents) -> Bool {
-    
-    return lhs.year == rhs.year
-        && lhs.month == rhs.month
-        && lhs.day == rhs.day
-        && lhs.hour == rhs.hour
-        && lhs.minute == rhs.minute
-        && lhs.second == rhs.second
-}

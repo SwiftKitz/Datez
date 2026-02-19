@@ -62,15 +62,11 @@ public final class DiscreteTimer: @unchecked Sendable {
                 return
             }
 
-            let dateView: DateView
             let now = date.gregorian
-            switch self.timeUnit {
-            case .second:
-                dateView = now.beginningOfSecond
-            case .minute:
-                dateView = now.beginningOfMinute
-            case .hour:
-                dateView = now.beginningOfHour
+            let dateView: DateView = switch self.timeUnit {
+            case .second: now.beginningOfSecond
+            case .minute: now.beginningOfMinute
+            case .hour: now.beginningOfHour
             }
             
             self.callback(dateView.date)
