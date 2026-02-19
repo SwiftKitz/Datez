@@ -27,7 +27,7 @@ swift test --filter DatezTests.CalendarComponentsTests/testUpdate
 swift build -v && swift test -v
 ```
 
-Platforms: iOS 13+, macOS 10.15+, tvOS 13+, watchOS 6+. Swift 6 language mode enabled.
+Platforms: iOS 15+, macOS 12+, tvOS 15+, watchOS 8+. Swift 6 language mode enabled.
 
 ## Architecture
 
