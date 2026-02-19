@@ -42,57 +42,49 @@ class DateViewOperatorsTests: XCTestCase {
     }
     
     func testDateViewOffsetOnDSTDay() {
-        
+
         // DST affected time zone
         let timeZone = TimeZone(identifier: "America/Los_Angeles")!
-        NSTimeZone.default = timeZone
-        
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = timeZone
+
         // DST switch date
         let dstSwitch = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 11, day: 1),
-            inCalendar: Calendar(identifier: .gregorian)
+            inCalendar: calendar
         )
-        
+
         // 1 hour will be eaten by spending 2 AM twice
         let expectedDate = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 11, day: 1, hour: 2),
-            inCalendar: Calendar(identifier: .gregorian)
+            inCalendar: calendar
         )
-        
+
         let dstOffset = dstSwitch + 3.hours
         XCTAssertEqual(dstOffset, expectedDate)
-        
-        NSTimeZone.default = TimeZone.current
     }
     
     func testDateViewOffsetCrossingDSTDay() {
-        
+
         // DST affected time zone
         let timeZone = TimeZone(identifier: "America/Los_Angeles")!
-        NSTimeZone.default = timeZone
-        
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = timeZone
+
         let preDst = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 10, day: 29),
-            inCalendar: Calendar(identifier: .gregorian)
-        )
-        
-        let postDst = DateView(
-            forCalendarComponents: CalendarComponents(year: 2015, month: 11, day: 3),
-            inCalendar: Calendar(identifier: .gregorian)
+            inCalendar: calendar
         )
 
-        // DST compatibile timeZone
-        let dateFormatter = DateFormatter()
-        dateFormatter.calendar = Calendar.gregorian
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .short
-        
+        let postDst = DateView(
+            forCalendarComponents: CalendarComponents(year: 2015, month: 11, day: 3),
+            inCalendar: calendar
+        )
+
         let crossDstForward = preDst + 121.hours
         XCTAssertEqual(crossDstForward, postDst)
-        
+
         let crossDstBackwards = postDst - 121.hours
         XCTAssertEqual(crossDstBackwards, preDst)
-        
-        NSTimeZone.default = TimeZone.current
     }
 }
