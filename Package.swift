@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "Datez",
     platforms: [
-        .iOS(.v15),
+        .iOS(.v16),
         .macOS(.v13),
         .tvOS(.v15),
         .watchOS(.v8),
