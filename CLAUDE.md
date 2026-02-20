@@ -25,9 +25,12 @@ swift test --filter DatezTests.CalendarComponentsTests/testUpdate
 
 # Verbose output (matches CI)
 swift build -v && swift test -v
+
+# Verify compilation for all platform targets (iOS, macOS, tvOS, watchOS)
+./scripts/verify-platforms.sh
 ```
 
-Platforms: iOS 16+, macOS 13+, tvOS 15+, watchOS 8+. Swift 6 language mode enabled.
+Platforms: iOS 16+, macOS 13+, tvOS 16+, watchOS 9+. Swift 6 language mode enabled.
 
 ## Architecture
 
