@@ -6,11 +6,11 @@
 //  Copyright © 2015 kitz. All rights reserved.
 //
 
-import XCTest
+import Testing
+import Foundation
 @testable import Datez
 
-
-class DateViewOperatorsTests: XCTestCase {
+@Suite struct DateViewOperatorsTests {
 
     let anyDate = DateView(
         forCalendarComponents: CalendarComponents(
@@ -22,27 +22,23 @@ class DateViewOperatorsTests: XCTestCase {
         ),
         inCalendar: Calendar.gregorian
     )
-    
-    func testAddingComponents() {
-        
-        let expectedDate = anyDate.update(year: 2015, day: 19)
-        XCTAssertEqual(anyDate + 2.years + 7.days, expectedDate)
-    }
-    
-    func testSubtractingComponents() {
-        
-        let expectedDate = anyDate.update(month: 1, day: 19)
-        XCTAssertEqual(anyDate - 2.months - 24.days, expectedDate)
-    }
-    
-    func testAddingComponentsWithOverflow() {
-        
-        let expectedDate = anyDate.update(month: 5, day: 19)
-        XCTAssertEqual(anyDate + 37.days, expectedDate)
-    }
-    
-    func testDateViewOffsetOnDSTDay() {
 
+    @Test func addingComponents() {
+        let expectedDate = anyDate.update(year: 2015, day: 19)
+        #expect(anyDate + 2.years + 7.days == expectedDate)
+    }
+
+    @Test func subtractingComponents() {
+        let expectedDate = anyDate.update(month: 1, day: 19)
+        #expect(anyDate - 2.months - 24.days == expectedDate)
+    }
+
+    @Test func addingComponentsWithOverflow() {
+        let expectedDate = anyDate.update(month: 5, day: 19)
+        #expect(anyDate + 37.days == expectedDate)
+    }
+
+    @Test func dateViewOffsetOnDSTDay() {
         // DST affected time zone
         let timeZone = TimeZone(identifier: "America/Los_Angeles")!
         var calendar = Calendar(identifier: .gregorian)
@@ -61,11 +57,10 @@ class DateViewOperatorsTests: XCTestCase {
         )
 
         let dstOffset = dstSwitch + 3.hours
-        XCTAssertEqual(dstOffset, expectedDate)
+        #expect(dstOffset == expectedDate)
     }
-    
-    func testDateViewOffsetCrossingDSTDay() {
 
+    @Test func dateViewOffsetCrossingDSTDay() {
         // DST affected time zone
         let timeZone = TimeZone(identifier: "America/Los_Angeles")!
         var calendar = Calendar(identifier: .gregorian)
@@ -82,9 +77,9 @@ class DateViewOperatorsTests: XCTestCase {
         )
 
         let crossDstForward = preDst + 121.hours
-        XCTAssertEqual(crossDstForward, postDst)
+        #expect(crossDstForward == postDst)
 
         let crossDstBackwards = postDst - 121.hours
-        XCTAssertEqual(crossDstBackwards, preDst)
+        #expect(crossDstBackwards == preDst)
     }
 }

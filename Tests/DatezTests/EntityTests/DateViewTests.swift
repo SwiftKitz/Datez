@@ -6,46 +6,43 @@
 //  Copyright © 2015 kitz. All rights reserved.
 //
 
-import XCTest
+import Testing
+import Foundation
 @testable import Datez
 
+@Suite struct DateViewTests {
 
-class DateViewTests: XCTestCase {
-    
-    func testInitForDateInCalendar() {
-
+    @Test func initForDateInCalendar() {
         let date = Date(timeIntervalSinceReferenceDate: 180)
         let dateView = DateView(forDate: date, inCalendar: Calendar.gregorian)
-        
-        XCTAssertEqual(dateView.date, date)
-        XCTAssertEqual(dateView.calendar, Calendar.gregorian)
-    }
-    
-    func testInitForCalendarComponentsInCalendar() {
 
+        #expect(dateView.date == date)
+        #expect(dateView.calendar == Calendar.gregorian)
+    }
+
+    @Test func initForCalendarComponentsInCalendar() {
         let components = CalendarComponents(year: 1990, month: 1, day: 7, hour: 3, minute: 44, second: 42)
         let dateView = DateView(forCalendarComponents: components, inCalendar: Calendar.gregorian)
         let result = dateView.components
 
-        XCTAssertEqual(result.year, components.year)
-        XCTAssertEqual(result.month, components.month)
-        XCTAssertEqual(result.day, components.day)
-        XCTAssertEqual(result.hour, components.hour)
-        XCTAssertEqual(result.minute, components.minute)
-        XCTAssertEqual(result.second, components.second)
-        XCTAssertEqual(dateView.calendar, Calendar.gregorian)
+        #expect(result.year == components.year)
+        #expect(result.month == components.month)
+        #expect(result.day == components.day)
+        #expect(result.hour == components.hour)
+        #expect(result.minute == components.minute)
+        #expect(result.second == components.second)
+        #expect(dateView.calendar == Calendar.gregorian)
     }
-    
-    func testUpdate() {
 
+    @Test func update() {
         let dateView = Date().gregorian.update(year: 1, month: 2, day: 3, hour: 4, minute: 5, second: 6)
         let result = dateView.components
 
-        XCTAssertEqual(result.year, 1)
-        XCTAssertEqual(result.month, 2)
-        XCTAssertEqual(result.day, 3)
-        XCTAssertEqual(result.hour, 4)
-        XCTAssertEqual(result.minute, 5)
-        XCTAssertEqual(result.second, 6)
+        #expect(result.year == 1)
+        #expect(result.month == 2)
+        #expect(result.day == 3)
+        #expect(result.hour == 4)
+        #expect(result.minute == 5)
+        #expect(result.second == 6)
     }
 }

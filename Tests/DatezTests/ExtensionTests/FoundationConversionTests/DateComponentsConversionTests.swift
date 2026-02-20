@@ -6,14 +6,13 @@
 //  Copyright © 2015 kitz. All rights reserved.
 //
 
-import XCTest
+import Testing
+import Foundation
 @testable import Datez
 
+@Suite struct DateComponentsConversionTests {
 
-class DateComponentsConversionTests: XCTestCase {
-
-    func testCalendarComponentsToDateComponentsConversion() {
-        
+    @Test func calendarComponentsToDateComponents() {
         let calendarComponents = CalendarComponents(year: 1,
                                                     month: 2,
                                                     weekOfYear: 3,
@@ -22,7 +21,7 @@ class DateComponentsConversionTests: XCTestCase {
                                                     hour: 6,
                                                     minute: 7,
                                                     second: 8)
-        
+
         let dateComponents = calendarComponents.dateComponents
         var expectedDateComponents = DateComponents()
         expectedDateComponents.year = 1
@@ -33,12 +32,11 @@ class DateComponentsConversionTests: XCTestCase {
         expectedDateComponents.hour = 6
         expectedDateComponents.minute = 7
         expectedDateComponents.second = 8
-        
-        XCTAssertEqual(dateComponents, expectedDateComponents)
+
+        #expect(dateComponents == expectedDateComponents)
     }
-    
-    func testDateComponentsToCalendarComponentsConversion() {
-        
+
+    @Test func dateComponentsToCalendarComponents() {
         var dateComponents = DateComponents()
         dateComponents.year = 1
         dateComponents.month = 2
@@ -48,7 +46,7 @@ class DateComponentsConversionTests: XCTestCase {
         dateComponents.hour = 6
         dateComponents.minute = 7
         dateComponents.second = 8
-        
+
         let expectedComponents = CalendarComponents(year: 1,
                                                     month: 2,
                                                     weekOfYear: 3,
@@ -57,11 +55,11 @@ class DateComponentsConversionTests: XCTestCase {
                                                     hour: 6,
                                                     minute: 7,
                                                     second: 8)
-        
-        XCTAssertEqual(dateComponents.calendarComponents, expectedComponents)
+
+        #expect(dateComponents.calendarComponents == expectedComponents)
     }
-    
-    func testDateComponentstoCalendarComponentsConversionWithUndefinedComponents() {
+
+    @Test func undefinedDateComponentsConvertToZero() {
         // this works because `NSDateComponentUndefined` is too large to fit in an Int (-_-")
         var dateComponents = DateComponents()
         dateComponents.year = NSDateComponentUndefined
@@ -72,7 +70,7 @@ class DateComponentsConversionTests: XCTestCase {
         dateComponents.hour = NSDateComponentUndefined
         dateComponents.minute = NSDateComponentUndefined
         dateComponents.second = NSDateComponentUndefined
-        
-        XCTAssertEqual(dateComponents.calendarComponents, CalendarComponents())
+
+        #expect(dateComponents.calendarComponents == CalendarComponents())
     }
 }

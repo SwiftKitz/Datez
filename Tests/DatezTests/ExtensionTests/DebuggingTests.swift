@@ -6,21 +6,19 @@
 //  Copyright © 2015 kitz. All rights reserved.
 //
 
-import XCTest
+import Testing
+import Foundation
 @testable import Datez
 
+@Suite struct DebuggingTests {
 
-class DebuggingTests: XCTestCase {
-    
-    func testCalendarComponentsDebugDescription() {
-        
+    @Test func calendarComponentsDebugDescription() {
         let components = CalendarComponents(year: 2011, month: 2, day: 5, hour: 6, minute: 7, second: 8)
-        XCTAssertEqual("\(components)", "2011-02-05 06:07:08")
+        #expect("\(components)" == "2011-02-05 06:07:08")
     }
-    
-    func testDateViewDebugDescription() {
-        
+
+    @Test func dateViewDebugDescription() {
         let dateView = Date(timeIntervalSinceReferenceDate: 8.years.timeInterval).gregorian
-        XCTAssertEqual("\(dateView)", "\(dateView.components), \(dateView.calendar.identifier)")
+        #expect("\(dateView)" == "\(dateView.components), \(dateView.calendar.identifier)")
     }
 }

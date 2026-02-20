@@ -6,50 +6,48 @@
 //  Copyright © 2015 kitz. All rights reserved.
 //
 
-import XCTest
+import Testing
 @testable import Datez
 
+@Suite struct DurationTests {
 
-class DurationTests: XCTestCase {
-    
-    func testSecond() {
-        XCTAssertEqual(1.second, CalendarComponents(second: 1))
-        XCTAssertEqual(1.seconds, CalendarComponents(second: 1))
-    }
-    
-    func testMinute() {
-        XCTAssertEqual(1.minute, CalendarComponents(minute: 1))
-        XCTAssertEqual(1.minutes, CalendarComponents(minute: 1))
-    }
-    
-    func testHour() {
-        XCTAssertEqual(1.hour, CalendarComponents(hour: 1))
-        XCTAssertEqual(1.hours, CalendarComponents(hour: 1))
-    }
-    
-    func testDay() {
-        XCTAssertEqual(1.day, CalendarComponents(day: 1))
-        XCTAssertEqual(1.days, CalendarComponents(day: 1))
-    }
-    
-    func testWeekOfMonth() {
-        XCTAssertEqual(1.weekOfMonth, CalendarComponents(weekOfMonth: 1))
-        XCTAssertEqual(1.weeksOfMonth, CalendarComponents(weekOfMonth: 1))
-    }
-    
-    func testWeekOfYear() {
-        XCTAssertEqual(1.weekOfYear, CalendarComponents(weekOfYear: 1))
-        XCTAssertEqual(1.weeksOfYear, CalendarComponents(weekOfYear: 1))
-    }
-    
-    func testMonth() {
-        XCTAssertEqual(1.month, CalendarComponents(month: 1))
-        XCTAssertEqual(1.months, CalendarComponents(month: 1))
-    }
-    
-    func testYear() {
-        XCTAssertEqual(1.year, CalendarComponents(year: 1))
-        XCTAssertEqual(1.years, CalendarComponents(year: 1))
+    @Test func second() {
+        #expect(1.second == CalendarComponents(second: 1))
+        #expect(1.seconds == CalendarComponents(second: 1))
     }
 
+    @Test func minute() {
+        #expect(1.minute == CalendarComponents(minute: 1))
+        #expect(1.minutes == CalendarComponents(minute: 1))
+    }
+
+    @Test func hour() {
+        #expect(1.hour == CalendarComponents(hour: 1))
+        #expect(1.hours == CalendarComponents(hour: 1))
+    }
+
+    @Test func day() {
+        #expect(1.day == CalendarComponents(day: 1))
+        #expect(1.days == CalendarComponents(day: 1))
+    }
+
+    @Test func weekOfMonth() {
+        #expect(1.weekOfMonth == CalendarComponents(weekOfMonth: 1))
+        #expect(1.weeksOfMonth == CalendarComponents(weekOfMonth: 1))
+    }
+
+    @Test func weekOfYear() {
+        #expect(1.weekOfYear == CalendarComponents(weekOfYear: 1))
+        #expect(1.weeksOfYear == CalendarComponents(weekOfYear: 1))
+    }
+
+    @Test func month() {
+        #expect(1.month == CalendarComponents(month: 1))
+        #expect(1.months == CalendarComponents(month: 1))
+    }
+
+    @Test func year() {
+        #expect(1.year == CalendarComponents(year: 1))
+        #expect(1.years == CalendarComponents(year: 1))
+    }
 }

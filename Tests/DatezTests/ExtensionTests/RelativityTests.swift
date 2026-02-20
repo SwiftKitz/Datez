@@ -6,12 +6,12 @@
 //  Copyright © 2015 kitz. All rights reserved.
 //
 
-import XCTest
+import Testing
+import Foundation
 @testable import Datez
 
+@Suite struct RelativityTests {
 
-class RelativityTests: XCTestCase {
-    
     let date = DateView(
         forCalendarComponents: CalendarComponents(
             year: 2015,
@@ -23,70 +23,58 @@ class RelativityTests: XCTestCase {
         ),
         inCalendar: Calendar.gregorian
     )
-    
-    func testBeginningOfYear() {
-        
+
+    @Test func beginningOfYear() {
         let expectedDate = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 1, day: 1),
             inCalendar: Calendar.gregorian
         )
-        
-        XCTAssertEqual(date.beginningOfYear, expectedDate)
+        #expect(date.beginningOfYear == expectedDate)
     }
-    
-    func testBeginningOfMonth() {
-        
+
+    @Test func beginningOfMonth() {
         let expectedDate = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 10, day: 1),
             inCalendar: Calendar.gregorian
         )
-        
-        XCTAssertEqual(date.beginningOfMonth, expectedDate)
+        #expect(date.beginningOfMonth == expectedDate)
     }
-    
-    func testBeginningOfDay() {
-        
+
+    @Test func beginningOfDay() {
         let expectedDate = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 10, day: 31),
             inCalendar: Calendar.gregorian
         )
-        
-        XCTAssertEqual(date.beginningOfDay, expectedDate)
+        #expect(date.beginningOfDay == expectedDate)
     }
-    
-    func  testBeginningOfHour() {
-        
+
+    @Test func beginningOfHour() {
         let expectedDate = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 10, day: 31, hour: 23),
             inCalendar: Calendar.gregorian
         )
-        
-        XCTAssertEqual(date.beginningOfHour, expectedDate)
+        #expect(date.beginningOfHour == expectedDate)
     }
-    
-    func testIsToday() {
-        
+
+    @Test func isToday() {
         let todayDate = Date().gregorian
-        XCTAssertTrue(todayDate.isToday)
-        
+        #expect(todayDate.isToday)
+
         let differentDayDate = todayDate.update(year: 2014)
-        XCTAssertFalse(differentDayDate.isToday)
+        #expect(!differentDayDate.isToday)
     }
-    
-    func testIsSameDayAsDate() {
-        
+
+    @Test func isSameDayAsDate() {
         let sameDayDate = DateView(
             forCalendarComponents: CalendarComponents(year: 2015, month: 10, day: 31, hour: 2),
             inCalendar: Calendar.gregorian
         )
-        
-        XCTAssertTrue(date.isSameDayAsDate(sameDayDate))
-        
+        #expect(date.isSameDayAsDate(sameDayDate))
+
         let differentDayDate = DateView(
             forCalendarComponents: CalendarComponents(year: 2014, month: 10, day: 31, hour: 2),
             inCalendar: Calendar.gregorian
         )
-        
-        XCTAssertFalse(date.isSameDayAsDate(differentDayDate))
+        #expect(!date.isSameDayAsDate(differentDayDate))
     }
 }

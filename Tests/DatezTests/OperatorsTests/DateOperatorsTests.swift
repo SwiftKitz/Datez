@@ -6,18 +6,17 @@
 //  Copyright © 2015 kitz. All rights reserved.
 //
 
-import XCTest
+import Testing
+import Foundation
 import Datez
 
+@Suite struct DateOperatorsTests {
 
-class DateOperatorsTests: XCTestCase {
-    
-    func testSubtractingDates() {
-                
+    @Test func subtractingDates() {
         let interval = 8.weeksOfYear.timeInterval
         let date = Date(timeIntervalSinceReferenceDate: interval)
-        
-        XCTAssertEqual(date - Date(timeIntervalSinceReferenceDate: 0), interval)
-        XCTAssertEqual(Date(timeIntervalSinceReferenceDate: 0) - date, -interval)
+
+        #expect(date - Date(timeIntervalSinceReferenceDate: 0) == interval)
+        #expect(Date(timeIntervalSinceReferenceDate: 0) - date == -interval)
     }
 }

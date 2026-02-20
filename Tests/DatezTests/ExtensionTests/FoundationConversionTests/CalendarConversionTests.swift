@@ -6,26 +6,25 @@
 //  Copyright © 2015 kitz. All rights reserved.
 //
 
-import XCTest
+import Testing
+import Foundation
 @testable import Datez
 
+@Suite struct CalendarConversionTests {
 
-class CalendarConversionTests: XCTestCase {
-    
-    func testComponentsFromTimeInterval() {
-        
+    @Test func componentsFromTimeInterval() {
         let timeInterval = 8.days.timeInterval + 9.months.timeInterval
-        
+
         let calendar = Calendar.gregorian
         let baseDate = Date(timeIntervalSinceReferenceDate: 0)
-        
+
         let components = calendar.dateComponents(
             [.month, .day],
             from: baseDate,
             to: baseDate + timeInterval
         )
-        
-        XCTAssertEqual(components.day, 8)
-        XCTAssertEqual(components.month, 9)
+
+        #expect(components.day == 8)
+        #expect(components.month == 9)
     }
 }

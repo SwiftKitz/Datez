@@ -16,8 +16,7 @@ import Foundation
 
  e.g.
  */
-@MainActor
-public final class DiscreteTimer {
+public final class DiscreteTimer: Sendable {
 
     // MARK: - nested types
 
@@ -31,10 +30,7 @@ public final class DiscreteTimer {
 
     // MARK: - properties
 
-    private let timeUnit: TimeUnit
-    private let dateProvider: @Sendable () -> Date
-    private let callback: Callback
-    private var timerTask: Task<Void, Never>?
+    private let timerTask: Task<Void, Never>
 
     // MARK: - init & deinit
 
@@ -43,21 +39,22 @@ public final class DiscreteTimer {
         dateProvider: @escaping @Sendable () -> Date = Date.init,
         callback: @escaping Callback
     ) {
-        self.timeUnit = timeUnit
-        self.dateProvider = dateProvider
-        self.callback = callback
-        timerTask = Task { [weak self] in
-            await self?.runLoop()
+        timerTask = Task {
+            await Self.runLoop(timeUnit: timeUnit, dateProvider: dateProvider, callback: callback)
         }
     }
 
     deinit {
-        timerTask?.cancel()
+        timerTask.cancel()
     }
 
     // MARK: - private
 
-    private func runLoop() async {
+    private static func runLoop(
+        timeUnit: TimeUnit,
+        dateProvider: @Sendable () -> Date,
+        callback: Callback
+    ) async {
         var lastFiredUnit: Int? = nil
 
         while !Task.isCancelled {

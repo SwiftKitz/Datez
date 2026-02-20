@@ -6,10 +6,10 @@
 //  Copyright © 2015 kitz. All rights reserved.
 //
 
-import XCTest
+import Testing
 @testable import Datez
 
-class CalendarComponentsOperatorsTests: XCTestCase {
+@Suite struct CalendarComponentsOperatorsTests {
 
     let anyComponents = CalendarComponents(
         month: 5,
@@ -19,8 +19,7 @@ class CalendarComponentsOperatorsTests: XCTestCase {
         second: -10
     )
 
-    func testMinusPrefix() {
-        
+    @Test func minusPrefix() {
         let expectedComps = CalendarComponents(
             month: -5,
             day: 4,
@@ -28,12 +27,10 @@ class CalendarComponentsOperatorsTests: XCTestCase {
             minute: -22,
             second: 10
         )
-        
-        XCTAssertEqual(-anyComponents, expectedComps)
+        #expect(-anyComponents == expectedComps)
     }
-    
-    func testEqualityAndInequalityOperators() {
-        
+
+    @Test func equalityAndInequalityOperators() {
         let inequalComponents = [
             anyComponents.update(year: 1),
             anyComponents.update(month: -1),
@@ -42,12 +39,12 @@ class CalendarComponentsOperatorsTests: XCTestCase {
             anyComponents.update(minute: -13),
             anyComponents.update(second: 8),
         ]
-        
-        inequalComponents.forEach {
-            XCTAssertNotEqual($0, anyComponents)
+
+        for comp in inequalComponents {
+            #expect(comp != anyComponents)
         }
-        
+
         let equalComponents = anyComponents
-        XCTAssertEqual(equalComponents, anyComponents)
+        #expect(equalComponents == anyComponents)
     }
 }
