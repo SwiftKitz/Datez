@@ -13,65 +13,77 @@ import Foundation
  date instance that is truncated to only contain the required unit
  and greater units. This is to allow equality checks with the
  caller's date instances in case they need to be checked against.
- 
+
  e.g.
  */
-public final class DiscreteTimer: @unchecked Sendable {
-    
+@MainActor
+public final class DiscreteTimer {
+
     // MARK: - nested types
-    
+
     public enum TimeUnit: TimeInterval, Sendable {
         case second = 1
         case minute = 60
         case hour = 3_600
     }
-    
-    public typealias Callback = @Sendable (Date) -> ()
-    
+
+    public typealias Callback = @Sendable (Date) -> Void
+
     // MARK: - properties
-    
+
     private let timeUnit: TimeUnit
-    private let dateProvider: @Sendable () -> (Date)
+    private let dateProvider: @Sendable () -> Date
     private let callback: Callback
+    private var timerTask: Task<Void, Never>?
 
     // MARK: - init & deinit
-    
-    public init(timeUnit: TimeUnit,
-                dateProvider: @escaping @Sendable () -> (Date) = Date.init,
-                callback: @escaping @Sendable Callback) {
+
+    public init(
+        timeUnit: TimeUnit,
+        dateProvider: @escaping @Sendable () -> Date = Date.init,
+        callback: @escaping Callback
+    ) {
         self.timeUnit = timeUnit
         self.dateProvider = dateProvider
         self.callback = callback
-        
-        scheduleNextUpdate()
+        timerTask = Task { [weak self] in
+            await self?.runLoop()
+        }
     }
 
-    @discardableResult
-    private func scheduleNextUpdate() -> (Date, Int) {
+    deinit {
+        timerTask?.cancel()
+    }
 
-        let date = dateProvider()
-        let timeInterval = date.timeIntervalSince1970
-        let intervalDelay = timeUnit.rawValue - timeInterval.truncatingRemainder(dividingBy: timeUnit.rawValue)
-        let currentUnit = Int(timeInterval / timeUnit.rawValue)
+    // MARK: - private
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + intervalDelay) { [weak self] in
-            guard let self else { return }
+    private func runLoop() async {
+        var lastFiredUnit: Int? = nil
 
-            let (date, nextUnit) = self.scheduleNextUpdate()
-            guard currentUnit != nextUnit else {
-                return
+        while !Task.isCancelled {
+            let date = dateProvider()
+            let timeInterval = date.timeIntervalSince1970
+            let unit = timeUnit.rawValue
+            let delay = unit - timeInterval.truncatingRemainder(dividingBy: unit)
+            let currentUnit = Int(timeInterval / unit)
+
+            do {
+                try await Task.sleep(for: .seconds(delay))
+            } catch {
+                return // cancelled
             }
 
+            guard lastFiredUnit != currentUnit else { continue }
+            lastFiredUnit = currentUnit
+
             let now = date.gregorian
-            let dateView: DateView = switch self.timeUnit {
+            let dateView: DateView = switch timeUnit {
             case .second: now.beginningOfSecond
             case .minute: now.beginningOfMinute
             case .hour: now.beginningOfHour
             }
-            
-            self.callback(dateView.date)
-        }
 
-        return (date, currentUnit)
+            callback(dateView.date)
+        }
     }
 }
