@@ -139,6 +139,95 @@ import Datez
         try #require(dates.count == 2)
         #expect(dates[0] != dates[1])
     }
+
+    @Test func postBoundaryTickCarriesPostSleepDate() async throws {
+        let dateProvider = DateProviderMock()
+        // 0.50s into second 10; the swap target shares the sub-second offset
+        // so the delay (~0.50s) is identical whichever value is read first.
+        let preSleep = Date(timeIntervalSinceReferenceDate: 10.50)
+        let postSleep = Date(timeIntervalSinceReferenceDate: 12.50)
+        dateProvider.date = preSleep
+
+        nonisolated(unsafe) var receivedDate: Date?
+
+        try await confirmation("boundary tick fires") { confirm in
+            let timer = DiscreteTimer(
+                timeUnit: .second,
+                dateProvider: dateProvider.asCallback
+            ) { date in
+                receivedDate = date
+                confirm()
+            }
+
+            dateProvider.date = postSleep
+            try await Task.sleep(for: .milliseconds(900))
+            _ = timer
+        }
+
+        // The fix re-reads AFTER waking, so the tick carries second 12,
+        // not the stale pre-sleep second 10 the old code delivered.
+        #expect(receivedDate == postSleep.gregorian.beginningOfSecond.date)
+        #expect(receivedDate != preSleep.gregorian.beginningOfSecond.date)
+    }
+
+    @Test func doesNotPublishSameUnitTwice() async throws {
+        let dateProvider = DateProviderMock()
+        dateProvider.date = Date(timeIntervalSinceReferenceDate: 20.50)
+
+        nonisolated(unsafe) var dates: [Date] = []
+
+        let timer = DiscreteTimer(
+            timeUnit: .second,
+            dateProvider: dateProvider.asCallback
+        ) { date in
+            dates.append(date)
+        }
+
+        // Advance only within second 20 across several wake cycles; each wake
+        // recomputes a sub-second delay and must dedupe on unit 20.
+        dateProvider.date = Date(timeIntervalSinceReferenceDate: 20.70)
+        try await Task.sleep(for: .milliseconds(300))
+        dateProvider.date = Date(timeIntervalSinceReferenceDate: 20.90)
+        try await Task.sleep(for: .milliseconds(300))
+        _ = timer
+
+        #expect(dates == [Date(timeIntervalSinceReferenceDate: 20).gregorian.beginningOfSecond.date])
+    }
+
+    @Test func resumeDoesNotPublishOlderUnit() async throws {
+        let dateProvider = DateProviderMock()
+        dateProvider.date = Date(timeIntervalSinceReferenceDate: 100.50)
+
+        nonisolated(unsafe) var dates: [Date] = []
+
+        let timer = DiscreteTimer(
+            timeUnit: .second,
+            dateProvider: dateProvider.asCallback
+        ) { date in
+            dates.append(date)
+        }
+
+        // First tick publishes second 100.
+        try await Task.sleep(for: .milliseconds(700))
+
+        // Rewound/stale clock (e.g. a loop that woke from a long suspend
+        // holding an old instant): second 40 must NOT be published.
+        dateProvider.date = Date(timeIntervalSinceReferenceDate: 40.50)
+        try await Task.sleep(for: .milliseconds(700))
+
+        // Clock advances normally again: publishes second 101, never 40.
+        dateProvider.date = Date(timeIntervalSinceReferenceDate: 101.50)
+        try await Task.sleep(for: .milliseconds(700))
+        _ = timer
+
+        let second100 = Date(timeIntervalSinceReferenceDate: 100).gregorian.beginningOfSecond.date
+        let second101 = Date(timeIntervalSinceReferenceDate: 101).gregorian.beginningOfSecond.date
+        let second40 = Date(timeIntervalSinceReferenceDate: 40).gregorian.beginningOfSecond.date
+
+        #expect(dates == [second100, second101])
+        #expect(!dates.contains(second40))
+        #expect(dates == dates.sorted())
+    }
 }
 
 private final class DateProviderMock: @unchecked Sendable {

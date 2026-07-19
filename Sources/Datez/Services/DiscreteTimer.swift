@@ -55,14 +55,14 @@ public final class DiscreteTimer: Sendable {
         dateProvider: @Sendable () -> Date,
         callback: Callback
     ) async {
+        let unit = timeUnit.rawValue
         var lastFiredUnit: Int? = nil
 
         while !Task.isCancelled {
-            let date = dateProvider()
-            let timeInterval = date.timeIntervalSince1970
-            let unit = timeUnit.rawValue
-            let delay = unit - timeInterval.truncatingRemainder(dividingBy: unit)
-            let currentUnit = Int(timeInterval / unit)
+            // Pre-sleep read: used ONLY to size the sleep to the next unit
+            // boundary from the current instant.
+            let preSleepInterval = dateProvider().timeIntervalSince1970
+            let delay = unit - preSleepInterval.truncatingRemainder(dividingBy: unit)
 
             do {
                 try await Task.sleep(for: .seconds(delay))
@@ -70,7 +70,19 @@ public final class DiscreteTimer: Sendable {
                 return // cancelled
             }
 
-            guard lastFiredUnit != currentUnit else { continue }
+            // Post-sleep read: this is the instant we report and dedupe on.
+            // A normal tick carries the boundary we just reached; a wake from
+            // a long suspend carries the real current time, not the (now
+            // hours-old) pre-sleep instant.
+            let date = dateProvider()
+            let currentUnit = Int(date.timeIntervalSince1970 / unit)
+
+            // Publish only when the unit strictly advanced. This dedupes
+            // repeated wakes within one unit AND guarantees the reported date
+            // is monotonic non-decreasing (a rewound clock never rolls back).
+            if let lastFiredUnit, currentUnit <= lastFiredUnit {
+                continue
+            }
             lastFiredUnit = currentUnit
 
             let now = date.gregorian
